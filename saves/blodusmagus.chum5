@@ -65,7 +65,7 @@
   <burntstreetcred>0</burntstreetcred>
   <created>False</created>
   <maxavail>12</maxavail>
-  <nuyen>-659420.0</nuyen>
+  <nuyen>-1011920.0</nuyen>
   <startingnuyen>6000</startingnuyen>
   <sumtoten>10</sumtoten>
   <buildkarma>25</buildkarma>
@@ -99,7 +99,7 @@
       <base>6</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>7</totalvalue>
+      <totalvalue>8</totalvalue>
     </attribute>
     <attribute>
       <name>AGI</name>
@@ -109,7 +109,7 @@
       <base>6</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>7</totalvalue>
+      <totalvalue>9</totalvalue>
     </attribute>
     <attribute>
       <name>REA</name>
@@ -129,7 +129,7 @@
       <base>6</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>6</totalvalue>
+      <totalvalue>9</totalvalue>
     </attribute>
     <attribute>
       <name>CHA</name>
@@ -159,7 +159,7 @@
       <base>6</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>7</totalvalue>
+      <totalvalue>10</totalvalue>
     </attribute>
     <attribute>
       <name>WIL</name>
@@ -186,10 +186,10 @@
       <metatypemin>6</metatypemin>
       <metatypemax>6</metatypemax>
       <metatypeaugmax>6</metatypeaugmax>
-      <base>1</base>
+      <base>0</base>
       <karma>0</karma>
       <metatypecategory>Special</metatypecategory>
-      <totalvalue>1</totalvalue>
+      <totalvalue>0</totalvalue>
     </attribute>
     <attribute>
       <name>MAGAdept</name>
@@ -240,7 +240,7 @@
   <groupmember>False</groupmember>
   <groupname />
   <groupnotes />
-  <totaless>-2.50</totaless>
+  <totaless>-3.80</totaless>
   <magsplitadept>0</magsplitadept>
   <magsplitmagician>0</magsplitmagician>
   <physicalcmfilled>0</physicalcmfilled>
@@ -2271,6 +2271,216 @@
           <canswapattributes>False</canswapattributes>
           <sortorder>0</sortorder>
         </cyberware>
+        <cyberware>
+          <sourceid>a9f4efd4-b86c-4e90-b0f7-aefa32c3b9de</sourceid>
+          <guid>25ee3bfd-e8ac-4422-82d8-599ee6d8cfe2</guid>
+          <name>Enhanced Strength</name>
+          <category>Cyberlimb Enhancement</category>
+          <limbslot />
+          <limbslotcount>1</limbslotcount>
+          <inheritattributes>False</inheritattributes>
+          <ess>0</ess>
+          <capacity>[Rating * 1]</capacity>
+          <avail>(Rating * 3)R</avail>
+          <cost>Rating * 6500</cost>
+          <source>SR5</source>
+          <page>456</page>
+          <parentid />
+          <hasmodularmount />
+          <plugsintomodularmount />
+          <blocksmounts />
+          <forced />
+          <rating>3</rating>
+          <minrating />
+          <maxrating>3</maxrating>
+          <ratinglabel>String_Rating</ratinglabel>
+          <subsystems />
+          <wirelesson>False</wirelesson>
+          <grade>Standard (Adapsin)</grade>
+          <location />
+          <extra />
+          <suite>False</suite>
+          <stolen>False</stolen>
+          <essdiscount>0</essdiscount>
+          <extraessadditivemultiplier>0</extraessadditivemultiplier>
+          <extraessmultiplicativemultiplier>1.0</extraessmultiplicativemultiplier>
+          <forcegrade />
+          <matrixcmfilled>0</matrixcmfilled>
+          <prototypetranshuman>False</prototypetranshuman>
+          <bonus />
+          <pairbonus />
+          <wirelessbonus />
+          <wirelesspairbonus />
+          <improvementsource>Cyberware</improvementsource>
+          <pairinclude>
+            <name>Enhanced Strength</name>
+          </pairinclude>
+          <wirelesspairinclude>
+            <name>Enhanced Strength</name>
+          </wirelesspairinclude>
+          <children />
+          <notes />
+          <discountedcost>False</discountedcost>
+          <addtoparentess>False</addtoparentess>
+          <addtoparentcapacity>False</addtoparentcapacity>
+          <active>False</active>
+          <homenode>False</homenode>
+          <devicerating />
+          <programlimit />
+          <overclocked>None</overclocked>
+          <attack />
+          <sleaze />
+          <dataprocessing />
+          <firewall />
+          <attributearray />
+          <modattack />
+          <modsleaze />
+          <moddataprocessing />
+          <modfirewall />
+          <modattributearray />
+          <canswapattributes>False</canswapattributes>
+          <sortorder>0</sortorder>
+        </cyberware>
+        <cyberware>
+          <sourceid>7d61f860-0637-4214-914d-c68022361d24</sourceid>
+          <guid>9f94f4e9-0492-4bdf-877b-4432ddeb38cf</guid>
+          <name>Customized Strength</name>
+          <category>Cyberlimb Enhancement</category>
+          <limbslot />
+          <limbslotcount>1</limbslotcount>
+          <inheritattributes>False</inheritattributes>
+          <ess>0</ess>
+          <capacity>[0]</capacity>
+          <avail>+Rating - MinRating + 1</avail>
+          <cost>(Rating - MinRating + 1) * 5000</cost>
+          <source>SR5</source>
+          <page>456</page>
+          <parentid />
+          <hasmodularmount />
+          <plugsintomodularmount />
+          <blocksmounts />
+          <forced />
+          <rating>7</rating>
+          <minrating>MinimumSTR+1</minrating>
+          <maxrating>MaximumSTR</maxrating>
+          <ratinglabel>String_Rating</ratinglabel>
+          <subsystems />
+          <wirelesson>False</wirelesson>
+          <grade>Standard (Adapsin)</grade>
+          <location />
+          <extra />
+          <suite>False</suite>
+          <stolen>False</stolen>
+          <essdiscount>0</essdiscount>
+          <extraessadditivemultiplier>0</extraessadditivemultiplier>
+          <extraessmultiplicativemultiplier>1.0</extraessmultiplicativemultiplier>
+          <forcegrade />
+          <matrixcmfilled>0</matrixcmfilled>
+          <prototypetranshuman>False</prototypetranshuman>
+          <bonus />
+          <pairbonus />
+          <wirelessbonus />
+          <wirelesspairbonus />
+          <improvementsource>Cyberware</improvementsource>
+          <pairinclude>
+            <name>Customized Strength</name>
+          </pairinclude>
+          <wirelesspairinclude>
+            <name>Customized Strength</name>
+          </wirelesspairinclude>
+          <children />
+          <notes />
+          <discountedcost>False</discountedcost>
+          <addtoparentess>False</addtoparentess>
+          <addtoparentcapacity>False</addtoparentcapacity>
+          <active>False</active>
+          <homenode>False</homenode>
+          <devicerating />
+          <programlimit />
+          <overclocked>None</overclocked>
+          <attack />
+          <sleaze />
+          <dataprocessing />
+          <firewall />
+          <attributearray />
+          <modattack />
+          <modsleaze />
+          <moddataprocessing />
+          <modfirewall />
+          <modattributearray />
+          <canswapattributes>False</canswapattributes>
+          <sortorder>0</sortorder>
+        </cyberware>
+        <cyberware>
+          <sourceid>2c50d5c1-f2ff-4c7b-bf5e-46925e808648</sourceid>
+          <guid>252cf451-0a95-4d93-8508-e54b16aa6f0c</guid>
+          <name>Enhanced Agility</name>
+          <category>Cyberlimb Enhancement</category>
+          <limbslot />
+          <limbslotcount>1</limbslotcount>
+          <inheritattributes>False</inheritattributes>
+          <ess>0</ess>
+          <capacity>[Rating * 1]</capacity>
+          <avail>(Rating * 3)R</avail>
+          <cost>Rating * 6500</cost>
+          <source>SR5</source>
+          <page>456</page>
+          <parentid />
+          <hasmodularmount />
+          <plugsintomodularmount />
+          <blocksmounts />
+          <forced />
+          <rating>3</rating>
+          <minrating />
+          <maxrating>3</maxrating>
+          <ratinglabel>String_Rating</ratinglabel>
+          <subsystems />
+          <wirelesson>False</wirelesson>
+          <grade>Standard (Adapsin)</grade>
+          <location />
+          <extra />
+          <suite>False</suite>
+          <stolen>False</stolen>
+          <essdiscount>0</essdiscount>
+          <extraessadditivemultiplier>0</extraessadditivemultiplier>
+          <extraessmultiplicativemultiplier>1.0</extraessmultiplicativemultiplier>
+          <forcegrade />
+          <matrixcmfilled>0</matrixcmfilled>
+          <prototypetranshuman>False</prototypetranshuman>
+          <bonus />
+          <pairbonus />
+          <wirelessbonus />
+          <wirelesspairbonus />
+          <improvementsource>Cyberware</improvementsource>
+          <pairinclude>
+            <name>Enhanced Agility</name>
+          </pairinclude>
+          <wirelesspairinclude>
+            <name>Enhanced Agility</name>
+          </wirelesspairinclude>
+          <children />
+          <notes />
+          <discountedcost>False</discountedcost>
+          <addtoparentess>False</addtoparentess>
+          <addtoparentcapacity>False</addtoparentcapacity>
+          <active>False</active>
+          <homenode>False</homenode>
+          <devicerating />
+          <programlimit />
+          <overclocked>None</overclocked>
+          <attack />
+          <sleaze />
+          <dataprocessing />
+          <firewall />
+          <attributearray />
+          <modattack />
+          <modsleaze />
+          <moddataprocessing />
+          <modfirewall />
+          <modattributearray />
+          <canswapattributes>False</canswapattributes>
+          <sortorder>0</sortorder>
+        </cyberware>
       </children>
       <notes />
       <discountedcost>False</discountedcost>
@@ -2420,7 +2630,380 @@
           <canswapattributes>False</canswapattributes>
           <sortorder>0</sortorder>
         </cyberware>
+        <cyberware>
+          <sourceid>a9f4efd4-b86c-4e90-b0f7-aefa32c3b9de</sourceid>
+          <guid>fee07cba-f615-4add-8f91-d200ecdde278</guid>
+          <name>Enhanced Strength</name>
+          <category>Cyberlimb Enhancement</category>
+          <limbslot />
+          <limbslotcount>1</limbslotcount>
+          <inheritattributes>False</inheritattributes>
+          <ess>0</ess>
+          <capacity>[Rating * 1]</capacity>
+          <avail>(Rating * 3)R</avail>
+          <cost>Rating * 6500</cost>
+          <source>SR5</source>
+          <page>456</page>
+          <parentid />
+          <hasmodularmount />
+          <plugsintomodularmount />
+          <blocksmounts />
+          <forced />
+          <rating>3</rating>
+          <minrating />
+          <maxrating>3</maxrating>
+          <ratinglabel>String_Rating</ratinglabel>
+          <subsystems />
+          <wirelesson>False</wirelesson>
+          <grade>Standard (Adapsin)</grade>
+          <location />
+          <extra />
+          <suite>False</suite>
+          <stolen>False</stolen>
+          <essdiscount>0</essdiscount>
+          <extraessadditivemultiplier>0</extraessadditivemultiplier>
+          <extraessmultiplicativemultiplier>1.0</extraessmultiplicativemultiplier>
+          <forcegrade />
+          <matrixcmfilled>0</matrixcmfilled>
+          <prototypetranshuman>False</prototypetranshuman>
+          <bonus />
+          <pairbonus />
+          <wirelessbonus />
+          <wirelesspairbonus />
+          <improvementsource>Cyberware</improvementsource>
+          <pairinclude>
+            <name>Enhanced Strength</name>
+          </pairinclude>
+          <wirelesspairinclude>
+            <name>Enhanced Strength</name>
+          </wirelesspairinclude>
+          <children />
+          <notes />
+          <discountedcost>False</discountedcost>
+          <addtoparentess>False</addtoparentess>
+          <addtoparentcapacity>False</addtoparentcapacity>
+          <active>False</active>
+          <homenode>False</homenode>
+          <devicerating />
+          <programlimit />
+          <overclocked>None</overclocked>
+          <attack />
+          <sleaze />
+          <dataprocessing />
+          <firewall />
+          <attributearray />
+          <modattack />
+          <modsleaze />
+          <moddataprocessing />
+          <modfirewall />
+          <modattributearray />
+          <canswapattributes>False</canswapattributes>
+          <sortorder>0</sortorder>
+        </cyberware>
+        <cyberware>
+          <sourceid>7d61f860-0637-4214-914d-c68022361d24</sourceid>
+          <guid>b3f2b729-d391-4430-a1c0-97ca8ffa14d7</guid>
+          <name>Customized Strength</name>
+          <category>Cyberlimb Enhancement</category>
+          <limbslot />
+          <limbslotcount>1</limbslotcount>
+          <inheritattributes>False</inheritattributes>
+          <ess>0</ess>
+          <capacity>[0]</capacity>
+          <avail>+Rating - MinRating + 1</avail>
+          <cost>(Rating - MinRating + 1) * 5000</cost>
+          <source>SR5</source>
+          <page>456</page>
+          <parentid />
+          <hasmodularmount />
+          <plugsintomodularmount />
+          <blocksmounts />
+          <forced />
+          <rating>7</rating>
+          <minrating>MinimumSTR+1</minrating>
+          <maxrating>MaximumSTR</maxrating>
+          <ratinglabel>String_Rating</ratinglabel>
+          <subsystems />
+          <wirelesson>False</wirelesson>
+          <grade>Standard (Adapsin)</grade>
+          <location />
+          <extra />
+          <suite>False</suite>
+          <stolen>False</stolen>
+          <essdiscount>0</essdiscount>
+          <extraessadditivemultiplier>0</extraessadditivemultiplier>
+          <extraessmultiplicativemultiplier>1.0</extraessmultiplicativemultiplier>
+          <forcegrade />
+          <matrixcmfilled>0</matrixcmfilled>
+          <prototypetranshuman>False</prototypetranshuman>
+          <bonus />
+          <pairbonus />
+          <wirelessbonus />
+          <wirelesspairbonus />
+          <improvementsource>Cyberware</improvementsource>
+          <pairinclude>
+            <name>Customized Strength</name>
+          </pairinclude>
+          <wirelesspairinclude>
+            <name>Customized Strength</name>
+          </wirelesspairinclude>
+          <children />
+          <notes />
+          <discountedcost>False</discountedcost>
+          <addtoparentess>False</addtoparentess>
+          <addtoparentcapacity>False</addtoparentcapacity>
+          <active>False</active>
+          <homenode>False</homenode>
+          <devicerating />
+          <programlimit />
+          <overclocked>None</overclocked>
+          <attack />
+          <sleaze />
+          <dataprocessing />
+          <firewall />
+          <attributearray />
+          <modattack />
+          <modsleaze />
+          <moddataprocessing />
+          <modfirewall />
+          <modattributearray />
+          <canswapattributes>False</canswapattributes>
+          <sortorder>0</sortorder>
+        </cyberware>
+        <cyberware>
+          <sourceid>2c50d5c1-f2ff-4c7b-bf5e-46925e808648</sourceid>
+          <guid>b979efe7-055a-4297-b098-c92e882ec10a</guid>
+          <name>Enhanced Agility</name>
+          <category>Cyberlimb Enhancement</category>
+          <limbslot />
+          <limbslotcount>1</limbslotcount>
+          <inheritattributes>False</inheritattributes>
+          <ess>0</ess>
+          <capacity>[Rating * 1]</capacity>
+          <avail>(Rating * 3)R</avail>
+          <cost>Rating * 6500</cost>
+          <source>SR5</source>
+          <page>456</page>
+          <parentid />
+          <hasmodularmount />
+          <plugsintomodularmount />
+          <blocksmounts />
+          <forced />
+          <rating>3</rating>
+          <minrating />
+          <maxrating>3</maxrating>
+          <ratinglabel>String_Rating</ratinglabel>
+          <subsystems />
+          <wirelesson>False</wirelesson>
+          <grade>Standard (Adapsin)</grade>
+          <location />
+          <extra />
+          <suite>False</suite>
+          <stolen>False</stolen>
+          <essdiscount>0</essdiscount>
+          <extraessadditivemultiplier>0</extraessadditivemultiplier>
+          <extraessmultiplicativemultiplier>1.0</extraessmultiplicativemultiplier>
+          <forcegrade />
+          <matrixcmfilled>0</matrixcmfilled>
+          <prototypetranshuman>False</prototypetranshuman>
+          <bonus />
+          <pairbonus />
+          <wirelessbonus />
+          <wirelesspairbonus />
+          <improvementsource>Cyberware</improvementsource>
+          <pairinclude>
+            <name>Enhanced Agility</name>
+          </pairinclude>
+          <wirelesspairinclude>
+            <name>Enhanced Agility</name>
+          </wirelesspairinclude>
+          <children />
+          <notes />
+          <discountedcost>False</discountedcost>
+          <addtoparentess>False</addtoparentess>
+          <addtoparentcapacity>False</addtoparentcapacity>
+          <active>False</active>
+          <homenode>False</homenode>
+          <devicerating />
+          <programlimit />
+          <overclocked>None</overclocked>
+          <attack />
+          <sleaze />
+          <dataprocessing />
+          <firewall />
+          <attributearray />
+          <modattack />
+          <modsleaze />
+          <moddataprocessing />
+          <modfirewall />
+          <modattributearray />
+          <canswapattributes>False</canswapattributes>
+          <sortorder>0</sortorder>
+        </cyberware>
       </children>
+      <notes />
+      <discountedcost>False</discountedcost>
+      <addtoparentess>False</addtoparentess>
+      <addtoparentcapacity>False</addtoparentcapacity>
+      <active>False</active>
+      <homenode>False</homenode>
+      <devicerating />
+      <programlimit />
+      <overclocked>None</overclocked>
+      <attack />
+      <sleaze />
+      <dataprocessing />
+      <firewall />
+      <attributearray />
+      <modattack />
+      <modsleaze />
+      <moddataprocessing />
+      <modfirewall />
+      <modattributearray />
+      <canswapattributes>False</canswapattributes>
+      <sortorder>0</sortorder>
+    </cyberware>
+    <cyberware>
+      <sourceid>81b40aa8-98d1-4a5d-89d6-9b6d438006da</sourceid>
+      <guid>44a54eff-0854-4ea1-9a83-fc465c39e8c5</guid>
+      <name>Cerebral Booster</name>
+      <category>Cultured</category>
+      <limbslot />
+      <limbslotcount>1</limbslotcount>
+      <inheritattributes>False</inheritattributes>
+      <ess>Rating * 0.2</ess>
+      <capacity>0</capacity>
+      <avail>Rating * 6</avail>
+      <cost>Rating * 31500</cost>
+      <source>SR5</source>
+      <page>460</page>
+      <parentid />
+      <hasmodularmount />
+      <plugsintomodularmount />
+      <blocksmounts />
+      <forced />
+      <rating>3</rating>
+      <minrating />
+      <maxrating>3</maxrating>
+      <ratinglabel>String_Rating</ratinglabel>
+      <subsystems />
+      <wirelesson>False</wirelesson>
+      <grade>Standard</grade>
+      <location />
+      <extra />
+      <suite>False</suite>
+      <stolen>False</stolen>
+      <essdiscount>0</essdiscount>
+      <extraessadditivemultiplier>0</extraessadditivemultiplier>
+      <extraessmultiplicativemultiplier>1.0</extraessmultiplicativemultiplier>
+      <forcegrade />
+      <matrixcmfilled>0</matrixcmfilled>
+      <prototypetranshuman>False</prototypetranshuman>
+      <bonus>
+        <specificattribute>
+          <name>LOG</name>
+          <val>Rating</val>
+        </specificattribute>
+      </bonus>
+      <pairbonus />
+      <wirelessbonus />
+      <wirelesspairbonus />
+      <improvementsource>Bioware</improvementsource>
+      <pairinclude>
+        <name>Cerebral Booster</name>
+      </pairinclude>
+      <wirelesspairinclude>
+        <name>Cerebral Booster</name>
+      </wirelesspairinclude>
+      <children />
+      <notes />
+      <discountedcost>False</discountedcost>
+      <addtoparentess>False</addtoparentess>
+      <addtoparentcapacity>False</addtoparentcapacity>
+      <active>False</active>
+      <homenode>False</homenode>
+      <devicerating />
+      <programlimit />
+      <overclocked>None</overclocked>
+      <attack />
+      <sleaze />
+      <dataprocessing />
+      <firewall />
+      <attributearray />
+      <modattack />
+      <modsleaze />
+      <moddataprocessing />
+      <modfirewall />
+      <modattributearray />
+      <canswapattributes>False</canswapattributes>
+      <sortorder>0</sortorder>
+    </cyberware>
+    <cyberware>
+      <sourceid>d1a314d9-3b83-4d62-854d-90e3788eea83</sourceid>
+      <guid>5999fb82-08e7-4e37-9fc4-4e2abdae6177</guid>
+      <name>Suprathyroid Gland</name>
+      <category>Basic</category>
+      <limbslot />
+      <limbslotcount>1</limbslotcount>
+      <inheritattributes>False</inheritattributes>
+      <ess>0.7</ess>
+      <capacity>0</capacity>
+      <avail>20R</avail>
+      <cost>140000</cost>
+      <source>SR5</source>
+      <page>459</page>
+      <parentid />
+      <hasmodularmount />
+      <plugsintomodularmount />
+      <blocksmounts />
+      <forced />
+      <rating>0</rating>
+      <minrating />
+      <maxrating />
+      <ratinglabel>String_Rating</ratinglabel>
+      <subsystems />
+      <wirelesson>False</wirelesson>
+      <grade>Standard</grade>
+      <location />
+      <extra />
+      <suite>False</suite>
+      <stolen>False</stolen>
+      <essdiscount>0</essdiscount>
+      <extraessadditivemultiplier>0</extraessadditivemultiplier>
+      <extraessmultiplicativemultiplier>1.0</extraessmultiplicativemultiplier>
+      <forcegrade />
+      <matrixcmfilled>0</matrixcmfilled>
+      <prototypetranshuman>False</prototypetranshuman>
+      <bonus>
+        <lifestylecost>25</lifestylecost>
+        <specificattribute>
+          <name>BOD</name>
+          <val>1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>AGI</name>
+          <val>1</val>
+        </specificattribute>
+        <specificattribute>
+          <name precedence="0">REA</name>
+          <val>1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>STR</name>
+          <val>1</val>
+        </specificattribute>
+      </bonus>
+      <pairbonus />
+      <wirelessbonus />
+      <wirelesspairbonus />
+      <improvementsource>Bioware</improvementsource>
+      <pairinclude>
+        <name>Suprathyroid Gland</name>
+      </pairinclude>
+      <wirelesspairinclude>
+        <name>Suprathyroid Gland</name>
+      </wirelesspairinclude>
+      <children />
       <notes />
       <discountedcost>False</discountedcost>
       <addtoparentess>False</addtoparentess>
@@ -3450,10 +4033,149 @@ With this particular quality, the character can have one skill rated at 7 at cha
     </improvement>
     <improvement>
       <target />
+      <improvedname>LOG</improvedname>
+      <sourcename>44a54eff-0854-4ea1-9a83-fc465c39e8c5</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>3</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Bioware</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname />
+      <sourcename>5999fb82-08e7-4e37-9fc4-4e2abdae6177</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>25</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>LifestyleCost</improvementttype>
+      <improvementsource>Bioware</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>BOD</improvedname>
+      <sourcename>5999fb82-08e7-4e37-9fc4-4e2abdae6177</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>1</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Bioware</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>AGI</improvedname>
+      <sourcename>5999fb82-08e7-4e37-9fc4-4e2abdae6177</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>1</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Bioware</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <unique>precedence0</unique>
+      <target />
+      <improvedname>REA</improvedname>
+      <sourcename>5999fb82-08e7-4e37-9fc4-4e2abdae6177</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>1</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Bioware</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>STR</improvedname>
+      <sourcename>5999fb82-08e7-4e37-9fc4-4e2abdae6177</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>1</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Bioware</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
       <improvedname>RES</improvedname>
       <sourcename />
-      <min>-9</min>
-      <max>-9</max>
+      <min>-10</min>
+      <max>-10</max>
       <aug>0</aug>
       <augmax>0</augmax>
       <val>0</val>
@@ -3475,8 +4197,8 @@ With this particular quality, the character can have one skill rated at 7 at cha
       <target />
       <improvedname>DEP</improvedname>
       <sourcename />
-      <min>-9</min>
-      <max>-9</max>
+      <min>-10</min>
+      <max>-10</max>
       <aug>0</aug>
       <augmax>0</augmax>
       <val>0</val>
@@ -3498,8 +4220,8 @@ With this particular quality, the character can have one skill rated at 7 at cha
       <target />
       <improvedname>MAG</improvedname>
       <sourcename />
-      <min>-9</min>
-      <max>-9</max>
+      <min>-10</min>
+      <max>-10</max>
       <aug>0</aug>
       <augmax>0</augmax>
       <val>0</val>
@@ -3521,8 +4243,8 @@ With this particular quality, the character can have one skill rated at 7 at cha
       <target />
       <improvedname>MAGAdept</improvedname>
       <sourcename />
-      <min>-9</min>
-      <max>-9</max>
+      <min>-10</min>
+      <max>-10</max>
       <aug>0</aug>
       <augmax>0</augmax>
       <val>0</val>
@@ -3563,7 +4285,7 @@ With this particular quality, the character can have one skill rated at 7 at cha
     <!--these values are not loaded and only stored here for third parties, who parse this files (to not have to calculate them themselves)-->
     <physicalcm>14</physicalcm>
     <physicalcmthresholdoffset>0</physicalcmthresholdoffset>
-    <physicalcmoverflow>8</physicalcmoverflow>
+    <physicalcmoverflow>9</physicalcmoverflow>
     <stuncm>12</stuncm>
     <stuncmthresholdoffset>0</stuncmthresholdoffset>
   </calculatedvalues>
