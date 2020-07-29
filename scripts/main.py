@@ -24,7 +24,7 @@ Exclude the \".chum5\" portion. Make sure the file is in the \"saves\" directory
 
         # Attempt to read and parse the Chummer file, if it doesn't work, send out an error message.
         try:
-            with open(str('saves/' + filename + ".chum5"), mode="r", encoding="utf-8") as file:
+            with open(str('../saves/' + filename + ".chum5"), mode="r", encoding="utf-8") as file:
                 character = xmltodict.parse(file.read())
         except FileNotFoundError:
             print("""\nThis filename specified is wrong or the file is missing.\n

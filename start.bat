@@ -1,6 +1,6 @@
 @ ECHO OFF
 TITLE Flag-inator 9000
 
-python scripts/main.py
+deps\Python\python.exe scripts\main.py
 
 PAUSE

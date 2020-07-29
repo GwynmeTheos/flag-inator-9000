@@ -25,12 +25,15 @@ def attributeFlagCheck(character, attributesDict):
         elif currentAtt['name'] == 'ESS' or currentAtt['name'] == 'EDG' or currentAtt['name'] == 'MAGAdept':
             continue
 
-        elif attributesDict[str('average' + currentAtt['name'])] == 1:
-            accruedFlags += 2
-            print("    [" + currentAtt['name'] + " at 1] = +2 Flag")
+        else:
+            if attributesDict[currentAtt['name']] == 1:
+                accruedFlags += 2
+                print("    [" + currentAtt['name'] + " at 1] = +2 Flag")
 
-        elif attributesDict[str('average' + currentAtt['name'])] >= 9 and attributesDict[str('average' + currentAtt['name'])] > int(currentAtt['metatypemax']):
-            accruedFlags += 2
-            print("    [BOD at " + str(attributesDict['averageBOD']) + ", over Metatype limit] = +2 Flag")
+            if attributesDict[str('average' + currentAtt['name'])] >= 9 and attributesDict[
+                str('average' + currentAtt['name'])] > int(currentAtt['metatypemax']):
+                accruedFlags += 2
+                print("    [BOD at " + str(attributesDict['averageBOD']) + ", over Metatype limit] = +2 Flag")
+
 
     return accruedFlags
