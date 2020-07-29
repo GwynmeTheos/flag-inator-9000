@@ -1,0 +1,10 @@
+Step 1 - run the Python installer found in "deps".
+
+	- During the instalation, during the very first screen, make sure to select "Add Python 3.8 to PATH"
+	- Click "Install Now" and follow the installation process normally.
+	
+Step 2 - run the modules.bat file in "deps".
+
+	- If you installed Python as described above, nothing should go wrong.
+	
+Step 3 - In the root folder, run the "start.bat" file.
