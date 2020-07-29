@@ -6,7 +6,7 @@ import os, time, math
 # third-party modules
 import xmltodict
 # project scripts
-import char_data, talents, initiate_grades, wares, skills, attributes, spells, adept_powers, qualities, armor
+import char_data, talents, initiate_grades, wares, skills, attributes, spells, adept_powers, qualities
 import metatypes, awakened_essence, foci
 
 
