@@ -39,43 +39,153 @@ def createAttributeDict(character):
     # Find and add the highest limb's AGI rating.
     highestLimbAGI = 0
     try:
+        limbCount = 0
         for limb in character['character']['cyberwares']['cyberware']:
             limbAGI = 0
+
             if limb['category'] == 'Cyberlimb':
-                if limb['children']['cyberware']['name'] == "Customized Agility":
-                    limbAGI = int(limb['children']['cyberware']['rating'])
-                elif limb['children']['cyberware']['name'] == "Enhanced Agility":
-                    limbAGI += int(limb['children']['cyberware']['rating'])
-                if limbAGI > highestLimbAGI:
-                    highestLimbAGI = limbAGI
+                try:
+                    if limb['limbslot'] == 'arm' or limb['limbslot'] == 'leg':
+                        limbCount += 1
+                    for mods in limb['children']['cyberware']:
+                        # Normal Limbs
+                        if mods['name'] == 'Customized Agility' or mods['name'] == "Enhanced Agility":
+                            limbAGI += int(mods['rating'])
+                        # Centaur Liminal Body
+                        elif mods['category'] == 'Cyberlimb':
+                            try:
+                                for limBodyMods in mods['children']['cyberware']:
+                                    if limBodyMods['name'] == 'Customized Agility' or limBodyMods['name'] == "Enhanced Agility":
+                                        limbAGI += int(limBodyMods['rating'])
+                            except TypeError:
+                                pass
+                except TypeError:
+                    pass
+            if limbAGI > highestLimbAGI:
+                highestLimbAGI = limbAGI
         attributesDict['highestLimbAGI'] = highestLimbAGI
+        if 2 <= limbCount <= 3:
+            attributesDict['highestLimbAGI'] += 1
+        elif limbCount >= 4:
+            attributesDict['highestLimbAGI'] += 2
     except TypeError:
         attributesDict['highestLimbAGI'] = 0
+
+    # Find and add the highest limb's STR rating.
+    highestLimbSTR = 0
+    try:
+        limbCount = 0
+        for limb in character['character']['cyberwares']['cyberware']:
+            limbSTR = 0
+
+            if limb['category'] == 'Cyberlimb':
+                try:
+                    if limb['limbslot'] == 'arm' or limb['limbslot'] == 'leg':
+                        limbCount += 1
+                    for mods in limb['children']['cyberware']:
+                        # Normal Limbs
+                        if mods['name'] == 'Customized Strength' or mods['name'] == "Enhanced Strength":
+                            limbSTR += int(mods['rating'])
+                        # Centaur Liminal Body
+                        elif mods['category'] == 'Cyberlimb':
+                            try:
+                                for limBodyMods in mods['children']['cyberware']:
+                                    if limBodyMods['name'] == 'Customized Strength' or limBodyMods['name'] == "Enhanced Strength":
+                                        limbSTR += int(limBodyMods['rating'])
+                            except TypeError:
+                                pass
+                except TypeError:
+                    pass
+            if limbSTR > highestLimbSTR:
+                highestLimbSTR = limbSTR
+        attributesDict['highestLimbSTR'] = highestLimbSTR
+        if 2 <= limbCount <= 3:
+            attributesDict['highestLimbSTR'] += 1
+        elif limbCount >= 4:
+            attributesDict['highestLimbSTR'] += 2
+    except TypeError:
+        attributesDict['highestLimbSTR'] = 0
 
     # Find and add the highest arm's AGI rating.
     highestArmAGI = 0
     try:
+        limbCount = 0
         for limb in character['character']['cyberwares']['cyberware']:
+            armAGI = 0
+            if limb['limbslot'] == 'arm' or limb['limbslot'] == 'leg':
+                limbCount += 1
             if limb['limbslot'] == 'arm':
-                armAGI = 0
-                if limb['children']['cyberware']['name'] == "Customized Agility":
-                    armAGI = int(limb['children']['cyberware']['rating'])
-                elif limb['children']['cyberware']['name'] == "Enhanced Agility":
-                    armAGI += int(limb['children']['cyberware']['rating'])
+                try:
+                    for mods in limb['children']['cyberware']:
+                        # Normal Limbs
+                        if mods['name'] == 'Customized Agility' or mods['name'] == 'Enhanced Agility':
+                            armAGI += int(mods['rating'])
+                        # Centaur Liminal body
+                        elif mods['category'] == 'Cyberlimbs':
+                            try:
+                                for limBodyMods in mods['children']['cyberware']:
+                                    if limBodyMods['name'] == 'Customized Agility' or limBodyMods['name'] == "Enhanced Agility":
+                                        armAGI += int(limBodyMods['rating'])
+                            except TypeError:
+                                pass
+
+                except TypeError:
+                    pass
+
                 if armAGI > highestArmAGI:
                     highestArmAGI = armAGI
         attributesDict['highestArmAGI'] = highestArmAGI
+        if 2 <= limbCount <= 3:
+            attributesDict['highestArmAGI'] += 1
+        elif limbCount >= 4:
+            attributesDict['highestArmAGI'] += 2
     except TypeError:
         attributesDict['highestArmAGI'] = 0
+
+    # Find and add the highest arm's AGI rating.
+    highestArmSTR = 0
+    try:
+        limbCount = 0
+        for limb in character['character']['cyberwares']['cyberware']:
+            armSTR = 0
+            if limb['limbslot'] == 'arm' or limb['limbslot'] == 'leg':
+                limbCount += 1
+            if limb['limbslot'] == 'arm':
+                try:
+                    for mods in limb['children']['cyberware']:
+                        # Normal Limbs
+                        if mods['name'] == 'Customized Strength' or mods['name'] == 'Enhanced Strength':
+                            armSTR += int(mods['rating'])
+                        # Centaur Liminal body
+                        elif mods['category'] == 'Cyberlimbs':
+                            try:
+                                for limBodyMods in mods['children']['cyberware']:
+                                    if limBodyMods['name'] == 'Customized Strength' or limBodyMods['name'] == "Enhanced Strength":
+                                        armSTR += int(limBodyMods['rating'])
+                            except TypeError:
+                                pass
+
+                except TypeError:
+                    pass
+
+                if armSTR > highestArmSTR:
+                    highestArmSTR = armSTR
+        attributesDict['highestArmSTR'] = highestArmSTR
+        if 2 <= limbCount <= 3:
+            attributesDict['highestArmSTR'] += 1
+        elif limbCount >= 4:
+            attributesDict['highestArmSTR'] += 2
+    except TypeError:
+        attributesDict['highestArmSTR'] = 0
 
     return attributesDict
 
 
-def createImprovementDict(character):
-    skillImprovementsDict = dict()
-
-    for skill in character['character']['improvements']['improvement']:
-        if skill['customid'] == 'skilllevel':
-            skillImprovementsDict[skill['improvedname']] = int(skill['val'])
-
-    return skillImprovementsDict
+# def createImprovementDict(character):
+#    skillImprovementsDict = dict()
+#
+#    for skill in character['character']['improvements']['improvement']:
+#        if skill['customid'] == 'skilllevel':
+#            skillImprovementsDict[skill['improvedname']] = int(skill['val'])
+#
+#    return skillImprovementsDict

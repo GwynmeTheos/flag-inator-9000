@@ -1,96 +1,93 @@
 # Skill flag checker.
 
 
-def skillFlagCheck(character, skillsDict, attributesDict, skillImprovements):
+def skillFlagCheck(character, skillsDict, attributesDict):
     accruedFlags = 0
 
     for currentSkill in character['character']['newskills']['skills']['skill']:
 
         # Body skills:
         try:
-            accruedFlags += BODSkills(currentSkill, skillsDict, attributesDict, skillImprovements)
+            accruedFlags += BODSkills(currentSkill, skillsDict, attributesDict)
         except TypeError:
             pass
 
         # Combat skills:
         try:
-            accruedFlags += CombatSkills(currentSkill, skillsDict, attributesDict, skillImprovements)
+            accruedFlags += CombatSkills(currentSkill, skillsDict, attributesDict)
         except TypeError:
             pass
 
         # Unarmed Combat skill:
         try:
-            accruedFlags += UnarmedCombatSkills(currentSkill, attributesDict, skillImprovements)
+            accruedFlags += UnarmedCombatSkills(currentSkill, attributesDict)
         except TypeError:
             pass
 
         # Agility skills:
         try:
-            accruedFlags += AGISkills(currentSkill, skillsDict, attributesDict, skillImprovements)
+            accruedFlags += AGISkills(currentSkill, skillsDict, attributesDict)
         except TypeError:
             pass
 
         # Reaction skills:
         try:
-            accruedFlags += REASkills(currentSkill, skillsDict, attributesDict, skillImprovements)
+            accruedFlags += REASkills(currentSkill, skillsDict, attributesDict)
         except TypeError:
             pass
 
         # Strength skills:
         try:
-            accruedFlags += STRSkills(currentSkill, skillsDict, attributesDict, skillImprovements)
+            accruedFlags += STRSkills(currentSkill, skillsDict, attributesDict)
         except TypeError:
             pass
 
         # Charisma skills:
         try:
-            accruedFlags += CHASkills(currentSkill, skillsDict, attributesDict, skillImprovements)
+            accruedFlags += CHASkills(currentSkill, skillsDict, attributesDict)
         except TypeError:
             pass
 
         # Intuition skills:
         try:
-            accruedFlags += INTSkills(currentSkill, skillsDict, attributesDict, skillImprovements)
+            accruedFlags += INTSkills(currentSkill, skillsDict, attributesDict)
         except TypeError:
             pass
 
         # Logic skills:
         try:
-            accruedFlags += LOGSkills(currentSkill, skillsDict, attributesDict, skillImprovements)
+            accruedFlags += LOGSkills(currentSkill, skillsDict, attributesDict)
         except TypeError:
             pass
 
         # Willpower skills:
         try:
-            accruedFlags += WILSkills(currentSkill, skillsDict, attributesDict, skillImprovements)
+            accruedFlags += WILSkills(currentSkill, skillsDict, attributesDict)
         except TypeError:
             pass
 
         # Magic skills:
         try:
-            accruedFlags += MAGSkills(currentSkill, skillsDict, attributesDict, skillImprovements)
+            accruedFlags += MAGSkills(currentSkill, skillsDict, attributesDict)
         except TypeError:
             pass
 
         # Resonance skills:
         try:
-            accruedFlags += RESSkills(currentSkill, skillsDict, attributesDict, skillImprovements)
+            accruedFlags += RESSkills(currentSkill, skillsDict, attributesDict)
         except TypeError:
             pass
 
     return accruedFlags
 
 
-def BODSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
+def BODSkills(currentSkill, skillsDict, attributesDict):
     for skill in skillsDict['BODSkills']:
         if skill == currentSkill['name']:
             accruedFlags = 0
 
             # Rating check:
-            try:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base']) + skillImprovements[skill]
-            except KeyError:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
+            skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
                 if skillRating == 8 or skillRating == 9:
                     accruedFlags += 1
@@ -118,16 +115,13 @@ def BODSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             return accruedFlags
 
 
-def CombatSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
+def CombatSkills(currentSkill, skillsDict, attributesDict):
     for skill in skillsDict['CombatSkills']:
         if skill == currentSkill['name']:
             accruedFlags = 0
 
             # Rating check:
-            try:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base']) + skillImprovements[skill]
-            except KeyError:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
+            skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
                 if skillRating == 8 or skillRating == 9:
                     accruedFlags += 1
@@ -163,16 +157,12 @@ def CombatSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             return accruedFlags
 
 
-def UnarmedCombatSkills(currentSkill, attributesDict, skillImprovements):
+def UnarmedCombatSkills(currentSkill, attributesDict):
     if 'Unarmed Combat' == currentSkill['name']:
         accruedFlags = 0
 
         # Rating check:
-        try:
-            skillRating = int(currentSkill['karma']) + int(currentSkill['base']) + skillImprovements[
-                'Unarmed Combat']
-        except KeyError:
-            skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
+        skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
         if skillRating > 7:
             if skillRating == 8 or skillRating == 9:
                 accruedFlags += 1
@@ -185,11 +175,13 @@ def UnarmedCombatSkills(currentSkill, attributesDict, skillImprovements):
                 print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +4 Flag")
 
         # Dicepool check:
+
         if attributesDict['averageLOG'] > attributesDict['averageAGI']:
             dicepool = skillRating + attributesDict['averageLOG']
             higherRating = "Logic"
         else:
             if attributesDict['averageAGI'] > attributesDict['highestLimbAGI']:
+                print(attributesDict['averageAGI'] + ">" + attributesDict['highestLimbAGI'])
                 dicepool = skillRating + attributesDict['averageAGI']
             else:
                 dicepool = skillRating + attributesDict['highestLimbAGI']
@@ -209,16 +201,13 @@ def UnarmedCombatSkills(currentSkill, attributesDict, skillImprovements):
         return accruedFlags
 
 
-def AGISkills(currentSkill, skillsDict, attributesDict, skillImprovements):
+def AGISkills(currentSkill, skillsDict, attributesDict):
     for skill in skillsDict['AGISkills']:
         if skill == currentSkill['name']:
             accruedFlags = 0
 
             # Rating check:
-            try:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base']) + skillImprovements[skill]
-            except KeyError:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
+            skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
                 if skillRating == 8 or skillRating == 9:
                     accruedFlags += 1
@@ -262,16 +251,13 @@ def AGISkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             return accruedFlags
 
 
-def REASkills(currentSkill, skillsDict, attributesDict, skillImprovements):
-    for skill in skillsDict['CombatSkills']:
+def REASkills(currentSkill, skillsDict, attributesDict):
+    for skill in skillsDict['REASkills']:
         if skill == currentSkill['name']:
             accruedFlags = 0
 
             # Rating check:
-            try:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base']) + skillImprovements[skill]
-            except KeyError:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
+            skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
                 if skillRating == 8 or skillRating == 9:
                     accruedFlags += 1
@@ -304,16 +290,13 @@ def REASkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             return accruedFlags
 
 
-def STRSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
+def STRSkills(currentSkill, skillsDict, attributesDict):
     for skill in skillsDict['STRSkills']:
         if skill == currentSkill['name']:
             accruedFlags = 0
 
             # Rating check:
-            try:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base']) + skillImprovements[skill]
-            except KeyError:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
+            skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
                 if skillRating == 8 or skillRating == 9:
                     accruedFlags += 1
@@ -341,16 +324,13 @@ def STRSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             return accruedFlags
 
 
-def CHASkills(currentSkill, skillsDict, attributesDict, skillImprovements):
+def CHASkills(currentSkill, skillsDict, attributesDict):
     for skill in skillsDict['CHASkills']:
         if skill == currentSkill['name']:
             accruedFlags = 0
 
             # Rating check:
-            try:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base']) + skillImprovements[skill]
-            except KeyError:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
+            skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
                 if skillRating == 8 or skillRating == 9:
                     accruedFlags += 1
@@ -378,16 +358,13 @@ def CHASkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             return accruedFlags
 
 
-def INTSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
+def INTSkills(currentSkill, skillsDict, attributesDict):
     for skill in skillsDict['INTSkills']:
         if skill == currentSkill['name']:
             accruedFlags = 0
 
             # Rating check:
-            try:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base']) + skillImprovements[skill]
-            except KeyError:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
+            skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
                 if skillRating == 8 or skillRating == 9:
                     accruedFlags += 1
@@ -416,16 +393,13 @@ def INTSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             return accruedFlags
 
 
-def LOGSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
+def LOGSkills(currentSkill, skillsDict, attributesDict):
     for skill in skillsDict['LOGSkills']:
         if skill == currentSkill['name']:
             accruedFlags = 0
 
             # Rating check:
-            try:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base']) + skillImprovements[skill]
-            except KeyError:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
+            skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
                 if skillRating == 8 or skillRating == 9:
                     accruedFlags += 1
@@ -470,16 +444,13 @@ def LOGSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             return accruedFlags
 
 
-def WILSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
+def WILSkills(currentSkill, skillsDict, attributesDict):
     for skill in skillsDict['BODSkills']:
         if skill == currentSkill['name']:
             accruedFlags = 0
 
             # Rating check:
-            try:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base']) + skillImprovements[skill]
-            except KeyError:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
+            skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
                 if skillRating == 8 or skillRating == 9:
                     accruedFlags += 1
@@ -507,16 +478,13 @@ def WILSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             return accruedFlags
 
 
-def MAGSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
+def MAGSkills(currentSkill, skillsDict, attributesDict):
     for skill in skillsDict['MAGSkills']:
         if skill == currentSkill['name']:
             accruedFlags = 0
 
             # Rating check:
-            try:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base']) + skillImprovements[skill]
-            except KeyError:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
+            skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
                 if skillRating == 8 or skillRating == 9:
                     accruedFlags += 1
@@ -544,16 +512,13 @@ def MAGSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             return accruedFlags
 
 
-def RESSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
+def RESSkills(currentSkill, skillsDict, attributesDict):
     for skill in skillsDict['RESSkills']:
         if skill == currentSkill['name']:
             accruedFlags = 0
 
             # Rating check:
-            try:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base']) + skillImprovements[skill]
-            except KeyError:
-                skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
+            skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
                 if skillRating == 8 or skillRating == 9:
                     accruedFlags += 1

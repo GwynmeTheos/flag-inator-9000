@@ -30,11 +30,11 @@ def qualityFlagCheck(character):
 
             elif quality['name'] == 'Day Job (20 hrs)':
                 accruedFlags += 3
-                print("    [Day Job (20 hrs)] = + Flag")
+                print("    [Day Job (20 hrs)] = +3 Flag")
 
             elif quality['name'] == 'Day Job (40 hrs)':
                 accruedFlags += 5
-                print("    [Day Job (40 hrs)] = + Flag")
+                print("    [Day Job (40 hrs)] = +5 Flag")
 
             # Fame
             elif quality['name'] == 'Fame: Local':

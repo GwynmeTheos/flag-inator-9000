@@ -48,7 +48,7 @@
   <gamenotes />
   <primaryarm>Right</primaryarm>
   <ignorerules>True</ignorerules>
-  <karma>-1058</karma>
+  <karma>-1080</karma>
   <special>9</special>
   <totalspecial>9</totalspecial>
   <totalattributes>16</totalattributes>
@@ -12781,8 +12781,68 @@ Tough dermal deposits under or on the skin, similar to a troll, count as a natur
           <power rating="1">Armor</power>
         </critterpowers>
       </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>b47319f5-372d-4e23-9fd9-a8e4aecd4c85</sourceid>
+      <guid>966131bb-e4dc-4d1b-a140-fa653edd7582</guid>
+      <name>Cyber-Singularity Seeker</name>
+      <extra />
+      <bp>12</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>False</metagenic>
+      <print>True</print>
+      <qualitytype>Positive</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>CF</source>
+      <page>54</page>
+      <sourcename />
+      <bonus>
+        <cyberseeker>WIL</cyberseeker>
+      </bonus>
       <firstlevelbonus />
       <notes />
+    </quality>
+    <quality>
+      <sourceid>38deea18-76f0-49a3-95ba-50006e4e7f90</sourceid>
+      <guid>98f0429e-ebdb-4975-9470-9dab2f1b1610</guid>
+      <name>Redliner</name>
+      <extra />
+      <bp>10</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>False</metagenic>
+      <print>True</print>
+      <qualitytype>Positive</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>CF</source>
+      <page>55</page>
+      <sourcename />
+      <bonus>
+        <cyberseeker>AGI</cyberseeker>
+        <cyberseeker>STR</cyberseeker>
+        <cyberseeker>BOX</cyberseeker>
+        <!--physical boxes, hardcoded to times 3 elsewhere -->
+      </bonus>
+      <firstlevelbonus />
+      <notes>REDLINER
+(COST: 10 KARMA)
+Any cyberlimbs you have installed are jacked-to-themax, with safety limits disabled and performance overclocked beyond what the warranty normally covers,
+and that’s the way you like it. You receive +1 Strength and +1 Agility for every two full cyberarms or cyberlegs installed, up to a maximum of +2 for both attributes (sorry, no super centipede-man builds). The downside to pushing your ’ware that hard, however, is that the strain is quite damaging. You lose three Physical Condition Monitor boxes per two full cyberarms and legs installed. Normally, every cyberlimb gives you one additional box, but with this quality, after two full limbs you end up with net one less box (i.e., –1 instead of +2).
+</notes>
     </quality>
   </qualities>
   <lifestyles />
@@ -16316,7 +16376,7 @@ Tough dermal deposits under or on the skin, similar to a troll, count as a natur
       <guid>92c409e4-a885-4cbb-8432-06bfb7c50c20</guid>
       <name>Armor</name>
       <extra>1</extra>
-      <rating>1</rating>
+      <rating>0</rating>
       <category>Mundane</category>
       <type>P</type>
       <action>Auto</action>
@@ -33396,6 +33456,52 @@ Tough dermal deposits under or on the skin, similar to a troll, count as a natur
     </improvement>
     <improvement>
       <target />
+      <improvedname />
+      <sourcename>92c409e4-a885-4cbb-8432-06bfb7c50c20</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>1</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Armor</improvementttype>
+      <improvementsource>CritterPower</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>92c409e4-a885-4cbb-8432-06bfb7c50c20</improvedname>
+      <sourcename>4cfc2372-e2cd-4d0f-9b6d-16eb43221c66</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>CritterPower</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
       <improvedname>RES</improvedname>
       <sourcename />
       <min>-36</min>
@@ -33488,18 +33594,42 @@ Tough dermal deposits under or on the skin, similar to a troll, count as a natur
     </improvement>
     <improvement>
       <target />
-      <improvedname />
-      <sourcename>92c409e4-a885-4cbb-8432-06bfb7c50c20</sourcename>
+      <improvedname>WIL</improvedname>
+      <sourcename>966131bb-e4dc-4d1b-a140-fa653edd7582</sourcename>
       <min>0</min>
       <max>0</max>
       <aug>0</aug>
       <augmax>0</augmax>
-      <val>1</val>
+      <val>0</val>
+      <rating>0</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Seeker</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <unique>b198d874-465f-4887-904e-938982ab5094</unique>
+      <target />
+      <improvedname>WIL</improvedname>
+      <sourcename>SEEKER_WIL</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>2</aug>
+      <augmax>0</augmax>
+      <val>2</val>
       <rating>1</rating>
       <exclude />
       <condition />
-      <improvementttype>Armor</improvementttype>
-      <improvementsource>CritterPower</improvementsource>
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
       <custom>False</custom>
       <customname />
       <customid />
@@ -33511,17 +33641,135 @@ Tough dermal deposits under or on the skin, similar to a troll, count as a natur
     </improvement>
     <improvement>
       <target />
-      <improvedname>92c409e4-a885-4cbb-8432-06bfb7c50c20</improvedname>
-      <sourcename>4cfc2372-e2cd-4d0f-9b6d-16eb43221c66</sourcename>
+      <improvedname>AGI</improvedname>
+      <sourcename>98f0429e-ebdb-4975-9470-9dab2f1b1610</sourcename>
       <min>0</min>
       <max>0</max>
       <aug>0</aug>
       <augmax>0</augmax>
       <val>0</val>
+      <rating>0</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Seeker</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>STR</improvedname>
+      <sourcename>98f0429e-ebdb-4975-9470-9dab2f1b1610</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>0</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Seeker</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>BOX</improvedname>
+      <sourcename>98f0429e-ebdb-4975-9470-9dab2f1b1610</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>0</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Seeker</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <unique>62f9f436-6218-4e37-a4d5-fa2802054aca</unique>
+      <target />
+      <improvedname>AGI</improvedname>
+      <sourcename>SEEKER_AGI</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>2</aug>
+      <augmax>0</augmax>
+      <val>2</val>
       <rating>1</rating>
       <exclude />
       <condition />
-      <improvementttype>CritterPower</improvementttype>
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <unique>4ed0426a-4c91-4b08-b506-e676859737dc</unique>
+      <target />
+      <improvedname>STR</improvedname>
+      <sourcename>SEEKER_STR</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>2</aug>
+      <augmax>0</augmax>
+      <val>2</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <unique>d1449a52-cc4b-42cd-9764-6f88c351a78f</unique>
+      <target />
+      <improvedname>BOX</improvedname>
+      <sourcename>SEEKER_BOX</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>-6</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>PhysicalCM</improvementttype>
       <improvementsource>Quality</improvementsource>
       <custom>False</custom>
       <customname />
@@ -33560,7 +33808,7 @@ Tough dermal deposits under or on the skin, similar to a troll, count as a natur
   </customdatadirectorynames>
   <calculatedvalues>
     <!--these values are not loaded and only stored here for third parties, who parse this files (to not have to calculate them themselves)-->
-    <physicalcm>16</physicalcm>
+    <physicalcm>10</physicalcm>
     <physicalcmthresholdoffset>0</physicalcmthresholdoffset>
     <physicalcmoverflow>13</physicalcmoverflow>
     <stuncm>10</stuncm>

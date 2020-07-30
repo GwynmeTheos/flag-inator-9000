@@ -4484,78 +4484,6 @@ She can dull the colors to almost black when she needs to lower her visual detec
           <sortorder>0</sortorder>
         </cyberware>
         <cyberware>
-          <sourceid>2a6ab1b1-f008-4c92-83d9-a298a5dad855</sourceid>
-          <guid>dfc12fe3-b0e7-4f34-b43b-4309028428f5</guid>
-          <name>Cyberlimb Optimization</name>
-          <category>Cyberlimb Enhancement</category>
-          <limbslot />
-          <limbslotcount>1</limbslotcount>
-          <inheritattributes>False</inheritattributes>
-          <ess>0</ess>
-          <capacity>[2]</capacity>
-          <avail>+2</avail>
-          <cost>2000</cost>
-          <source>CF</source>
-          <page>87</page>
-          <parentid />
-          <hasmodularmount />
-          <plugsintomodularmount />
-          <blocksmounts />
-          <forced />
-          <rating>0</rating>
-          <minrating />
-          <maxrating />
-          <ratinglabel>String_Rating</ratinglabel>
-          <subsystems />
-          <wirelesson>False</wirelesson>
-          <grade>Standard</grade>
-          <location />
-          <extra>Unarmed Combat</extra>
-          <suite>False</suite>
-          <stolen>False</stolen>
-          <essdiscount>0</essdiscount>
-          <extraessadditivemultiplier>0</extraessadditivemultiplier>
-          <extraessmultiplicativemultiplier>1.0</extraessmultiplicativemultiplier>
-          <forcegrade />
-          <matrixcmfilled>0</matrixcmfilled>
-          <prototypetranshuman>False</prototypetranshuman>
-          <bonus>
-            <selecttext />
-          </bonus>
-          <pairbonus />
-          <wirelessbonus />
-          <wirelesspairbonus />
-          <improvementsource>Cyberware</improvementsource>
-          <pairinclude>
-            <name>Cyberlimb Optimization</name>
-          </pairinclude>
-          <wirelesspairinclude>
-            <name>Cyberlimb Optimization</name>
-          </wirelesspairinclude>
-          <children />
-          <notes />
-          <discountedcost>False</discountedcost>
-          <addtoparentess>False</addtoparentess>
-          <addtoparentcapacity>False</addtoparentcapacity>
-          <active>False</active>
-          <homenode>False</homenode>
-          <devicerating />
-          <programlimit />
-          <overclocked>None</overclocked>
-          <attack />
-          <sleaze />
-          <dataprocessing />
-          <firewall />
-          <attributearray />
-          <modattack />
-          <modsleaze />
-          <moddataprocessing />
-          <modfirewall />
-          <modattributearray />
-          <canswapattributes>False</canswapattributes>
-          <sortorder>0</sortorder>
-        </cyberware>
-        <cyberware>
           <sourceid>8ea736c6-5a90-471c-9320-18432ec9aaf0</sourceid>
           <guid>7e4ec6da-ce63-4ce8-a62c-4821ab01d3f9</guid>
           <name>Armor</name>
@@ -13121,29 +13049,6 @@ and take the brunt of an incoming attack. There is no Defense Test (Reaction + I
     <improvement>
       <target />
       <improvedname>Unarmed Combat</improvedname>
-      <sourcename>dfc12fe3-b0e7-4f34-b43b-4309028428f5</sourcename>
-      <min>0</min>
-      <max>0</max>
-      <aug>0</aug>
-      <augmax>0</augmax>
-      <val>0</val>
-      <rating>1</rating>
-      <exclude />
-      <condition />
-      <improvementttype>Text</improvementttype>
-      <improvementsource>Cyberware</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
-    <improvement>
-      <target />
-      <improvedname>Unarmed Combat</improvedname>
       <sourcename>c80fee02-1515-48b1-a329-c2766d86b7bb</sourcename>
       <min>0</min>
       <max>0</max>
@@ -13206,7 +13111,7 @@ and take the brunt of an incoming attack. There is no Defense Test (Reaction + I
       <customid>specificskill</customid>
       <customgroup />
       <addtorating>False</addtorating>
-      <enabled>True</enabled>
+      <enabled>False</enabled>
       <order>0</order>
       <notes />
     </improvement>
@@ -13713,7 +13618,7 @@ and take the brunt of an incoming attack. There is no Defense Test (Reaction + I
       <customid>skillgroup</customid>
       <customgroup>Tailored Pheromones</customgroup>
       <addtorating>False</addtorating>
-      <enabled>True</enabled>
+      <enabled>False</enabled>
       <order>0</order>
       <notes />
     </improvement>
@@ -13736,7 +13641,7 @@ and take the brunt of an incoming attack. There is no Defense Test (Reaction + I
       <customid>skillgroup</customid>
       <customgroup>Tailored Pheromones</customgroup>
       <addtorating>False</addtorating>
-      <enabled>True</enabled>
+      <enabled>False</enabled>
       <order>1</order>
       <notes />
     </improvement>
@@ -13811,7 +13716,7 @@ and take the brunt of an incoming attack. There is no Defense Test (Reaction + I
       <notes />
     </improvement>
     <improvement>
-      <unique>7a3eb655-7cdb-42a2-a595-548afec40a37</unique>
+      <unique>66b52c27-7c0a-4c69-b7a9-8bd555d4f986</unique>
       <target />
       <improvedname>WIL</improvedname>
       <sourcename>SEEKER_WIL</sourcename>
@@ -13835,7 +13740,7 @@ and take the brunt of an incoming attack. There is no Defense Test (Reaction + I
       <notes />
     </improvement>
     <improvement>
-      <unique>c48f5b8c-7632-4bc3-90c7-49b878708b9a</unique>
+      <unique>cc0d7b01-9712-456b-960f-dad6fb4c70cc</unique>
       <target />
       <improvedname>AGI</improvedname>
       <sourcename>SEEKER_AGI</sourcename>
@@ -13859,7 +13764,7 @@ and take the brunt of an incoming attack. There is no Defense Test (Reaction + I
       <notes />
     </improvement>
     <improvement>
-      <unique>49882cbe-55fc-4cc6-b41d-bee337e3b458</unique>
+      <unique>3d4e832f-ba33-4f87-851a-9af6cafe12c8</unique>
       <target />
       <improvedname>STR</improvedname>
       <sourcename>SEEKER_STR</sourcename>
@@ -13883,7 +13788,7 @@ and take the brunt of an incoming attack. There is no Defense Test (Reaction + I
       <notes />
     </improvement>
     <improvement>
-      <unique>f47f996b-85df-462c-b6c7-098330aa4c9a</unique>
+      <unique>69f921b4-3a5c-49b6-9537-e1476cf178f9</unique>
       <target />
       <improvedname>BOX</improvedname>
       <sourcename>SEEKER_BOX</sourcename>
@@ -13911,22 +13816,6 @@ and take the brunt of an incoming attack. There is no Defense Test (Reaction + I
   <mentorspirits />
   <expenses>
     <expense>
-      <guid>a0770362-9ce4-4173-95c7-efa73645d35a</guid>
-      <date>2019-12-30T11:51:33</date>
-      <amount>1730.000</amount>
-      <reason>Starting Nuyen</reason>
-      <type>Nuyen</type>
-      <refund>False</refund>
-      <forcecareervisible>False</forcecareervisible>
-      <undo>
-        <karmatype>ImproveAttribute</karmatype>
-        <nuyentype>ManualAdd</nuyentype>
-        <objectid />
-        <qty>0</qty>
-        <extra />
-      </undo>
-    </expense>
-    <expense>
       <guid>c467a38a-911b-4f58-9c71-116e20dbafbc</guid>
       <date>2019-12-30T11:51:33</date>
       <amount>1</amount>
@@ -13937,6 +13826,22 @@ and take the brunt of an incoming attack. There is no Defense Test (Reaction + I
       <undo>
         <karmatype>ManualAdd</karmatype>
         <nuyentype>AddCyberware</nuyentype>
+        <objectid />
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>a0770362-9ce4-4173-95c7-efa73645d35a</guid>
+      <date>2019-12-30T11:51:33</date>
+      <amount>1730.000</amount>
+      <reason>Starting Nuyen</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>ManualAdd</nuyentype>
         <objectid />
         <qty>0</qty>
         <extra />
@@ -16246,8 +16151,8 @@ and take the brunt of an incoming attack. There is no Defense Test (Reaction + I
   <weaponlocations />
   <improvementgroups>
     <improvementgroup>Kamikaze</improvementgroup>
-    <improvementgroup>Betameth</improvementgroup>
     <improvementgroup>Jazz</improvementgroup>
+    <improvementgroup>Betameth</improvementgroup>
     <improvementgroup>Tailored Pheromones</improvementgroup>
   </improvementgroups>
   <calendar />

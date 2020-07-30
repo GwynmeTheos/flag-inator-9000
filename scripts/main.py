@@ -2,7 +2,7 @@
 # Flag-inator 9000
 
 # built-in modules
-import os, time, math
+import os, time
 # third-party modules
 import xmltodict
 # project scripts
@@ -24,7 +24,7 @@ Exclude the \".chum5\" portion. Make sure the file is in the \"saves\" directory
 
         # Attempt to read and parse the Chummer file, if it doesn't work, send out an error message.
         try:
-            with open(str('saves/' + filename + ".chum5"), mode="r", encoding="utf-8") as file:
+            with open(str('../saves/' + filename + ".chum5"), mode="r", encoding="utf-8") as file:
                 character = xmltodict.parse(file.read())
         except FileNotFoundError:
             print("""\nThis filename specified is wrong or the file is missing.\n
@@ -47,7 +47,7 @@ Exclude the \".chum5\" portion. Make sure the file is in the \"saves\" directory
         skillsDict = char_data.createSkillDict()
         attributesDict = char_data.createAttributeDict(character)
         # If they have any Improvements that increase their skill rating, we need to find those.
-        skillImprovements = char_data.createImprovementDict(character)
+        # skillImprovements = char_data.createImprovementDict(character)
 
         # For performance checking.
         start_time = time.time()
@@ -78,7 +78,7 @@ Exclude the \".chum5\" portion. Make sure the file is in the \"saves\" directory
 
         # Skill Ratings and Total Dicepool
         print("\n-> Skills:\n\n", end="")
-        currentFlag += skills.skillFlagCheck(character, skillsDict, attributesDict, skillImprovements)
+        currentFlag += skills.skillFlagCheck(character, skillsDict, attributesDict)
 
         # Attributes
         print("\n-> Attributes:\n\n", end="")
