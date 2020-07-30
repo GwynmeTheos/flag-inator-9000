@@ -7,7 +7,7 @@ import os, time, math
 import xmltodict
 # project scripts
 import char_data, talents, initiate_grades, wares, skills, attributes, spells, adept_powers, qualities
-import metatypes, awakened_essence, foci
+import metatypes, awakened_essence, foci, armor
 
 
 def main():
@@ -24,7 +24,7 @@ Exclude the \".chum5\" portion. Make sure the file is in the \"saves\" directory
 
         # Attempt to read and parse the Chummer file, if it doesn't work, send out an error message.
         try:
-            with open(str('../saves/' + filename + ".chum5"), mode="r", encoding="utf-8") as file:
+            with open(str('saves/' + filename + ".chum5"), mode="r", encoding="utf-8") as file:
                 character = xmltodict.parse(file.read())
         except FileNotFoundError:
             print("""\nThis filename specified is wrong or the file is missing.\n
@@ -53,7 +53,7 @@ Exclude the \".chum5\" portion. Make sure the file is in the \"saves\" directory
         start_time = time.time()
 
         # Metatypes
-        print("\n-> Qualities:\n\n", end="")
+        print("\n-> Metatype:\n\n", end="")
         currentFlag += metatypes.metatypeFlagCheck(character)
 
         # Awakened or Emerged?
@@ -77,8 +77,8 @@ Exclude the \".chum5\" portion. Make sure the file is in the \"saves\" directory
         currentFlag += foci.focusFlagCheck(character)
 
         # Skill Ratings and Total Dicepool
-        # print("\n-> Skills:\n\n", end="")
-        # currentFlag += skills.skillFlagCheck(character, skillsDict, attributesDict, skillImprovements)
+        print("\n-> Skills:\n\n", end="")
+        currentFlag += skills.skillFlagCheck(character, skillsDict, attributesDict, skillImprovements)
 
         # Attributes
         print("\n-> Attributes:\n\n", end="")
@@ -97,8 +97,8 @@ Exclude the \".chum5\" portion. Make sure the file is in the \"saves\" directory
         currentFlag += qualities.qualityFlagCheck(character)
 
         # Armor
-        # print("\n-> Armor:\n\n", end="")
-        # currentFlag += armor.armorFlagCheck(character)
+        print("\n-> Armor:\n\n", end="")
+        currentFlag += armor.armorFlagCheck(character)
 
         print("\n---> Current Flag: " + str(currentFlag) + " <---\n")
         print("--- Finished in %s seconds ---" % (time.time() - start_time))

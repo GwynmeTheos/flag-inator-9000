@@ -8,13 +8,13 @@ def skillFlagCheck(character, skillsDict, attributesDict, skillImprovements):
 
         # Body skills:
         try:
-            accruedFlags += BODSkills(currentSkill, attributesDict, skillImprovements)
+            accruedFlags += BODSkills(currentSkill, skillsDict, attributesDict, skillImprovements)
         except TypeError:
             pass
 
         # Combat skills:
         try:
-            accruedFlags += CombatSkills(currentSkill, attributesDict, skillImprovements)
+            accruedFlags += CombatSkills(currentSkill, skillsDict, attributesDict, skillImprovements)
         except TypeError:
             pass
 
@@ -26,55 +26,55 @@ def skillFlagCheck(character, skillsDict, attributesDict, skillImprovements):
 
         # Agility skills:
         try:
-            accruedFlags += AGISkills(currentSkill, attributesDict, skillImprovements)
+            accruedFlags += AGISkills(currentSkill, skillsDict, attributesDict, skillImprovements)
         except TypeError:
             pass
 
         # Reaction skills:
         try:
-            accruedFlags += REASkills(currentSkill, attributesDict, skillImprovements)
+            accruedFlags += REASkills(currentSkill, skillsDict, attributesDict, skillImprovements)
         except TypeError:
             pass
 
         # Strength skills:
         try:
-            accruedFlags += STRSkills(currentSkill, attributesDict, skillImprovements)
+            accruedFlags += STRSkills(currentSkill, skillsDict, attributesDict, skillImprovements)
         except TypeError:
             pass
 
         # Charisma skills:
         try:
-            accruedFlags += CHASkills(currentSkill, attributesDict, skillImprovements)
+            accruedFlags += CHASkills(currentSkill, skillsDict, attributesDict, skillImprovements)
         except TypeError:
             pass
 
         # Intuition skills:
         try:
-            accruedFlags += INTSkills(currentSkill, attributesDict, skillImprovements)
+            accruedFlags += INTSkills(currentSkill, skillsDict, attributesDict, skillImprovements)
         except TypeError:
             pass
 
         # Logic skills:
         try:
-            accruedFlags += LOGSkills(currentSkill, attributesDict, skillImprovements)
+            accruedFlags += LOGSkills(currentSkill, skillsDict, attributesDict, skillImprovements)
         except TypeError:
             pass
 
         # Willpower skills:
         try:
-            accruedFlags += WILSkills(currentSkill, attributesDict, skillImprovements)
+            accruedFlags += WILSkills(currentSkill, skillsDict, attributesDict, skillImprovements)
         except TypeError:
             pass
 
         # Magic skills:
         try:
-            accruedFlags += MAGSkills(currentSkill, attributesDict, skillImprovements)
+            accruedFlags += MAGSkills(currentSkill, skillsDict, attributesDict, skillImprovements)
         except TypeError:
             pass
 
         # Resonance skills:
         try:
-            accruedFlags += RESSkills(currentSkill, attributesDict, skillImprovements)
+            accruedFlags += RESSkills(currentSkill, skillsDict, attributesDict, skillImprovements)
         except TypeError:
             pass
 
@@ -84,9 +84,7 @@ def skillFlagCheck(character, skillsDict, attributesDict, skillImprovements):
 def BODSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
     for skill in skillsDict['BODSkills']:
         if skill == currentSkill['name']:
-
-            ratingFlags = 0
-            dicepoolFlags = 0
+            accruedFlags = 0
 
             # Rating check:
             try:
@@ -94,55 +92,36 @@ def BODSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             except KeyError:
                 skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
-
-                if skillRating >= 8:
-                    ratingFlags += 1
-                if skillRating >= 9:
-                    ratingFlags += 1
-                if skillRating >= 10:
-                    ratingFlags += 2
-                if skillRating >= 11:
-                    ratingFlags += 2
-                if skillRating >= 12:
-                    ratingFlags += 4
-                if skillRating >= 13:
-                    ratingFlags += 4
-
-                print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = + " + str(
-                    ratingFlags) + " Flag")
+                if skillRating == 8 or skillRating == 9:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +1 Flag")
+                elif skillRating == 10 or skillRating == 11:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +2 Flag")
+                elif skillRating == 12 or skillRating == 13:
+                    accruedFlags += 4
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +4 Flag")
 
             # Dicepool check:
             dicepool = skillRating + attributesDict['averageBOD']
             if not (dicepool - 1 < 12):
-
-                if dicepool >= 13:
-                    dicepoolFlags += 1
-                if dicepool >= 14:
-                    dicepoolFlags += 1
-                if dicepool >= 15:
-                    dicepoolFlags += 1
-                if dicepool >= 16:
-                    dicepoolFlags += 2
-                if dicepool >= 17:
-                    dicepoolFlags += 2
-                if dicepool >= 18:
-                    dicepoolFlags += 2
+                if dicepool == 13 or dicepool == 14 or dicepool == 15:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " + Body at " + str(dicepool) + " dicepool] = +1 Flag")
+                elif dicepool == 16 or dicepool == 17 or dicepool == 18:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " + Body at " + str(dicepool) + " dicepool] = +2 Flag")
                 if dicepool >= 19:
-                    for ratingOver19 in range(19, dicepool + 1, 1):
-                        dicepoolFlags += 5
+                    accruedFlags += 5
+                    print("    [" + currentSkill['name'] + " + Body at " + str(dicepool) + " dicepool] = +5 Flag")
 
-                print("    [" + currentSkill['name'] + " + Body at " + str(dicepool) + " dicepool] = +" + str(
-                    dicepoolFlags) + " Flag")
-
-            return ratingFlags + dicepoolFlags
+            return accruedFlags
 
 
 def CombatSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
     for skill in skillsDict['CombatSkills']:
         if skill == currentSkill['name']:
-
-            ratingFlags = 0
-            dicepoolFlags = 0
+            accruedFlags = 0
 
             # Rating check:
             try:
@@ -150,22 +129,15 @@ def CombatSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             except KeyError:
                 skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
-
-                if skillRating >= 8:
-                    ratingFlags += 1
-                if skillRating >= 9:
-                    ratingFlags += 1
-                if skillRating >= 10:
-                    ratingFlags += 2
-                if skillRating >= 11:
-                    ratingFlags += 2
-                if skillRating >= 12:
-                    ratingFlags += 4
-                if skillRating >= 13:
-                    ratingFlags += 4
-
-                print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = + " + str(
-                    ratingFlags) + " Flag")
+                if skillRating == 8 or skillRating == 9:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +1 Flag")
+                elif skillRating == 10 or skillRating == 11:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +2 Flag")
+                elif skillRating == 12 or skillRating == 13:
+                    accruedFlags += 4
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +4 Flag")
 
             # Dicepool check:
             if attributesDict['averageLOG'] > attributesDict['averageAGI']:
@@ -178,34 +150,22 @@ def CombatSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
                     dicepool = skillRating + attributesDict['highestArmAGI']
                 higherRating = "Agility"
             if not (dicepool - 1 < 12):
-
-                if dicepool >= 13:
-                    dicepoolFlags += 1
-                if dicepool >= 14:
-                    dicepoolFlags += 1
-                if dicepool >= 15:
-                    dicepoolFlags += 1
-                if dicepool >= 16:
-                    dicepoolFlags += 2
-                if dicepool >= 17:
-                    dicepoolFlags += 2
-                if dicepool >= 18:
-                    dicepoolFlags += 2
+                if dicepool == 13 or dicepool == 14 or dicepool == 15:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +1 Flag")
+                elif dicepool == 16 or dicepool == 17 or dicepool == 18:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +2 Flag")
                 if dicepool >= 19:
-                    for ratingOver19 in range(19, dicepool + 1, 1):
-                        dicepoolFlags += 5
+                    accruedFlags += 5
+                    print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +5 Flag")
 
-                print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) +
-                      " dicepool] = +" + str(dicepoolFlags) + " Flag")
-
-            return ratingFlags + dicepoolFlags
+            return accruedFlags
 
 
 def UnarmedCombatSkills(currentSkill, attributesDict, skillImprovements):
     if 'Unarmed Combat' == currentSkill['name']:
-
-        ratingFlags = 0
-        dicepoolFlags = 0
+        accruedFlags = 0
 
         # Rating check:
         try:
@@ -214,22 +174,15 @@ def UnarmedCombatSkills(currentSkill, attributesDict, skillImprovements):
         except KeyError:
             skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
         if skillRating > 7:
-
-            if skillRating >= 8:
-                ratingFlags += 1
-            if skillRating >= 9:
-                ratingFlags += 1
-            if skillRating >= 10:
-                ratingFlags += 2
-            if skillRating >= 11:
-                ratingFlags += 2
-            if skillRating >= 12:
-                ratingFlags += 4
-            if skillRating >= 13:
-                ratingFlags += 4
-
-            print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = + " + str(
-                ratingFlags) + " Flag")
+            if skillRating == 8 or skillRating == 9:
+                accruedFlags += 1
+                print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +1 Flag")
+            elif skillRating == 10 or skillRating == 11:
+                accruedFlags += 2
+                print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +2 Flag")
+            elif skillRating == 12 or skillRating == 13:
+                accruedFlags += 4
+                print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +4 Flag")
 
         # Dicepool check:
         if attributesDict['averageLOG'] > attributesDict['averageAGI']:
@@ -243,35 +196,23 @@ def UnarmedCombatSkills(currentSkill, attributesDict, skillImprovements):
             higherRating = "Agility"
 
         if not (dicepool - 1 < 12):
-
-            if dicepool >= 13:
-                dicepoolFlags += 1
-            if dicepool >= 14:
-                dicepoolFlags += 1
-            if dicepool >= 15:
-                dicepoolFlags += 1
-            if dicepool >= 16:
-                dicepoolFlags += 2
-            if dicepool >= 17:
-                dicepoolFlags += 2
-            if dicepool >= 18:
-                dicepoolFlags += 2
+            if dicepool == 13 or dicepool == 14 or dicepool == 15:
+                accruedFlags += 1
+                print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +1 Flag")
+            elif dicepool == 16 or dicepool == 17 or dicepool == 18:
+                accruedFlags += 2
+                print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +2 Flag")
             if dicepool >= 19:
-                for ratingOver19 in range(19, dicepool + 1, 1):
-                    dicepoolFlags += 5
+                accruedFlags += 5
+                print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +5 Flag")
 
-            print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) +
-                  " dicepool] = +" + str(dicepoolFlags) + " Flag")
-
-        return ratingFlags + dicepoolFlags
+        return accruedFlags
 
 
 def AGISkills(currentSkill, skillsDict, attributesDict, skillImprovements):
     for skill in skillsDict['AGISkills']:
         if skill == currentSkill['name']:
-
-            ratingFlags = 0
-            dicepoolFlags = 0
+            accruedFlags = 0
 
             # Rating check:
             try:
@@ -279,22 +220,15 @@ def AGISkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             except KeyError:
                 skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
-
-                if skillRating >= 8:
-                    ratingFlags += 1
-                if skillRating >= 9:
-                    ratingFlags += 1
-                if skillRating >= 10:
-                    ratingFlags += 2
-                if skillRating >= 11:
-                    ratingFlags += 2
-                if skillRating >= 12:
-                    ratingFlags += 4
-                if skillRating >= 13:
-                    ratingFlags += 4
-
-                print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = + " + str(
-                    ratingFlags) + " Flag")
+                if skillRating == 8 or skillRating == 9:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +1 Flag")
+                elif skillRating == 10 or skillRating == 11:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +2 Flag")
+                elif skillRating == 12 or skillRating == 13:
+                    accruedFlags += 4
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +4 Flag")
 
             # Dicepool check:
             if currentSkill['name'] == 'Sneaking':
@@ -302,7 +236,7 @@ def AGISkills(currentSkill, skillsDict, attributesDict, skillImprovements):
                     dicepool = skillRating + attributesDict['averageINT']
                     higherRating = "Intuition"
                 else:
-                    dicepool = skillRating + attributesDict['AGI']
+                    dicepool = skillRating + attributesDict['averageAGI']
                     higherRating = "Agility"
             elif currentSkill['name'] == 'Escape Artist' or currentSkill['name'] == 'Locksmith':
                 if attributesDict['averageLOG'] > attributesDict['averageAGI']:
@@ -315,36 +249,23 @@ def AGISkills(currentSkill, skillsDict, attributesDict, skillImprovements):
                 dicepool = skillRating + attributesDict['averageAGI']
                 higherRating = "Agility"
             if not (dicepool - 1 < 12):
-
-                if dicepool >= 13:
-                    dicepoolFlags += 1
-                if dicepool >= 14:
-                    dicepoolFlags += 1
-                if dicepool >= 15:
-                    dicepoolFlags += 1
-                if dicepool >= 16:
-                    dicepoolFlags += 2
-                if dicepool >= 17:
-                    dicepoolFlags += 2
-                if dicepool >= 18:
-                    dicepoolFlags += 2
+                if dicepool == 13 or dicepool == 14 or dicepool == 15:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +1 Flag")
+                elif dicepool == 16 or dicepool == 17 or dicepool == 18:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +2 Flag")
                 if dicepool >= 19:
-                    for ratingOver19 in range(19, dicepool + 1, 1):
-                        dicepoolFlags += 5
+                    accruedFlags += 5
+                    print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +5 Flag")
 
-                print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(
-                    dicepool) + " dicepool] = +"
-                      + str(dicepoolFlags) + " Flag")
-
-            return ratingFlags + dicepoolFlags
+            return accruedFlags
 
 
 def REASkills(currentSkill, skillsDict, attributesDict, skillImprovements):
     for skill in skillsDict['CombatSkills']:
         if skill == currentSkill['name']:
-
-            ratingFlags = 0
-            dicepoolFlags = 0
+            accruedFlags = 0
 
             # Rating check:
             try:
@@ -352,22 +273,15 @@ def REASkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             except KeyError:
                 skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
-
-                if skillRating >= 8:
-                    ratingFlags += 1
-                if skillRating >= 9:
-                    ratingFlags += 1
-                if skillRating >= 10:
-                    ratingFlags += 2
-                if skillRating >= 11:
-                    ratingFlags += 2
-                if skillRating >= 12:
-                    ratingFlags += 4
-                if skillRating >= 13:
-                    ratingFlags += 4
-
-                print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +" + str(
-                    ratingFlags) + " Flag")
+                if skillRating == 8 or skillRating == 9:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +1 Flag")
+                elif skillRating == 10 or skillRating == 11:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +2 Flag")
+                elif skillRating == 12 or skillRating == 13:
+                    accruedFlags += 4
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +4 Flag")
 
             # Dicepool check:
             if attributesDict['averageINT'] > attributesDict['averageREA']:
@@ -377,35 +291,23 @@ def REASkills(currentSkill, skillsDict, attributesDict, skillImprovements):
                 dicepool = skillRating + attributesDict['averageREA']
                 higherRating = "Reaction"
             if not (dicepool - 1 < 12):
-
-                if dicepool >= 13:
-                    dicepoolFlags += 1
-                if dicepool >= 14:
-                    dicepoolFlags += 1
-                if dicepool >= 15:
-                    dicepoolFlags += 1
-                if dicepool >= 16:
-                    dicepoolFlags += 2
-                if dicepool >= 17:
-                    dicepoolFlags += 2
-                if dicepool >= 18:
-                    dicepoolFlags += 2
+                if dicepool == 13 or dicepool == 14 or dicepool == 15:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +1 Flag")
+                elif dicepool == 16 or dicepool == 17 or dicepool == 18:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +2 Flag")
                 if dicepool >= 19:
-                    for ratingOver19 in range(19, dicepool + 1, 1):
-                        dicepoolFlags += 5
+                    accruedFlags += 5
+                    print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +5 Flag")
 
-                print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) +
-                      " dicepool] = +" + str(dicepoolFlags) + " Flag")
-
-            return ratingFlags + dicepoolFlags
+            return accruedFlags
 
 
 def STRSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
     for skill in skillsDict['STRSkills']:
         if skill == currentSkill['name']:
-
-            ratingFlags = 0
-            dicepoolFlags = 0
+            accruedFlags = 0
 
             # Rating check:
             try:
@@ -413,55 +315,36 @@ def STRSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             except KeyError:
                 skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
-
-                if skillRating >= 8:
-                    ratingFlags += 1
-                if skillRating >= 9:
-                    ratingFlags += 1
-                if skillRating >= 10:
-                    ratingFlags += 2
-                if skillRating >= 11:
-                    ratingFlags += 2
-                if skillRating >= 12:
-                    ratingFlags += 4
-                if skillRating >= 13:
-                    ratingFlags += 4
-
-                print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = + " + str(
-                    ratingFlags) + " Flag")
+                if skillRating == 8 or skillRating == 9:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +1 Flag")
+                elif skillRating == 10 or skillRating == 11:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +2 Flag")
+                elif skillRating == 12 or skillRating == 13:
+                    accruedFlags += 4
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +4 Flag")
 
             # Dicepool check:
             dicepool = skillRating + attributesDict['averageSTR']
             if not (dicepool - 1 < 12):
-
-                if dicepool >= 13:
-                    dicepoolFlags += 1
-                if dicepool >= 14:
-                    dicepoolFlags += 1
-                if dicepool >= 15:
-                    dicepoolFlags += 1
-                if dicepool >= 16:
-                    dicepoolFlags += 2
-                if dicepool >= 17:
-                    dicepoolFlags += 2
-                if dicepool >= 18:
-                    dicepoolFlags += 2
+                if dicepool == 13 or dicepool == 14 or dicepool == 15:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " + Strength at " + str(dicepool) + " dicepool] = +1 Flag")
+                elif dicepool == 16 or dicepool == 17 or dicepool == 18:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " + Strength at " + str(dicepool) + " dicepool] = +2 Flag")
                 if dicepool >= 19:
-                    for ratingOver19 in range(19, dicepool + 1, 1):
-                        dicepoolFlags += 5
+                    accruedFlags += 5
+                    print("    [" + currentSkill['name'] + " + Strength at " + str(dicepool) + " dicepool] = +5 Flag")
 
-                print("    [" + currentSkill['name'] + " + Strength at " + str(dicepool) + " dicepool] = +" + str(
-                    dicepoolFlags) + " Flag")
-
-            return ratingFlags + dicepoolFlags
+            return accruedFlags
 
 
 def CHASkills(currentSkill, skillsDict, attributesDict, skillImprovements):
     for skill in skillsDict['CHASkills']:
         if skill == currentSkill['name']:
-
-            ratingFlags = 0
-            dicepoolFlags = 0
+            accruedFlags = 0
 
             # Rating check:
             try:
@@ -469,55 +352,36 @@ def CHASkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             except KeyError:
                 skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
-
-                if skillRating >= 8:
-                    ratingFlags += 1
-                if skillRating >= 9:
-                    ratingFlags += 1
-                if skillRating >= 10:
-                    ratingFlags += 2
-                if skillRating >= 11:
-                    ratingFlags += 2
-                if skillRating >= 12:
-                    ratingFlags += 4
-                if skillRating >= 13:
-                    ratingFlags += 4
-
-                print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = + " + str(
-                    ratingFlags) + " Flag")
+                if skillRating == 8 or skillRating == 9:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +1 Flag")
+                elif skillRating == 10 or skillRating == 11:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +2 Flag")
+                elif skillRating == 12 or skillRating == 13:
+                    accruedFlags += 4
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +4 Flag")
 
             # Dicepool check:
             dicepool = skillRating + attributesDict['averageCHA']
             if not (dicepool - 1 < 12):
-
-                if dicepool >= 13:
-                    dicepoolFlags += 1
-                if dicepool >= 14:
-                    dicepoolFlags += 1
-                if dicepool >= 15:
-                    dicepoolFlags += 1
-                if dicepool >= 16:
-                    dicepoolFlags += 2
-                if dicepool >= 17:
-                    dicepoolFlags += 2
-                if dicepool >= 18:
-                    dicepoolFlags += 2
+                if dicepool == 13 or dicepool == 14 or dicepool == 15:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " + Charisma at " + str(dicepool) + " dicepool] = +1 Flag")
+                elif dicepool == 16 or dicepool == 17 or dicepool == 18:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " + Charisma at " + str(dicepool) + " dicepool] = +2 Flag")
                 if dicepool >= 19:
-                    for ratingOver19 in range(19, dicepool + 1, 1):
-                        dicepoolFlags += 5
+                    accruedFlags += 5
+                    print("    [" + currentSkill['name'] + " + Charisma at " + str(dicepool) + " dicepool] = +5 Flag")
 
-                print("    [" + currentSkill['name'] + " + Charisma at " + str(dicepool) + " dicepool] = +" + str(
-                    dicepoolFlags) + " Flag")
-
-            return ratingFlags + dicepoolFlags
+            return accruedFlags
 
 
 def INTSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
     for skill in skillsDict['INTSkills']:
         if skill == currentSkill['name']:
-
-            ratingFlags = 0
-            dicepoolFlags = 0
+            accruedFlags = 0
 
             # Rating check:
             try:
@@ -525,56 +389,37 @@ def INTSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             except KeyError:
                 skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
-
-                if skillRating >= 8:
-                    ratingFlags += 1
-                if skillRating >= 9:
-                    ratingFlags += 1
-                if skillRating >= 10:
-                    ratingFlags += 2
-                if skillRating >= 11:
-                    ratingFlags += 2
-                if skillRating >= 12:
-                    ratingFlags += 4
-                if skillRating >= 13:
-                    ratingFlags += 4
-
-                print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = + " + str(
-                    ratingFlags) + " Flag")
+                if skillRating == 8 or skillRating == 9:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +1 Flag")
+                elif skillRating == 10 or skillRating == 11:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +2 Flag")
+                elif skillRating == 12 or skillRating == 13:
+                    accruedFlags += 4
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +4 Flag")
 
             # Dicepool check:
             dicepool = skillRating + attributesDict['averageINT']
 
             if not (dicepool - 1 < 12):
-
-                if dicepool >= 13:
-                    dicepoolFlags += 1
-                if dicepool >= 14:
-                    dicepoolFlags += 1
-                if dicepool >= 15:
-                    dicepoolFlags += 1
-                if dicepool >= 16:
-                    dicepoolFlags += 2
-                if dicepool >= 17:
-                    dicepoolFlags += 2
-                if dicepool >= 18:
-                    dicepoolFlags += 2
+                if dicepool == 13 or dicepool == 14 or dicepool == 15:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " + Intuition at " + str(dicepool) + " dicepool] = +1 Flag")
+                elif dicepool == 16 or dicepool == 17 or dicepool == 18:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " + Intuition at " + str(dicepool) + " dicepool] = +2 Flag")
                 if dicepool >= 19:
-                    for ratingOver19 in range(19, (dicepool + 1), 1):
-                        dicepoolFlags += 5
+                    accruedFlags += 5
+                    print("    [" + currentSkill['name'] + " + Intuition at " + str(dicepool) + " dicepool] = +5 Flag")
 
-                print("    [" + currentSkill['name'] + " + Intuition at " + str(dicepool) + " dicepool] = +" + str(
-                    dicepoolFlags) + " Flag")
-
-            return ratingFlags + dicepoolFlags
+            return accruedFlags
 
 
 def LOGSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
     for skill in skillsDict['LOGSkills']:
         if skill == currentSkill['name']:
-
-            ratingFlags = 0
-            dicepoolFlags = 0
+            accruedFlags = 0
 
             # Rating check:
             try:
@@ -582,22 +427,15 @@ def LOGSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             except KeyError:
                 skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
-
-                if skillRating >= 8:
-                    ratingFlags += 1
-                if skillRating >= 9:
-                    ratingFlags += 1
-                if skillRating >= 10:
-                    ratingFlags += 2
-                if skillRating >= 11:
-                    ratingFlags += 2
-                if skillRating >= 12:
-                    ratingFlags += 4
-                if skillRating >= 13:
-                    ratingFlags += 4
-
-                print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = + " + str(
-                    ratingFlags) + " Flag")
+                if skillRating == 8 or skillRating == 9:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +1 Flag")
+                elif skillRating == 10 or skillRating == 11:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +2 Flag")
+                elif skillRating == 12 or skillRating == 13:
+                    accruedFlags += 4
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +4 Flag")
 
             # Dicepool check:
             if currentSkill['name'] == 'Computer' or currentSkill['name'] == 'Electronic Warfare':
@@ -619,36 +457,23 @@ def LOGSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
                 higherRating = "Logic"
 
             if not (dicepool - 1 < 12):
-
-                if dicepool >= 13:
-                    dicepoolFlags += 1
-                if dicepool >= 14:
-                    dicepoolFlags += 1
-                if dicepool >= 15:
-                    dicepoolFlags += 1
-                if dicepool >= 16:
-                    dicepoolFlags += 2
-                if dicepool >= 17:
-                    dicepoolFlags += 2
-                if dicepool >= 18:
-                    dicepoolFlags += 2
+                if dicepool == 13 or dicepool == 14 or dicepool == 15:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +1 Flag")
+                elif dicepool == 16 or dicepool == 17 or dicepool == 18:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +2 Flag")
                 if dicepool >= 19:
-                    for ratingOver19 in range(19, dicepool + 1, 1):
-                        dicepoolFlags += 5
+                    accruedFlags += 5
+                    print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +5 Flag")
 
-                print("    [" + currentSkill['name'] + " + " + higherRating + " at " + str(
-                    dicepool) + " dicepool] = +"
-                      + str(dicepoolFlags) + " Flag")
-
-            return ratingFlags + dicepoolFlags
+            return accruedFlags
 
 
 def WILSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
     for skill in skillsDict['BODSkills']:
         if skill == currentSkill['name']:
-
-            ratingFlags = 0
-            dicepoolFlags = 0
+            accruedFlags = 0
 
             # Rating check:
             try:
@@ -656,55 +481,36 @@ def WILSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             except KeyError:
                 skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
-
-                if skillRating >= 8:
-                    ratingFlags += 1
-                if skillRating >= 9:
-                    ratingFlags += 1
-                if skillRating >= 10:
-                    ratingFlags += 2
-                if skillRating >= 11:
-                    ratingFlags += 2
-                if skillRating >= 12:
-                    ratingFlags += 4
-                if skillRating >= 13:
-                    ratingFlags += 4
-
-                print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = + " + str(
-                    ratingFlags) + " Flag")
+                if skillRating == 8 or skillRating == 9:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +1 Flag")
+                elif skillRating == 10 or skillRating == 11:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +2 Flag")
+                elif skillRating == 12 or skillRating == 13:
+                    accruedFlags += 4
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +4 Flag")
 
             # Dicepool check:
             dicepool = skillRating + attributesDict['averageWIL']
             if not (dicepool - 1 < 12):
-
-                if dicepool >= 13:
-                    dicepoolFlags += 1
-                if dicepool >= 14:
-                    dicepoolFlags += 1
-                if dicepool >= 15:
-                    dicepoolFlags += 1
-                if dicepool >= 16:
-                    dicepoolFlags += 2
-                if dicepool >= 17:
-                    dicepoolFlags += 2
-                if dicepool >= 18:
-                    dicepoolFlags += 2
+                if dicepool == 13 or dicepool == 14 or dicepool == 15:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " + Body at " + str(dicepool) + " dicepool] = +1 Flag")
+                elif dicepool == 16 or dicepool == 17 or dicepool == 18:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " + Body at " + str(dicepool) + " dicepool] = +2 Flag")
                 if dicepool >= 19:
-                    for ratingOver19 in range(19, dicepool + 1, 1):
-                        dicepoolFlags += 5
+                    accruedFlags += 5
+                    print("    [" + currentSkill['name'] + " + Body at " + str(dicepool) + " dicepool] = +5 Flag")
 
-                print("    [" + currentSkill['name'] + " + Willpower at " + str(dicepool) + " dicepool] = +" + str(
-                    dicepoolFlags) + " Flag")
-
-            return ratingFlags + dicepoolFlags
+            return accruedFlags
 
 
 def MAGSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
     for skill in skillsDict['MAGSkills']:
         if skill == currentSkill['name']:
-
-            ratingFlags = 0
-            dicepoolFlags = 0
+            accruedFlags = 0
 
             # Rating check:
             try:
@@ -712,55 +518,36 @@ def MAGSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             except KeyError:
                 skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
-
-                if skillRating >= 8:
-                    ratingFlags += 1
-                if skillRating >= 9:
-                    ratingFlags += 1
-                if skillRating >= 10:
-                    ratingFlags += 2
-                if skillRating >= 11:
-                    ratingFlags += 2
-                if skillRating >= 12:
-                    ratingFlags += 4
-                if skillRating >= 13:
-                    ratingFlags += 4
-
-                print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = + " + str(
-                    ratingFlags) + " Flag")
+                if skillRating == 8 or skillRating == 9:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +1 Flag")
+                elif skillRating == 10 or skillRating == 11:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +2 Flag")
+                elif skillRating == 12 or skillRating == 13:
+                    accruedFlags += 4
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +4 Flag")
 
             # Dicepool check:
             dicepool = skillRating + attributesDict['averageMAG']
             if not (dicepool - 1 < 12):
-
-                if dicepool >= 13:
-                    dicepoolFlags += 1
-                if dicepool >= 14:
-                    dicepoolFlags += 1
-                if dicepool >= 15:
-                    dicepoolFlags += 1
-                if dicepool >= 16:
-                    dicepoolFlags += 2
-                if dicepool >= 17:
-                    dicepoolFlags += 2
-                if dicepool >= 18:
-                    dicepoolFlags += 2
+                if dicepool == 13 or dicepool == 14 or dicepool == 15:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " + Body at " + str(dicepool) + " dicepool] = +1 Flag")
+                elif dicepool == 16 or dicepool == 17 or dicepool == 18:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " + Body at " + str(dicepool) + " dicepool] = +2 Flag")
                 if dicepool >= 19:
-                    for ratingOver19 in range(19, dicepool + 1, 1):
-                        dicepoolFlags += 5
+                    accruedFlags += 5
+                    print("    [" + currentSkill['name'] + " + Body at " + str(dicepool) + " dicepool] = +5 Flag")
 
-                print("    [" + currentSkill['name'] + " + Magic at " + str(dicepool) + " dicepool] = +" + str(
-                    dicepoolFlags) + " Flag")
-
-            return ratingFlags + dicepoolFlags
+            return accruedFlags
 
 
 def RESSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
     for skill in skillsDict['RESSkills']:
         if skill == currentSkill['name']:
-
-            ratingFlags = 0
-            dicepoolFlags = 0
+            accruedFlags = 0
 
             # Rating check:
             try:
@@ -768,44 +555,27 @@ def RESSkills(currentSkill, skillsDict, attributesDict, skillImprovements):
             except KeyError:
                 skillRating = int(currentSkill['karma']) + int(currentSkill['base'])
             if skillRating > 7:
-
-                if skillRating >= 8:
-                    ratingFlags += 1
-                if skillRating >= 9:
-                    ratingFlags += 1
-                if skillRating >= 10:
-                    ratingFlags += 2
-                if skillRating >= 11:
-                    ratingFlags += 2
-                if skillRating >= 12:
-                    ratingFlags += 4
-                if skillRating >= 13:
-                    ratingFlags += 4
-
-                print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = + " + str(
-                    ratingFlags) + " Flag")
+                if skillRating == 8 or skillRating == 9:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +1 Flag")
+                elif skillRating == 10 or skillRating == 11:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +2 Flag")
+                elif skillRating == 12 or skillRating == 13:
+                    accruedFlags += 4
+                    print("    [" + currentSkill['name'] + " at Rating " + str(skillRating) + "] = +4 Flag")
 
             # Dicepool check:
             dicepool = skillRating + attributesDict['averageRES']
-            if not (dicepool - 1 <= 12):
-
-                if dicepool >= 13:
-                    dicepoolFlags += 1
-                if dicepool >= 14:
-                    dicepoolFlags += 1
-                if dicepool >= 15:
-                    dicepoolFlags += 1
-                if dicepool >= 16:
-                    dicepoolFlags += 2
-                if dicepool >= 17:
-                    dicepoolFlags += 2
-                if dicepool >= 18:
-                    dicepoolFlags += 2
+            if not (dicepool - 1 < 12):
+                if dicepool == 13 or dicepool == 14 or dicepool == 15:
+                    accruedFlags += 1
+                    print("    [" + currentSkill['name'] + " + Body at " + str(dicepool) + " dicepool] = +1 Flag")
+                elif dicepool == 16 or dicepool == 17 or dicepool == 18:
+                    accruedFlags += 2
+                    print("    [" + currentSkill['name'] + " + Body at " + str(dicepool) + " dicepool] = +2 Flag")
                 if dicepool >= 19:
-                    for ratingOver19 in range(19, dicepool + 1, 1):
-                        dicepoolFlags += 5
+                    accruedFlags += 5
+                    print("    [" + currentSkill['name'] + " + Body at " + str(dicepool) + " dicepool] = +5 Flag")
 
-                print("    [" + currentSkill['name'] + " + Resonance at " + str(dicepool) + " dicepool] = +" + str(
-                    dicepoolFlags) + " Flag")
-
-            return ratingFlags + dicepoolFlags
+            return accruedFlags

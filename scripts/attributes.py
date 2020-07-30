@@ -30,10 +30,8 @@ def attributeFlagCheck(character, attributesDict):
                 accruedFlags += 2
                 print("    [" + currentAtt['name'] + " at 1] = +2 Flag")
 
-            if attributesDict[str('average' + currentAtt['name'])] >= 9 and attributesDict[
-                str('average' + currentAtt['name'])] > int(currentAtt['metatypemax']):
+            if attributesDict[str('average' + currentAtt['name'])] >= 9 and attributesDict[str('average' + currentAtt['name'])] > int(currentAtt['metatypemax']):
                 accruedFlags += 2
-                print("    [BOD at " + str(attributesDict['averageBOD']) + ", over Metatype limit] = +2 Flag")
-
+                print("    [" + currentAtt['name'] + " at " + str(attributesDict[str('average' + currentAtt['name'])]) + ", over Metatype limit] = +2 Flag")
 
     return accruedFlags
