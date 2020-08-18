@@ -28,7 +28,7 @@
     <priorityskill>Alchemy</priorityskill>
     <priorityskill>Arcana</priorityskill>
   </priorityskills>
-  <essenceatspecialstart>6</essenceatspecialstart>
+  <essenceatspecialstart>5</essenceatspecialstart>
   <name />
   <mainmugshotindex>-1</mainmugshotindex>
   <mugshots />
@@ -48,12 +48,12 @@
   <gamenotes />
   <primaryarm>Right</primaryarm>
   <ignorerules>True</ignorerules>
-  <karma>-1080</karma>
+  <karma>-1470</karma>
   <special>9</special>
   <totalspecial>9</totalspecial>
   <totalattributes>16</totalattributes>
-  <contactpoints>15</contactpoints>
-  <contactpointsused>15</contactpointsused>
+  <contactpoints>18</contactpoints>
+  <contactpointsused>18</contactpointsused>
   <spelllimit>10</spelllimit>
   <cfplimit>0</cfplimit>
   <ainormalprogramlimit>0</ainormalprogramlimit>
@@ -65,7 +65,7 @@
   <burntstreetcred>0</burntstreetcred>
   <created>False</created>
   <maxavail>12</maxavail>
-  <nuyen>-2199170.0</nuyen>
+  <nuyen>-2812170.0</nuyen>
   <startingnuyen>6000</startingnuyen>
   <sumtoten>10</sumtoten>
   <buildkarma>25</buildkarma>
@@ -84,7 +84,7 @@
   <nuyenmaxbp>10</nuyenmaxbp>
   <adept>True</adept>
   <magician>True</magician>
-  <technomancer>False</technomancer>
+  <technomancer>True</technomancer>
   <ai>False</ai>
   <cyberwaredisabled>False</cyberwaredisabled>
   <initiationdisabled>False</initiationdisabled>
@@ -96,20 +96,20 @@
       <metatypemin>1</metatypemin>
       <metatypemax>6</metatypemax>
       <metatypeaugmax>10</metatypeaugmax>
-      <base>0</base>
+      <base>7</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>12</totalvalue>
+      <totalvalue>16</totalvalue>
     </attribute>
     <attribute>
       <name>AGI</name>
       <metatypemin>1</metatypemin>
       <metatypemax>6</metatypemax>
       <metatypeaugmax>10</metatypeaugmax>
-      <base>6</base>
+      <base>4</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>11</totalvalue>
+      <totalvalue>10</totalvalue>
     </attribute>
     <attribute>
       <name>REA</name>
@@ -119,17 +119,17 @@
       <base>6</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>10</totalvalue>
+      <totalvalue>11</totalvalue>
     </attribute>
     <attribute>
       <name>STR</name>
       <metatypemin>1</metatypemin>
       <metatypemax>6</metatypemax>
       <metatypeaugmax>10</metatypeaugmax>
-      <base>6</base>
+      <base>5</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>14</totalvalue>
+      <totalvalue>13</totalvalue>
     </attribute>
     <attribute>
       <name>CHA</name>
@@ -139,14 +139,14 @@
       <base>4</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>1</totalvalue>
+      <totalvalue>2</totalvalue>
     </attribute>
     <attribute>
       <name>INT</name>
       <metatypemin>1</metatypemin>
       <metatypemax>6</metatypemax>
       <metatypeaugmax>10</metatypeaugmax>
-      <base>6</base>
+      <base>5</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
       <totalvalue>10</totalvalue>
@@ -159,7 +159,7 @@
       <base>4</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>4</totalvalue>
+      <totalvalue>5</totalvalue>
     </attribute>
     <attribute>
       <name>WIL</name>
@@ -169,7 +169,7 @@
       <base>4</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>12</totalvalue>
+      <totalvalue>11</totalvalue>
     </attribute>
     <attribute>
       <name>EDG</name>
@@ -189,7 +189,7 @@
       <base>0</base>
       <karma>0</karma>
       <metatypecategory>Special</metatypecategory>
-      <totalvalue>0</totalvalue>
+      <totalvalue>7</totalvalue>
     </attribute>
     <attribute>
       <name>MAGAdept</name>
@@ -199,7 +199,7 @@
       <base>0</base>
       <karma>0</karma>
       <metatypecategory>Special</metatypecategory>
-      <totalvalue>0</totalvalue>
+      <totalvalue>2</totalvalue>
     </attribute>
     <attribute>
       <name>RES</name>
@@ -234,15 +234,41 @@
   </attributes>
   <magenabled>True</magenabled>
   <initiategrade>4</initiategrade>
-  <resenabled>False</resenabled>
+  <resenabled>True</resenabled>
   <submersiongrade>0</submersiongrade>
   <depenabled>False</depenabled>
   <groupmember>False</groupmember>
   <groupname />
   <groupnotes />
-  <totaless>-29.85</totaless>
+  <totaless>2.95</totaless>
   <magsplitadept>0</magsplitadept>
   <magsplitmagician>0</magsplitmagician>
+  <tradition>
+    <sourceid>7a3ecfbe-616e-425d-b204-329de37ffdbb</sourceid>
+    <guid>01fc78d3-a776-4005-95eb-5f68afb6b9ae</guid>
+    <traditiontype>RES</traditiontype>
+    <name>Default</name>
+    <extra />
+    <spiritform>Materialization</spiritform>
+    <drain>WIL + RES</drain>
+    <source>SR5</source>
+    <page>258</page>
+    <spiritcombat />
+    <spiritdetection />
+    <spirithealth />
+    <spiritillusion />
+    <spiritmanipulation />
+    <spirits>
+      <spirit>Courier Sprite</spirit>
+      <spirit>Crack Sprite</spirit>
+      <spirit>Data Sprite</spirit>
+      <spirit>Fault Sprite</spirit>
+      <spirit>Machine Sprite</spirit>
+      <spirit>Companion Sprite</spirit>
+      <spirit>Generalist Sprite</spirit>
+    </spirits>
+    <bonus />
+  </tradition>
   <physicalcmfilled>0</physicalcmfilled>
   <stuncmfilled>0</stuncmfilled>
   <newskills>
@@ -448,6 +474,17 @@
         <buywithkarma>False</buywithkarma>
       </skill>
       <skill>
+        <guid>fdd0427a-052e-48ac-b641-675bffd18329</guid>
+        <suid>f338d383-ffd8-4ff8-b99b-cf4c2ed1b159</suid>
+        <isknowledge>False</isknowledge>
+        <skillcategory>Resonance Active</skillcategory>
+        <karma>0</karma>
+        <base>0</base>
+        <notes />
+        <name>Compiling</name>
+        <buywithkarma>False</buywithkarma>
+      </skill>
+      <skill>
         <guid>aa4d47e3-351e-4ddc-b803-6d1fce21c014</guid>
         <suid>1c14bf0d-cc69-4126-9a95-1f2429c11aa5</suid>
         <isknowledge>False</isknowledge>
@@ -500,6 +537,17 @@
         <base>12</base>
         <notes />
         <name>Cybertechnology</name>
+        <buywithkarma>False</buywithkarma>
+      </skill>
+      <skill>
+        <guid>13b31112-37e1-44bb-aaf3-e39339cc44e1</guid>
+        <suid>64eed2e9-e61c-4cba-81d4-18a612cf2df6</suid>
+        <isknowledge>False</isknowledge>
+        <skillcategory>Resonance Active</skillcategory>
+        <karma>0</karma>
+        <base>0</base>
+        <notes />
+        <name>Decompiling</name>
         <buywithkarma>False</buywithkarma>
       </skill>
       <skill>
@@ -899,6 +947,17 @@
         <buywithkarma>False</buywithkarma>
       </skill>
       <skill>
+        <guid>7c9350d5-b70e-461f-a637-0e627f88f028</guid>
+        <suid>3a38bbcf-38b0-435b-98f2-4ce8c50e8490</suid>
+        <isknowledge>False</isknowledge>
+        <skillcategory>Resonance Active</skillcategory>
+        <karma>0</karma>
+        <base>0</base>
+        <notes />
+        <name>Registering</name>
+        <buywithkarma>False</buywithkarma>
+      </skill>
+      <skill>
         <guid>bab954d9-a5ee-44e9-9b07-d4c0e9499729</guid>
         <suid>a6287e62-6a3b-43ce-b6e0-20f3655910e2</suid>
         <isknowledge>False</isknowledge>
@@ -1106,6 +1165,12 @@
         <base>0</base>
         <id>f1b12e4e-aeb5-4def-a5c2-eefd785f32f3</id>
         <name>Acting</name>
+      </group>
+      <group>
+        <karma>12</karma>
+        <base>0</base>
+        <id>12269dc0-54d1-4668-a9ac-b08b86dfba3a</id>
+        <name>Tasking</name>
       </group>
     </groups>
   </newskills>
@@ -4897,7 +4962,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
       <extraessmultiplicativemultiplier>1.0</extraessmultiplicativemultiplier>
       <forcegrade>None</forcegrade>
       <matrixcmfilled>0</matrixcmfilled>
-      <prototypetranshuman>False</prototypetranshuman>
+      <prototypetranshuman>True</prototypetranshuman>
       <bonus>
         <specificattribute>
           <name>STR</name>
@@ -5941,7 +6006,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
       <extraessmultiplicativemultiplier>1.0</extraessmultiplicativemultiplier>
       <forcegrade />
       <matrixcmfilled>0</matrixcmfilled>
-      <prototypetranshuman>False</prototypetranshuman>
+      <prototypetranshuman>True</prototypetranshuman>
       <bonus>
         <armor group="0">Rating</armor>
       </bonus>
@@ -6372,7 +6437,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
       <ratinglabel>String_Rating</ratinglabel>
       <subsystems />
       <wirelesson>False</wirelesson>
-      <grade>Standard (Adapsin)</grade>
+      <grade>Deltaware (Adapsin)</grade>
       <location />
       <extra />
       <suite>False</suite>
@@ -6430,7 +6495,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
           <ratinglabel>String_Rating</ratinglabel>
           <subsystems>Bodyware,Cosmetic Enhancement,Cyberlimb,Cyberlimb Enhancement,Cyberlimb Accessory,Cyber Implant Weapon</subsystems>
           <wirelesson>False</wirelesson>
-          <grade>Standard (Adapsin)</grade>
+          <grade>Deltaware (Adapsin)</grade>
           <location>Left</location>
           <extra />
           <suite>False</suite>
@@ -6485,7 +6550,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -6557,7 +6622,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -6627,7 +6692,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -6697,7 +6762,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -6767,7 +6832,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -6860,7 +6925,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
           <ratinglabel>String_Rating</ratinglabel>
           <subsystems>Bodyware,Cosmetic Enhancement,Cyberlimb,Cyberlimb Enhancement,Cyberlimb Accessory,Cyber Implant Weapon</subsystems>
           <wirelesson>False</wirelesson>
-          <grade>Standard (Adapsin)</grade>
+          <grade>Deltaware (Adapsin)</grade>
           <location>Right</location>
           <extra />
           <suite>False</suite>
@@ -6915,7 +6980,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -6987,7 +7052,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -7057,7 +7122,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -7127,7 +7192,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -7197,7 +7262,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -7290,7 +7355,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
           <ratinglabel>String_Rating</ratinglabel>
           <subsystems>Bodyware,Cosmetic Enhancement,Cyberlimb,Cyberlimb Enhancement,Cyberlimb Accessory,Cyber Implant Weapon</subsystems>
           <wirelesson>False</wirelesson>
-          <grade>Standard (Adapsin)</grade>
+          <grade>Deltaware (Adapsin)</grade>
           <location>Left</location>
           <extra />
           <suite>False</suite>
@@ -7345,7 +7410,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -7417,7 +7482,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -7487,7 +7552,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -7557,7 +7622,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -7627,7 +7692,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -7720,7 +7785,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
           <ratinglabel>String_Rating</ratinglabel>
           <subsystems>Bodyware,Cosmetic Enhancement,Cyberlimb,Cyberlimb Enhancement,Cyberlimb Accessory,Cyber Implant Weapon</subsystems>
           <wirelesson>False</wirelesson>
-          <grade>Standard (Adapsin)</grade>
+          <grade>Deltaware (Adapsin)</grade>
           <location>Right</location>
           <extra />
           <suite>False</suite>
@@ -7775,7 +7840,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -7847,7 +7912,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -7917,7 +7982,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -7987,7 +8052,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -8057,7 +8122,7 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
               <ratinglabel>String_Rating</ratinglabel>
               <subsystems />
               <wirelesson>False</wirelesson>
-              <grade>Standard (Adapsin)</grade>
+              <grade>Deltaware (Adapsin)</grade>
               <location />
               <extra />
               <suite>False</suite>
@@ -8856,6 +8921,76 @@ Not as heavily armored, or accessory friendly, as their mil-spec big brothers, t
           <sortorder>0</sortorder>
         </cyberware>
       </children>
+      <notes />
+      <discountedcost>False</discountedcost>
+      <addtoparentess>False</addtoparentess>
+      <addtoparentcapacity>False</addtoparentcapacity>
+      <active>False</active>
+      <homenode>False</homenode>
+      <devicerating />
+      <programlimit />
+      <overclocked>None</overclocked>
+      <attack />
+      <sleaze />
+      <dataprocessing />
+      <firewall />
+      <attributearray />
+      <modattack />
+      <modsleaze />
+      <moddataprocessing />
+      <modfirewall />
+      <modattributearray />
+      <canswapattributes>False</canswapattributes>
+      <sortorder>0</sortorder>
+    </cyberware>
+    <cyberware>
+      <sourceid>961eac53-0c43-4b19-8741-2872177a3a4c</sourceid>
+      <guid>b3524974-d50c-49e8-b505-364a7d2bbdb1</guid>
+      <name>Essence Antihole</name>
+      <category>Bodyware</category>
+      <limbslot />
+      <limbslotcount>1</limbslotcount>
+      <inheritattributes>False</inheritattributes>
+      <ess>Rating * -1.00</ess>
+      <capacity>0</capacity>
+      <avail>0</avail>
+      <cost>0</cost>
+      <source>SR5</source>
+      <page>0</page>
+      <parentid />
+      <hasmodularmount />
+      <plugsintomodularmount />
+      <blocksmounts />
+      <forced />
+      <rating>3000</rating>
+      <minrating />
+      <maxrating>3000</maxrating>
+      <ratinglabel>String_Rating</ratinglabel>
+      <subsystems />
+      <wirelesson>False</wirelesson>
+      <grade>None</grade>
+      <location />
+      <extra />
+      <suite>False</suite>
+      <stolen>False</stolen>
+      <essdiscount>0</essdiscount>
+      <extraessadditivemultiplier>0</extraessadditivemultiplier>
+      <extraessmultiplicativemultiplier>1.0</extraessmultiplicativemultiplier>
+      <forcegrade>None</forcegrade>
+      <matrixcmfilled>0</matrixcmfilled>
+      <prototypetranshuman>False</prototypetranshuman>
+      <bonus />
+      <pairbonus />
+      <wirelessbonus />
+      <wirelesspairbonus />
+      <improvementsource>Cyberware</improvementsource>
+      <pairinclude>
+        <name>Essence Antihole</name>
+      </pairinclude>
+      <wirelesspairinclude>
+        <name>Essence Antihole</name>
+      </wirelesspairinclude>
+      <children />
       <notes />
       <discountedcost>False</discountedcost>
       <addtoparentess>False</addtoparentess>
@@ -12808,7 +12943,8 @@ Tough dermal deposits under or on the skin, similar to a troll, count as a natur
       <bonus>
         <cyberseeker>WIL</cyberseeker>
       </bonus>
-      <firstlevelbonus />
+      <firstlevelbonus>
+      </firstlevelbonus>
       <notes />
     </quality>
     <quality>
@@ -12837,16 +12973,686 @@ Tough dermal deposits under or on the skin, similar to a troll, count as a natur
         <cyberseeker>BOX</cyberseeker>
         <!--physical boxes, hardcoded to times 3 elsewhere -->
       </bonus>
-      <firstlevelbonus />
+      <firstlevelbonus>
+      </firstlevelbonus>
       <notes>REDLINER
 (COST: 10 KARMA)
 Any cyberlimbs you have installed are jacked-to-themax, with safety limits disabled and performance overclocked beyond what the warranty normally covers,
 and that’s the way you like it. You receive +1 Strength and +1 Agility for every two full cyberarms or cyberlegs installed, up to a maximum of +2 for both attributes (sorry, no super centipede-man builds). The downside to pushing your ’ware that hard, however, is that the strain is quite damaging. You lose three Physical Condition Monitor boxes per two full cyberarms and legs installed. Normally, every cyberlimb gives you one additional box, but with this quality, after two full limbs you end up with net one less box (i.e., –1 instead of +2).
 </notes>
     </quality>
+    <quality>
+      <sourceid>96c4c8e1-2f5d-431c-96c8-db83820f747b</sourceid>
+      <guid>c8122743-f54b-4cfb-9366-6f2370102108</guid>
+      <name>Metagenic Improvement (Agility)</name>
+      <extra />
+      <bp>15</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Positive</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>116</page>
+      <sourcename />
+      <bonus>
+        <specificattribute>
+          <name>AGI</name>
+          <max>1</max>
+          <min>1</min>
+        </specificattribute>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>2ffd990c-ced6-4484-955c-108473df5335</sourceid>
+      <guid>ac2aa34d-b26b-4d1e-9e36-88866df823d8</guid>
+      <name>Metagenic Improvement (Body)</name>
+      <extra />
+      <bp>15</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Positive</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>116</page>
+      <sourcename />
+      <bonus>
+        <specificattribute>
+          <name>BOD</name>
+          <max>1</max>
+          <min>1</min>
+        </specificattribute>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>f1609199-e601-4b69-837f-2029b2ea94f0</sourceid>
+      <guid>6f14d5b1-d50d-4438-b2dc-539012bc2ce5</guid>
+      <name>Metagenic Improvement (Charisma)</name>
+      <extra />
+      <bp>15</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Positive</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>116</page>
+      <sourcename />
+      <bonus>
+        <specificattribute>
+          <name>CHA</name>
+          <max>1</max>
+          <min>1</min>
+        </specificattribute>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>7ee0765f-34f4-43ef-82c0-55c1b8bef8d8</sourceid>
+      <guid>c59da10a-82c7-4e24-b450-0545e7b0d0d0</guid>
+      <name>Metagenic Improvement (Intuition)</name>
+      <extra />
+      <bp>15</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Positive</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>116</page>
+      <sourcename />
+      <bonus>
+        <specificattribute>
+          <name>INT</name>
+          <max>1</max>
+          <min>1</min>
+        </specificattribute>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>bfdffed5-b687-4cb4-ad6a-ac59788fdc8a</sourceid>
+      <guid>409c6c21-e2f7-4a8a-a536-d53169f39cb6</guid>
+      <name>Metagenic Improvement (Logic)</name>
+      <extra />
+      <bp>15</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Positive</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>116</page>
+      <sourcename />
+      <bonus>
+        <specificattribute>
+          <name>LOG</name>
+          <max>1</max>
+          <min>1</min>
+        </specificattribute>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>c734c06d-c9e4-431d-93ba-033e82444efc</sourceid>
+      <guid>790130f7-784c-4956-a8c9-52a630bb4871</guid>
+      <name>Metagenic Improvement (Reaction)</name>
+      <extra />
+      <bp>15</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Positive</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>116</page>
+      <sourcename />
+      <bonus>
+        <specificattribute>
+          <name>REA</name>
+          <max>1</max>
+          <min>1</min>
+        </specificattribute>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>76ac03f1-b379-48a8-a6e8-d8611fce0adf</sourceid>
+      <guid>c3bbabe3-6a96-49f3-a43d-2458347ab8c7</guid>
+      <name>Metagenic Improvement (Strength)</name>
+      <extra />
+      <bp>15</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Positive</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>116</page>
+      <sourcename />
+      <bonus>
+        <specificattribute>
+          <name>STR</name>
+          <max>1</max>
+          <min>1</min>
+        </specificattribute>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>a6536e32-5f2f-4865-8f6a-d2ba268d4647</sourceid>
+      <guid>ba2c0fb0-d7aa-4087-a51e-d84e53a0804b</guid>
+      <name>Metagenic Improvement (Willpower)</name>
+      <extra />
+      <bp>15</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Positive</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>116</page>
+      <sourcename />
+      <bonus>
+        <specificattribute>
+          <name>WIL</name>
+          <max>1</max>
+          <min>1</min>
+        </specificattribute>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>8a1a04ff-5bff-48b2-90c2-b9bdb5fde8e8</sourceid>
+      <guid>6f8dc419-dd45-40bb-8293-d5017180b3ee</guid>
+      <name>Impaired Attribute (Agility)</name>
+      <extra />
+      <bp>-8</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Negative</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>120</page>
+      <sourcename />
+      <bonus>
+        <specificattribute>
+          <name>AGI</name>
+          <max>-2</max>
+        </specificattribute>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>96911a4d-d82e-4a1e-a550-3e12b8e14a7b</sourceid>
+      <guid>493cb943-0f54-4805-b44c-84a6d0c683ed</guid>
+      <name>Impaired Attribute (Body)</name>
+      <extra />
+      <bp>-8</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Negative</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>120</page>
+      <sourcename />
+      <bonus>
+        <specificattribute>
+          <name>BOD</name>
+          <max>-2</max>
+        </specificattribute>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>14e71856-7d38-4e04-933f-069ed89a14e9</sourceid>
+      <guid>64f39c5f-9ebc-4c6c-8ee5-038c967d2e98</guid>
+      <name>Impaired Attribute (Charisma)</name>
+      <extra />
+      <bp>-8</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Negative</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>120</page>
+      <sourcename />
+      <bonus>
+        <specificattribute>
+          <name>CHA</name>
+          <max>-2</max>
+        </specificattribute>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>b58b47a7-9011-4bef-8ba2-ae561a443765</sourceid>
+      <guid>5b532b4b-f619-47b0-8a97-67f329dc1832</guid>
+      <name>Impaired Attribute (Intuition)</name>
+      <extra />
+      <bp>-8</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Negative</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>120</page>
+      <sourcename />
+      <bonus>
+        <specificattribute>
+          <name>INT</name>
+          <max>-2</max>
+        </specificattribute>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>0df94dda-5941-4130-b6fc-0a98fcf7f846</sourceid>
+      <guid>7f114537-3bda-4158-9a7a-4b6adc87e471</guid>
+      <name>Impaired Attribute (Logic)</name>
+      <extra />
+      <bp>-8</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Negative</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>120</page>
+      <sourcename />
+      <bonus>
+        <specificattribute>
+          <name>LOG</name>
+          <max>-2</max>
+        </specificattribute>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>959b00a6-a55b-4c6b-95b0-a9746b31a24d</sourceid>
+      <guid>186ca5d3-47a5-4c4e-99e0-6bb920e12e3c</guid>
+      <name>Impaired Attribute (Reaction)</name>
+      <extra />
+      <bp>-8</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Negative</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>120</page>
+      <sourcename />
+      <bonus>
+        <specificattribute>
+          <name>REA</name>
+          <max>-2</max>
+        </specificattribute>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>c00591dc-fe6d-4ff0-8e42-22000878f03f</sourceid>
+      <guid>b3a82b3b-e4cd-4ede-81aa-f9f50f5c7a79</guid>
+      <name>Impaired Attribute (Strength)</name>
+      <extra />
+      <bp>-8</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Negative</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>120</page>
+      <sourcename />
+      <bonus>
+        <specificattribute>
+          <name>STR</name>
+          <max>-2</max>
+        </specificattribute>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>a6a4d71d-452f-4d26-9588-e7a5bc2474c0</sourceid>
+      <guid>bf9c07ce-df30-4981-b614-acface1627b4</guid>
+      <name>Impaired Attribute (Willpower)</name>
+      <extra />
+      <bp>-8</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Negative</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>120</page>
+      <sourcename />
+      <bonus>
+        <specificattribute>
+          <name>WIL</name>
+          <max>-2</max>
+        </specificattribute>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>33a1a0ed-20b8-4ddd-9070-2b460a5455b7</sourceid>
+      <guid>4cf8aab2-d0bf-464b-a176-1059970a9f70</guid>
+      <name>Symbiosis</name>
+      <extra />
+      <bp>-5</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Negative</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>122</page>
+      <sourcename />
+      <bonus>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes>SYMBIOSIS
+BONUS: 5 KARMA
+If the character sets up residence in a certain location for a sustained period of time (more than a season,
+though the gamemaster determines the specific time period) he gradually becomes attuned to the place and his surroundings. While this grants the character a preternaturally intuitive understanding of the environment and its inhabitants, the bonding can be fatal when it occurs in polluted or desolate urban environments.
+In game terms, the character’s biorhythm and senses gradually adapt to the environment (Essence x 100 meters in radius) around his permanent residence—the place where he spends most of his time. The character makes a Body +Willpower (3) Test each month; if they succeed, they are attuned to their environment. If they fail, they are unattuned and left to feel incomplete or lost. It may be that the area in which they live is one where they do not want to be attuned and they want to actively resist the attunement. In that case, they get a –1 dice pool modifier on the test.
+Once the bond is formed, it can only be broken if the character changes his home to form a new bond. They have to live in the new place for a full month to have a chance to break the old bond, and the bond is not broken until they succeed at the Body + Willpower (3) Test in the new neighborhood.
+Symbiosis provides the character with preternatural insight and connection to everything living within his sphere of attunement. This grants him a +1 dice pool modifier on any Skill Test involving the Outdoor Skill Group as well as a modifier to all Social Tests with indi viduals residing within the area. In addition, the character possesses an intuitive grasp of what’s going on around him, and he is emotionally affected by the condition of the land. If a fire breaks out, he instantly becomes alarmed. If all inhabitants in the area coexist peacefully, he is blissful and healthy, providing +1 to any Healing Tests performed while in the neighborhood. On the other hand, environmental and social problems—like drug abuse, gang violence, and pollution—produce a somatic response in the character, leaving him sick and depleted; treat as a persistent Mild Allergy until the situation is rectified.
+</notes>
+    </quality>
+    <quality>
+      <sourceid>51ba5e67-f2fd-4149-b24c-9b502ed0e7c7</sourceid>
+      <guid>63f2d4da-2b54-4857-9d3f-b06fa4e079c5</guid>
+      <name>Shiva Arms (Pair)</name>
+      <extra />
+      <bp>8</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Positive</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>118</page>
+      <sourcename />
+      <bonus>
+        <addlimb>
+          <limbslot>arm</limbslot>
+          <val>2</val>
+        </addlimb>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>51ba5e67-f2fd-4149-b24c-9b502ed0e7c7</sourceid>
+      <guid>9cf5e3bf-558c-4915-a66e-d175c6acd0fd</guid>
+      <name>Shiva Arms (Pair)</name>
+      <extra />
+      <bp>8</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>False</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>True</metagenic>
+      <print>True</print>
+      <qualitytype>Positive</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>118</page>
+      <sourcename />
+      <bonus>
+        <addlimb>
+          <limbslot>arm</limbslot>
+          <val>2</val>
+        </addlimb>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes />
+    </quality>
+    <quality>
+      <sourceid>c4b35412-bd91-45b4-b428-29da7edd5ff4</sourceid>
+      <guid>271e158a-0344-46a3-bcf9-feb21caecd5b</guid>
+      <name>Technomancer</name>
+      <extra />
+      <bp>15</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>False</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>False</metagenic>
+      <print>True</print>
+      <qualitytype>Positive</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>SR5</source>
+      <page>69</page>
+      <sourcename />
+      <bonus>
+        <addgear>
+          <name>Living Persona</name>
+          <category>Commlinks</category>
+        </addgear>
+        <enableattribute>
+          <name>RES</name>
+        </enableattribute>
+        <enabletab>
+          <name>technomancer</name>
+        </enabletab>
+        <unlockskills>Technomancer</unlockskills>
+      </bonus>
+      <firstlevelbonus />
+      <notes />
+    </quality>
   </qualities>
   <lifestyles />
-  <gears />
+  <gears>
+    <gear>
+      <sourceid>73b55822-dfb8-48f5-8ff8-37ef498ab9ef</sourceid>
+      <guid>f2532e78-3c33-495c-a836-955181dc3028</guid>
+      <name>Living Persona</name>
+      <category>Commlinks</category>
+      <capacity />
+      <armorcapacity />
+      <minrating />
+      <maxrating />
+      <rating>1</rating>
+      <qty>1.0</qty>
+      <avail>0</avail>
+      <cost>0</cost>
+      <extra />
+      <bonded>False</bonded>
+      <equipped>True</equipped>
+      <wirelesson>False</wirelesson>
+      <stolen>False</stolen>
+      <bonus />
+      <wirelessbonus />
+      <source>SR5</source>
+      <page>251</page>
+      <canformpersona>Self</canformpersona>
+      <devicerating>{RES}</devicerating>
+      <gearname />
+      <forcedvalue />
+      <matrixcmfilled>0</matrixcmfilled>
+      <matrixcmbonus>0</matrixcmbonus>
+      <parentid>271e158a-0344-46a3-bcf9-feb21caecd5b</parentid>
+      <allowrename>False</allowrename>
+      <children />
+      <location />
+      <notes />
+      <discountedcost>False</discountedcost>
+      <programlimit />
+      <overclocked>None</overclocked>
+      <attack>{CHA}</attack>
+      <sleaze>{INT}</sleaze>
+      <dataprocessing>{LOG}</dataprocessing>
+      <firewall>{WIL}</firewall>
+      <attributearray />
+      <modattack />
+      <modsleaze />
+      <moddataprocessing />
+      <modfirewall />
+      <modattributearray />
+      <canswapattributes>False</canswapattributes>
+      <active>True</active>
+      <homenode>False</homenode>
+      <sortorder>0</sortorder>
+    </gear>
+  </gears>
   <vehicles>
     <vehicle>
       <sourceid>0ed17686-7ac3-48de-88d2-bc8738a00afa</sourceid>
@@ -33502,98 +34308,6 @@ and that’s the way you like it. You receive +1 Strength and +1 Agility for eve
     </improvement>
     <improvement>
       <target />
-      <improvedname>RES</improvedname>
-      <sourcename />
-      <min>-36</min>
-      <max>-36</max>
-      <aug>0</aug>
-      <augmax>0</augmax>
-      <val>0</val>
-      <rating>1</rating>
-      <exclude />
-      <condition />
-      <improvementttype>Attribute</improvementttype>
-      <improvementsource>EssenceLossChargen</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
-    <improvement>
-      <target />
-      <improvedname>DEP</improvedname>
-      <sourcename />
-      <min>-36</min>
-      <max>-36</max>
-      <aug>0</aug>
-      <augmax>0</augmax>
-      <val>0</val>
-      <rating>1</rating>
-      <exclude />
-      <condition />
-      <improvementttype>Attribute</improvementttype>
-      <improvementsource>EssenceLossChargen</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
-    <improvement>
-      <target />
-      <improvedname>MAG</improvedname>
-      <sourcename />
-      <min>-32</min>
-      <max>-32</max>
-      <aug>0</aug>
-      <augmax>0</augmax>
-      <val>0</val>
-      <rating>1</rating>
-      <exclude />
-      <condition />
-      <improvementttype>Attribute</improvementttype>
-      <improvementsource>EssenceLossChargen</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
-    <improvement>
-      <target />
-      <improvedname>MAGAdept</improvedname>
-      <sourcename />
-      <min>-32</min>
-      <max>-32</max>
-      <aug>0</aug>
-      <augmax>0</augmax>
-      <val>0</val>
-      <rating>1</rating>
-      <exclude />
-      <condition />
-      <improvementttype>Attribute</improvementttype>
-      <improvementsource>EssenceLossChargen</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
-    <improvement>
-      <target />
       <improvedname>WIL</improvedname>
       <sourcename>966131bb-e4dc-4d1b-a140-fa653edd7582</sourcename>
       <min>0</min>
@@ -33616,7 +34330,490 @@ and that’s the way you like it. You receive +1 Strength and +1 Agility for eve
       <notes />
     </improvement>
     <improvement>
-      <unique>b198d874-465f-4887-904e-938982ab5094</unique>
+      <target />
+      <improvedname>AGI</improvedname>
+      <sourcename>98f0429e-ebdb-4975-9470-9dab2f1b1610</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>0</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Seeker</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>STR</improvedname>
+      <sourcename>98f0429e-ebdb-4975-9470-9dab2f1b1610</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>0</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Seeker</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>BOX</improvedname>
+      <sourcename>98f0429e-ebdb-4975-9470-9dab2f1b1610</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>0</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Seeker</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>AGI</improvedname>
+      <sourcename>c8122743-f54b-4cfb-9366-6f2370102108</sourcename>
+      <min>1</min>
+      <max>1</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>BOD</improvedname>
+      <sourcename>ac2aa34d-b26b-4d1e-9e36-88866df823d8</sourcename>
+      <min>1</min>
+      <max>1</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>CHA</improvedname>
+      <sourcename>6f14d5b1-d50d-4438-b2dc-539012bc2ce5</sourcename>
+      <min>1</min>
+      <max>1</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>INT</improvedname>
+      <sourcename>c59da10a-82c7-4e24-b450-0545e7b0d0d0</sourcename>
+      <min>1</min>
+      <max>1</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>LOG</improvedname>
+      <sourcename>409c6c21-e2f7-4a8a-a536-d53169f39cb6</sourcename>
+      <min>1</min>
+      <max>1</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>REA</improvedname>
+      <sourcename>790130f7-784c-4956-a8c9-52a630bb4871</sourcename>
+      <min>1</min>
+      <max>1</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>STR</improvedname>
+      <sourcename>c3bbabe3-6a96-49f3-a43d-2458347ab8c7</sourcename>
+      <min>1</min>
+      <max>1</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>WIL</improvedname>
+      <sourcename>ba2c0fb0-d7aa-4087-a51e-d84e53a0804b</sourcename>
+      <min>1</min>
+      <max>1</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>AGI</improvedname>
+      <sourcename>6f8dc419-dd45-40bb-8293-d5017180b3ee</sourcename>
+      <min>0</min>
+      <max>-2</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>BOD</improvedname>
+      <sourcename>493cb943-0f54-4805-b44c-84a6d0c683ed</sourcename>
+      <min>0</min>
+      <max>-2</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>CHA</improvedname>
+      <sourcename>64f39c5f-9ebc-4c6c-8ee5-038c967d2e98</sourcename>
+      <min>0</min>
+      <max>-2</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>INT</improvedname>
+      <sourcename>5b532b4b-f619-47b0-8a97-67f329dc1832</sourcename>
+      <min>0</min>
+      <max>-2</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>LOG</improvedname>
+      <sourcename>7f114537-3bda-4158-9a7a-4b6adc87e471</sourcename>
+      <min>0</min>
+      <max>-2</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>REA</improvedname>
+      <sourcename>186ca5d3-47a5-4c4e-99e0-6bb920e12e3c</sourcename>
+      <min>0</min>
+      <max>-2</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>STR</improvedname>
+      <sourcename>b3a82b3b-e4cd-4ede-81aa-f9f50f5c7a79</sourcename>
+      <min>0</min>
+      <max>-2</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>WIL</improvedname>
+      <sourcename>bf9c07ce-df30-4981-b614-acface1627b4</sourcename>
+      <min>0</min>
+      <max>-2</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>arm</improvedname>
+      <sourcename>63f2d4da-2b54-4857-9d3f-b06fa4e079c5</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>2</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>AddLimb</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>arm</improvedname>
+      <sourcename>9cf5e3bf-558c-4915-a66e-d175c6acd0fd</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>2</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>AddLimb</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <unique>abb415d6-2f0e-4f58-86d7-114e38af643c</unique>
       <target />
       <improvedname>WIL</improvedname>
       <sourcename>SEEKER_WIL</sourcename>
@@ -33640,76 +34837,7 @@ and that’s the way you like it. You receive +1 Strength and +1 Agility for eve
       <notes />
     </improvement>
     <improvement>
-      <target />
-      <improvedname>AGI</improvedname>
-      <sourcename>98f0429e-ebdb-4975-9470-9dab2f1b1610</sourcename>
-      <min>0</min>
-      <max>0</max>
-      <aug>0</aug>
-      <augmax>0</augmax>
-      <val>0</val>
-      <rating>0</rating>
-      <exclude />
-      <condition />
-      <improvementttype>Seeker</improvementttype>
-      <improvementsource>Quality</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
-    <improvement>
-      <target />
-      <improvedname>STR</improvedname>
-      <sourcename>98f0429e-ebdb-4975-9470-9dab2f1b1610</sourcename>
-      <min>0</min>
-      <max>0</max>
-      <aug>0</aug>
-      <augmax>0</augmax>
-      <val>0</val>
-      <rating>0</rating>
-      <exclude />
-      <condition />
-      <improvementttype>Seeker</improvementttype>
-      <improvementsource>Quality</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
-    <improvement>
-      <target />
-      <improvedname>BOX</improvedname>
-      <sourcename>98f0429e-ebdb-4975-9470-9dab2f1b1610</sourcename>
-      <min>0</min>
-      <max>0</max>
-      <aug>0</aug>
-      <augmax>0</augmax>
-      <val>0</val>
-      <rating>0</rating>
-      <exclude />
-      <condition />
-      <improvementttype>Seeker</improvementttype>
-      <improvementsource>Quality</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
-    <improvement>
-      <unique>62f9f436-6218-4e37-a4d5-fa2802054aca</unique>
+      <unique>084e0586-c56c-48ff-9c90-f932d5d2465e</unique>
       <target />
       <improvedname>AGI</improvedname>
       <sourcename>SEEKER_AGI</sourcename>
@@ -33733,7 +34861,7 @@ and that’s the way you like it. You receive +1 Strength and +1 Agility for eve
       <notes />
     </improvement>
     <improvement>
-      <unique>4ed0426a-4c91-4b08-b506-e676859737dc</unique>
+      <unique>26275bb8-5a54-459f-86f1-b7c5e2c1838c</unique>
       <target />
       <improvedname>STR</improvedname>
       <sourcename>SEEKER_STR</sourcename>
@@ -33757,7 +34885,7 @@ and that’s the way you like it. You receive +1 Strength and +1 Agility for eve
       <notes />
     </improvement>
     <improvement>
-      <unique>d1449a52-cc4b-42cd-9764-6f88c351a78f</unique>
+      <unique>13e2223f-546b-406f-ab49-ea70c6a7b7dc</unique>
       <target />
       <improvedname>BOX</improvedname>
       <sourcename>SEEKER_BOX</sourcename>
@@ -33780,6 +34908,192 @@ and that’s the way you like it. You receive +1 Strength and +1 Agility for eve
       <order>0</order>
       <notes />
     </improvement>
+    <improvement>
+      <target />
+      <improvedname>f2532e78-3c33-495c-a836-955181dc3028</improvedname>
+      <sourcename>271e158a-0344-46a3-bcf9-feb21caecd5b</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Gear</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <unique>enableattribute</unique>
+      <target />
+      <improvedname>RES</improvedname>
+      <sourcename>271e158a-0344-46a3-bcf9-feb21caecd5b</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>0</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>RES</improvedname>
+      <sourcename />
+      <min>-3</min>
+      <max>-4</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>EssenceLossChargen</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>DEP</improvedname>
+      <sourcename />
+      <min>-3</min>
+      <max>-4</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>EssenceLossChargen</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>MAG</improvedname>
+      <sourcename />
+      <min>1</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>EssenceLossChargen</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>MAGAdept</improvedname>
+      <sourcename />
+      <min>1</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>EssenceLossChargen</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <unique>enabletab</unique>
+      <target />
+      <improvedname>Technomancer</improvedname>
+      <sourcename>271e158a-0344-46a3-bcf9-feb21caecd5b</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>0</rating>
+      <exclude />
+      <condition />
+      <improvementttype>SpecialTab</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>Technomancer</improvedname>
+      <sourcename>271e158a-0344-46a3-bcf9-feb21caecd5b</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>SpecialSkills</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
   </improvements>
   <drugs />
   <mentorspirits />
@@ -33791,8 +35105,8 @@ and that’s the way you like it. You receive +1 Strength and +1 Agility for eve
   <improvementgroups />
   <calendar />
   <sources>
-    <source>SG</source>
     <source>SR5</source>
+    <source>SG</source>
     <source>SSP</source>
     <source>FA</source>
     <source>BTB</source>
@@ -33808,9 +35122,9 @@ and that’s the way you like it. You receive +1 Strength and +1 Agility for eve
   </customdatadirectorynames>
   <calculatedvalues>
     <!--these values are not loaded and only stored here for third parties, who parse this files (to not have to calculate them themselves)-->
-    <physicalcm>10</physicalcm>
+    <physicalcm>12</physicalcm>
     <physicalcmthresholdoffset>0</physicalcmthresholdoffset>
-    <physicalcmoverflow>13</physicalcmoverflow>
+    <physicalcmoverflow>17</physicalcmoverflow>
     <stuncm>10</stuncm>
     <stuncmthresholdoffset>0</stuncmthresholdoffset>
   </calculatedvalues>

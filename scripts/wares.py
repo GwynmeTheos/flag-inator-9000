@@ -14,33 +14,23 @@ def wareFlagCheck(character):
             # Pain Editor
             elif ware['name'] == 'Pain Editor':
                 accruedFlags += 2
-                print("    [Pain Editor] = +1 Flag")
+                print("    [Pain Editor] = +2 Flag")
             # MBW
             elif ware['name'] == 'Move-by-Wire' and (ware['rating'] == '2' or ware['rating'] == '3'):
                 accruedFlags += 1
                 print("    [MBW Rating 2 or 3] = +1 Flag")
             # Genetic Optmization
-            elif ware['name'] == 'Genetic Optimization (Body)':
+            elif ware['name'] == 'Genetic Optimization (Body)'\
+                    or ware['name'] == 'Genetic Optimization (Agility)'\
+                    or ware['name'] == 'Genetic Optimization (Strength)'\
+                    or ware['name'] == 'Genetic Optimization (Reaction)'\
+                    or ware['name'] == 'Genetic Optimization (Charisma)'\
+                    or ware['name'] == 'Genetic Optimization (Intuition)'\
+                    or ware['name'] == 'Genetic Optimization (Logic)'\
+                    or ware['name'] == 'Genetic Optimization (Willpower)':
                 accruedFlags += 1
-                print("    [Genetic Optimization (Body)] = +1 Flag")
-            elif ware['name'] == 'Genetic Optimization (Agility)':
-                accruedFlags += 1
-                print("    [Genetic Optimization (Agility)] = +1 Flag")
-            elif ware['name'] == 'Genetic Optimization (Strength)':
-                accruedFlags += 1
-                print("    [Genetic Optimization (Strength)] = +1 Flag")
-            elif ware['name'] == 'Genetic Optimization (Charisma)':
-                accruedFlags += 1
-                print("    [Genetic Optimization (Charisma)] = +1 Flag")
-            elif ware['name'] == 'Genetic Optimization (Intuition)':
-                accruedFlags += 1
-                print("    [Genetic Optimization (Intuition)] = +1 Flag")
-            elif ware['name'] == 'Genetic Optimization (Logic)':
-                accruedFlags += 1
-                print("    [Genetic Optimization (Logic)] = +1 Flag")
-            elif ware['name'] == 'Genetic Optimization (Willpower)':
-                accruedFlags += 1
-                print("    [Genetic Optimization (Willpower)] = +1 Flag")
+                print("    [" + ware['name'] + "] = +1 Flag")
+
             # Narco
             elif ware['name'] == 'Narco':
                 accruedFlags += 1
@@ -50,12 +40,22 @@ def wareFlagCheck(character):
     except TypeError:
         pass
 
-    # Betaware
+    # Betaware and Deltaware Base Ess Cost
     try:
+        betaCostSum = 0
+        deltaCostSum = 0
         for ware in character['character']['cyberwares']['cyberware']:
-            if ware['grade'] == 'Betaware' or ware['grade'] == 'Betaware (Adapsin)':
-                accruedFlags += 1
-                print("    [Betaware: " + ware['name'] + "] = +1 Flag")
+            # Betaware
+            if ware['grade'] == "Betaware" or ware['grade'] == "Betaware (Adapsin)":
+                betaCostSum += float(ware['ess'])
+            # Deltaware
+            elif ware['grade'] == "Deltaware" or ware['grade'] == "Deltaware (Adapsin)":
+                deltaCostSum += float(ware['ess']) * 2
+        accruedFlags += int(betaCostSum) + int(deltaCostSum)
+        if int(betaCostSum) != 0:
+            print("    [Sum of base cost of Betaware] = +" + str(int(betaCostSum)) + " Flag")
+        if int(deltaCostSum) != 0:
+            print("    [Sum of base cost of Deltaware] = +" + str(int(deltaCostSum)) + " Flag")
     except TypeError:
         pass
 

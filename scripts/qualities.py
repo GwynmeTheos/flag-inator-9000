@@ -1,167 +1,130 @@
 # Quality flag checker.
 
 
-def qualityFlagCheck(character):
+def qualityFlagCheck(talent, character):
     accruedFlags = 0
 
     try:
         inDebtQual = 0
+        shivaArmsQual = 0
+        dayJobQual = ""
+        dayJobMod = 0
+        fameQual = ""
+        fameMod = 0
 
         for quality in character['character']['qualities']['quality']:
             # Archivist
             if quality['name'] == 'Archivist':
-                accruedFlags += 5
-                print("    [Archivist] = +5 Flag")
+                accruedFlags += 2
+                print("    [Archivist] = +2 Flag")
 
-            # Astral Hazing
-            elif quality['name'] == 'Astral Hazing' and character['character']['prioritytalent'] == 'Mundane':
+            # Metagenic
+
+            elif quality['name'] == 'Astral Hazing' and talent == 'Mundane':
                 accruedFlags += 6
                 print("    [Astral Hazing] = +6 Flag")
+
+            elif quality['name'] == 'Metagenetic Improvement (Body)' or \
+                    quality['name'] == 'Metagenetic Improvement (Agility)' or \
+                    quality['name'] == 'Metagenetic Improvement (Reaction)' or \
+                    quality['name'] == 'Metagenetic Improvement (Strength)' or \
+                    quality['name'] == 'Metagenetic Improvement (Charisma)' or \
+                    quality['name'] == 'Metagenetic Improvement (Intuition)' or \
+                    quality['name'] == 'Metagenetic Improvement (Logic)' or \
+                    quality['name'] == 'Metagenetic Improvement (Willpower)':
+                accruedFlags += 4
+                print("    [" + quality['name'] + "] = +2 Flag")
+
+            elif quality['name'] == 'Impaired Attribute (Body)' or \
+                    quality['name'] == 'Impaired Attribute (Agility)' or \
+                    quality['name'] == 'Impaired Attribute (Reaction)' or \
+                    quality['name'] == 'Impaired Attribute (Strength)' or \
+                    quality['name'] == 'Impaired Attribute (Charisma)' or \
+                    quality['name'] == 'Impaired Attribute (Intuition)' or \
+                    quality['name'] == 'Impaired Attribute (Logic)' or \
+                    quality['name'] == 'Impaired Attribute (Willpower)':
+                accruedFlags += 2
+                print("    [" + quality['name'] + "] = +2 Flag")
+
+            elif quality['name'] == 'Symbiosis':
+                accruedFlags += 1
+                print("    [Symbiosis] = +1 Flag")
+
+            elif quality['name'] == 'Shiva Arms (Pair)':
+                shivaArmsQual += 1
 
             # Prototype Transhuman
             elif quality['name'] == 'Prototype Transhuman':
                 accruedFlags += 5
                 print("    [Prototype Transhuman] = +5 Flag")
 
-            # Day Job
-            elif quality['name'] == 'Day Job (10 hrs)':
-                accruedFlags += 1
-                print("    [Day Job (10 hrs)] = +1 Flag")
+            # Day Job + Fame
+            elif quality['name'] == 'Day Job (10 hrs)' and (dayJobQual != 'Day Job (20 hrs)' or dayJobQual != 'Day Job (40 hrs)'):
+                dayJobQual = quality['name']
+                dayJobMod = 0
 
-            elif quality['name'] == 'Day Job (20 hrs)':
-                accruedFlags += 3
-                print("    [Day Job (20 hrs)] = +3 Flag")
+            elif quality['name'] == 'Day Job (20 hrs)' and dayJobQual != 'Day Job (40hrs)':
+                dayJobQual = quality['name']
+                dayJobMod = 2
 
             elif quality['name'] == 'Day Job (40 hrs)':
-                accruedFlags += 5
-                print("    [Day Job (40 hrs)] = +5 Flag")
+                dayJobQual = quality['name']
+                dayJobMod = 5
 
-            # Fame
-            elif quality['name'] == 'Fame: Local':
-                accruedFlags += 3
-                print("    [Fame: Local] = +3 Flag")
+            elif quality['name'] == 'Fame: Local' and not (fameQual == 'Fame: National' or fameQual == 'Fame: Megacorporate' or fameQual == 'Fame: Global'):
+                fameQual = quality['name']
+                fameMod = 3
 
-            elif quality['name'] == 'Fame: National':
-                accruedFlags += 5
-                print("    [Fame: National] = +5 Flag")
+            elif quality['name'] == 'Fame: National' and not (fameQual == 'Fame: Megacorporate' or fameQual == 'Fame: Global'):
+                fameQual = quality['name']
+                fameMod = 7
 
-            elif quality['name'] == 'Fame: Megacorporate':
-                accruedFlags += 7
-                print("    [Fame: Megacorporate] = +7 Flag")
+            elif quality['name'] == 'Fame: Megacorporate' and not (fameQual == 'Fame: Global'):
+                fameQual = quality['name']
+                fameMod = 10
 
             elif quality['name'] == 'Fame: Global':
-                accruedFlags += 9
-                print("    [Fame: Global] = +9 Flag")
-
-            # SURGE
-            elif quality['name'] == 'Changeling (Class I SURGE)':
-                accruedFlags += 2
-                print("    [Changeling (Class I SURGE)] = +2 Flag")
-
-            elif quality['name'] == 'Changeling (Class II SURGE)':
-                accruedFlags += 4
-                print("    [Changeling (Class II SURGE)] = +4 Flag")
-
-            elif quality['name'] == 'Changeling (Class III SURGE)':
-                accruedFlags += 6
-                print("    [Changeling (Class III SURGE)] = +6 Flag")
+                fameQual = quality['name']
+                fameMod = 12
 
             # HMHVV
-            elif quality['name'] == 'Carrier (HMHVV Strain II)':
+            elif quality['name'] == 'Carrier (HMHVV Strain II)' or quality['name'] == 'Carrier (HMHVV Strain III)':
                 accruedFlags += 5
-                print("    [Carrier (HMHVV Strain II)] = +5 Flag")
+                print("    [" + quality['name'] + "] = +5 Flag")
 
-            elif quality['name'] == 'Carrier (HMHVV Strain III)':
-                accruedFlags += 5
-                print("    [Carrier (HMHVV Strain III)] = +5 Flag")
+            # Strain Ia and I
+            elif quality['name'] == 'Infected: Banshee' or \
+                    quality['name'] == 'Infected: Dzoo-Noo-Qua' or \
+                    quality['name'] == 'Infected: Goblin' or \
+                    quality['name'] == 'Infected: Mutaqua' or \
+                    quality['name'] == 'Infected: Nosferatu' or \
+                    quality['name'] == 'Infected: Sukuyan (Human)' or \
+                    quality['name'] == 'Infected: Sukuyan (Non-Human)' or \
+                    quality['name'] == 'Infected: Vampire (Human)' or \
+                    quality['name'] == 'Infected: Vampire (Non-Human)' or \
+                    quality['name'] == 'Infected: Wendigo':
+                accruedFlags += 16
+                print("    [" + quality['name'] + "] = +16 Flag")
 
-            elif quality['name'] == 'Infected: Bandersnatch':
+            # Strain II
+            elif quality['name'] == 'Infected: Fomoraig' or \
+                    quality['name'] == 'Infected: Bandersnatch' or \
+                    quality['name'] == 'Infected: Gnawer' or \
+                    quality['name'] == 'Infected: Grendel' or \
+                    quality['name'] == 'Infected: Harvester' or \
+                    quality['name'] == 'Infected: Loup-Garou':
                 accruedFlags += 14
-                print("    [Infected: Bandersnatch] = +14 Flag")
+                print("    [" + quality['name'] + "] = +14 Flag")
 
-            elif quality['name'] == 'Infected: Banshee':
-                accruedFlags += 16
-                print("    [Infected: Banshee] = +16 Flag")
-
-            elif quality['name'] == 'Infected: Dzoo-Noo-Qua':
-                accruedFlags += 16
-                print("    [Infected: Dzoo-Noo-Qua] = +16 Flag")
-
-            elif quality['name'] == 'Infected: Fomoraig':
-                accruedFlags += 14
-                print("    [Infected: Fomoraig] = +14 Flag")
-
-            elif quality['name'] == 'Infected: Ghoul (Human)':
+            # Strain III
+            elif quality['name'] == 'Infected: Ghoul (Human)' or \
+                    quality['name'] == 'Infected: Ghoul (Dwarf)' or \
+                    quality['name'] == 'Infected: Ghoul (Elf)' or \
+                    quality['name'] == 'Infected: Ghoul (Ork)' or \
+                    quality['name'] == 'Infected: Ghoul (Sasquatch)' or \
+                    quality['name'] == 'Infected: Ghoul (Troll)':
                 accruedFlags += 12
-                print("    [Infected: Ghoul (Human)] = +12 Flag")
-
-            elif quality['name'] == 'Infected: Ghoul (Dwarf)':
-                accruedFlags += 12
-                print("    [Infected: Ghoul (Dwarf)] = +12 Flag")
-
-            elif quality['name'] == 'Infected: Ghoul (Elf)':
-                accruedFlags += 12
-                print("    [Infected: Ghoul (Elf)] = +12 Flag")
-
-            elif quality['name'] == 'Infected: Ghoul (Ork)':
-                accruedFlags += 12
-                print("    [Infected: Ghoul (Ork)] = +12 Flag")
-
-            elif quality['name'] == 'Infected: Ghoul (Sasquatch)':
-                accruedFlags += 12
-                print("    [Infected: Ghoul (Sasquatch)] = +12 Flag")
-
-            elif quality['name'] == 'Infected: Ghoul (Troll)':
-                accruedFlags += 12
-                print("    [Infected: Ghoul (Sasquatch)] = +12 Flag")
-
-            elif quality['name'] == 'Infected: Gnawer':
-                accruedFlags += 14
-                print("    [Infected: Gnawer] = +14 Flag")
-
-            elif quality['name'] == 'Infected: Goblin':
-                accruedFlags += 16
-                print("    [Infected: Goblin] = +16 Flag")
-
-            elif quality['name'] == 'Infected: Grendel':
-                accruedFlags += 14
-                print("    [Infected: Grendel] = +14 Flag")
-
-            elif quality['name'] == 'Infected: Harvester':
-                accruedFlags += 14
-                print("    [Infected: Harvester] = +14 Flag")
-
-            elif quality['name'] == 'Infected: Loup-Garou':
-                accruedFlags += 14
-                print("    [Infected: Loup-Garou] = +14 Flag")
-
-            elif quality['name'] == 'Infected: Mutaqua':
-                accruedFlags += 16
-                print("    [Infected: Mutaqua] = +16 Flag")
-
-            elif quality['name'] == 'Infected: Nosferatu':
-                accruedFlags += 16
-                print("    [Infected: Nosferatu] = +16 Flag")
-
-            elif quality['name'] == 'Infected: Sukuyan (Human)':
-                accruedFlags += 16
-                print("    [Infected: Sukuyan (Human)] = +16 Flag")
-
-            elif quality['name'] == 'Infected: Sukuyan (Non-Human)':
-                accruedFlags += 16
-                print("    [Infected: Sukuyan (Non-Human)] = +16 Flag")
-
-            elif quality['name'] == 'Infected: Vampire (Human)':
-                accruedFlags += 16
-                print("    [Infected: Vampire (Human)] = +16 Flag")
-
-            elif quality['name'] == 'Infected: Vampire (Non-Human)':
-                accruedFlags += 16
-                print("    [Infected: Vampire (Non-Human)] = +16 Flag")
-
-            elif quality['name'] == 'Infected: Wendigo':
-                accruedFlags += 16
-                print("    [Infected: Wendigo] = +16 Flag")
+                print("    [" + quality['name'] + "] = +12 Flag")
 
             # Exceptional Attribute
             elif quality['name'] == 'Exceptional Attribute':
@@ -170,24 +133,15 @@ def qualityFlagCheck(character):
 
             # Dracoform
             elif quality['name'] == 'Latent Dracomorphosis':
-                accruedFlags += 19
-                print("    [Latent Dracomorphosis] = +19 Flag")
+                accruedFlags += 5
+                print("    [Latent Dracomorphosis] = +5 Flag")
 
-            elif quality['name'] == 'Dracoform (Eastern Drake)':
+            elif quality['name'] == 'Dracoform (Eastern Drake)' or \
+                    quality['name'] == 'Dracoform (Feathered Drake)' or \
+                    quality['name'] == 'Dracoform (Sea Drake)' or \
+                    quality['name'] == 'Dracoform (Western Drake)':
                 accruedFlags += 19
-                print("    [Dracoform (Eastern Drake)] = +19 Flag")
-
-            elif quality['name'] == 'Dracoform (Feathered Drake)':
-                accruedFlags += 19
-                print("    [Dracoform (Feathered Drake)] = +19 Flag")
-
-            elif quality['name'] == 'Dracoform (Sea Drake)':
-                accruedFlags += 19
-                print("    [Dracoform (Sea Drake)] = +19 Flag")
-
-            elif quality['name'] == 'Dracoform (Western Drake)':
-                accruedFlags += 19
-                print("    [Dracoform (Western Drake)] = +19 Flag")
+                print("    [" + quality['name'] + "] = +19 Flag")
 
             # In Debt
             elif quality['name'] == 'In Debt':
@@ -198,21 +152,33 @@ def qualityFlagCheck(character):
             accruedFlags += 2
             print("    [In Debt 3-5] = +2 Flag")
         # In Debt 6-8
-        elif 6 <= inDebtQual < 8:
+        elif 6 <= inDebtQual < 9:
             accruedFlags += 4
             print("    [In Debt 6-8] = +4 Flag")
         # In Debt 9-11
-        elif 9 <= inDebtQual < 11:
+        elif 9 <= inDebtQual < 12:
             accruedFlags += 6
             print("    [In Debt 9-11] = +6 Flag")
         # In Debt 12-14
-        elif 12 <= inDebtQual < 14:
+        elif 12 <= inDebtQual < 15:
             accruedFlags += 8
             print("    [In Debt 12-14] = +8 Flag")
         # In Debt 15
         elif inDebtQual == 15:
             accruedFlags += 10
             print("    [In Debt 15] = +10 Flag")
+
+        # Shiva Arms
+        if shivaArmsQual != 0:
+            accruedFlags += shivaArmsQual
+            print("    [Shiva Arms " + str(shivaArmsQual) + "] = +" + str(shivaArmsQual) + " Flag")
+
+        # Fame + Day Job
+        if fameQual == "" or dayJobQual == "":
+            pass
+        else:
+            accruedFlags += dayJobMod + fameMod
+            print("    [" + dayJobQual + " with " + fameQual + "] = +" + str(dayJobMod + fameMod) + " Flag")
 
     except TypeError:
         pass

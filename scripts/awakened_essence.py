@@ -1,12 +1,15 @@
 # Awakened Essence flag checker.
 
 
-def awakenedEssenceFlagCheck(character):
+def awakenedEssenceFlagCheck(talent, character):
     accruedFlags = 0
 
-    if character['character']['prioritytalent'] != 'Mundane' and character['character']['prioritytalent'] != 'Technomancer':
+    if talent == 'Mundane' or talent == 'Technomancer':
+        return 0
+    else:
         if 6.0 == float(character['character']['totaless']):
             return 0
+
         elif 6.0 > float(character['character']['totaless']) >= 5.0:
             accruedFlags += 2
             print("    [Awakened at 5.9 to 5.0 Essence] = +2 Flag")

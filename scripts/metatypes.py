@@ -34,8 +34,8 @@ def metatypeFlagCheck(character):
 
     # AI
     elif character['character']['metatype'] == 'A.I.':
-        accruedFlags += 15
-        print("    [A.I.] = +15 Flag")
+        accruedFlags += 10
+        print("    [A.I.] = +10 Flag")
 
     # Naga
     elif character['character']['metatype'] == 'Naga':

@@ -15,8 +15,9 @@ def checkCharacterFlags(character):
     currentFlag = 0
 
     # Create the dictionaries for the skills and the character's attributes.
-    skillsDict = char_data.createSkillDict()
+    skillsDict = char_data.createSkillDict(character)
     attributesDict = char_data.createAttributeDict(character)
+    talent = char_data.findTalent(character)
     # If they have any Improvements that increase their skill rating, we need to find those.
     # skillImprovements = char_data.createImprovementDict(character)
 
@@ -29,7 +30,7 @@ def checkCharacterFlags(character):
 
     # Awakened or Emerged?
     print("\n-> Priority Talent:\n\n", end="")
-    currentFlag += talents.talentFlagCheck(character)
+    currentFlag += talents.talentFlagCheck(talent)
 
     # Initiation Grade
     print("\n-> Initiation Grade:\n\n", end="")
@@ -41,7 +42,7 @@ def checkCharacterFlags(character):
 
     # Awakened Essence Loss
     print("\n-> Awakened Essence Loss:\n\n", end="")
-    currentFlag += awakened_essence.awakenedEssenceFlagCheck(character)
+    currentFlag += awakened_essence.awakenedEssenceFlagCheck(talent, character)
 
     # Magical Foci
     print("\n-> Magical Foci:\n\n", end="")
@@ -49,7 +50,7 @@ def checkCharacterFlags(character):
 
     # Skill Ratings and Total Dicepool
     print("\n-> Skills:\n\n", end="")
-    currentFlag += skills.skillFlagCheck(character, skillsDict, attributesDict)
+    currentFlag += skills.skillFlagCheck(skillsDict, attributesDict)
 
     # Attributes
     print("\n-> Attributes:\n\n", end="")
@@ -57,7 +58,7 @@ def checkCharacterFlags(character):
 
     # Spells
     print("\n-> Spells:\n\n", end="")
-    currentFlag += spells.spellFlagCheck(character)
+    currentFlag += spells.spellFlagCheck(character, skillsDict)
 
     # Adept Powers
     print("\n-> Adept Powers:\n\n", end="")
@@ -65,7 +66,7 @@ def checkCharacterFlags(character):
 
     # Qualities
     print("\n-> Qualities:\n\n", end="")
-    currentFlag += qualities.qualityFlagCheck(character)
+    currentFlag += qualities.qualityFlagCheck(talent, character)
 
     # Armor
     print("\n-> Armor:\n\n", end="")

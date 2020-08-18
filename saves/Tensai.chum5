@@ -65,7 +65,7 @@ Without a job and her father, Tensai had to depend on her own skillset to live. 
   <burntstreetcred>0</burntstreetcred>
   <created>True</created>
   <maxavail>12</maxavail>
-  <nuyen>4225.0000</nuyen>
+  <nuyen>4825.0000</nuyen>
   <startingnuyen>450000</startingnuyen>
   <sumtoten>10</sumtoten>
   <buildkarma>25</buildkarma>
@@ -1047,6 +1047,34 @@ Without a job and her father, Tensai had to depend on her own skillset to live. 
       <mainmugshotindex>-1</mainmugshotindex>
       <mugshots />
     </contact>
+    <contact>
+      <name>Isaiah Hudson</name>
+      <role>Armorsmith</role>
+      <location>Puyallup</location>
+      <connection>4</connection>
+      <loyalty>1</loyalty>
+      <metatype>Dwarf</metatype>
+      <sex>Male</sex>
+      <age>18</age>
+      <contacttype>Swag (Armor)</contacttype>
+      <preferredpayment>N/A</preferredpayment>
+      <hobbiesvice>Barter (Elven Wine)</hobbiesvice>
+      <personallife>N/A</personallife>
+      <type>Contact</type>
+      <file />
+      <relative />
+      <notes />
+      <groupname />
+      <colour>0</colour>
+      <group>False</group>
+      <family>False</family>
+      <blackmail>False</blackmail>
+      <free>False</free>
+      <groupenabled>True</groupenabled>
+      <guid>3f6fc2fe-4e4d-4d9c-9b68-335e79b27d1e</guid>
+      <mainmugshotindex>-1</mainmugshotindex>
+      <mugshots />
+    </contact>
   </contacts>
   <spells />
   <foci />
@@ -1144,7 +1172,7 @@ Without a job and her father, Tensai had to depend on her own skillset to live. 
       <source>SR5</source>
       <page>437</page>
       <armorname />
-      <equipped>False</equipped>
+      <equipped>True</equipped>
       <wirelesson>False</wirelesson>
       <extra />
       <damage>0</damage>
@@ -1287,7 +1315,7 @@ Creating your own AR clothing can be done with an Artisan + Intuition Extended T
       <source>RG</source>
       <page>74</page>
       <armorname />
-      <equipped>False</equipped>
+      <equipped>True</equipped>
       <wirelesson>False</wirelesson>
       <extra />
       <damage>0</damage>
@@ -6074,7 +6102,7 @@ This designer stimulant is especially prized by magicians and technomancers alik
               <cost>800</cost>
               <extra />
               <bonded>False</bonded>
-              <equipped>False</equipped>
+              <equipped>True</equipped>
               <wirelesson>False</wirelesson>
               <stolen>False</stolen>
               <bonus>
@@ -8552,6 +8580,226 @@ Your running programs appear as icons connected to your persona. As with all ico
           <homenode>False</homenode>
           <sortorder>2</sortorder>
         </gear>
+        <gear>
+          <sourceid>0025f1c7-45a4-4ec5-a692-e18aab2f97a9</sourceid>
+          <guid>e2d544b1-e1b2-4645-a515-648c940b0894</guid>
+          <name>Agents</name>
+          <category>Custom</category>
+          <capacity />
+          <armorcapacity />
+          <minrating />
+          <maxrating />
+          <rating>0</rating>
+          <qty>1.0</qty>
+          <avail>0</avail>
+          <cost>0</cost>
+          <extra />
+          <bonded>False</bonded>
+          <equipped>True</equipped>
+          <wirelesson>False</wirelesson>
+          <stolen>False</stolen>
+          <bonus>
+          </bonus>
+          <wirelessbonus>
+          </wirelessbonus>
+          <source>SR5</source>
+          <page>1</page>
+          <canformpersona />
+          <devicerating />
+          <gearname />
+          <forcedvalue />
+          <matrixcmfilled>0</matrixcmfilled>
+          <matrixcmbonus>0</matrixcmbonus>
+          <parentid />
+          <allowrename>False</allowrename>
+          <children>
+            <gear>
+              <sourceid>2d8396ff-a4a9-4382-ab69-70d198856e7f</sourceid>
+              <guid>b46cd82b-7a0d-4dbb-a3b6-3c35539024ff</guid>
+              <name>Agent</name>
+              <category>Software</category>
+              <capacity />
+              <armorcapacity />
+              <minrating />
+              <maxrating>6</maxrating>
+              <rating>5</rating>
+              <qty>1.0</qty>
+              <avail>Rating * 3</avail>
+              <cost>FixedValues(1000,2000,3000,8000,10000,12000)</cost>
+              <extra />
+              <bonded>False</bonded>
+              <equipped>True</equipped>
+              <wirelesson>False</wirelesson>
+              <stolen>False</stolen>
+              <bonus>
+              </bonus>
+              <wirelessbonus>
+              </wirelessbonus>
+              <source>SR5</source>
+              <page>246</page>
+              <canformpersona />
+              <devicerating />
+              <gearname>Shirogane Noel</gearname>
+              <forcedvalue />
+              <matrixcmfilled>0</matrixcmfilled>
+              <matrixcmbonus>0</matrixcmbonus>
+              <parentid />
+              <allowrename>False</allowrename>
+              <children />
+              <location />
+              <notes />
+              <discountedcost>False</discountedcost>
+              <programlimit />
+              <overclocked>None</overclocked>
+              <attack />
+              <sleaze />
+              <dataprocessing />
+              <firewall />
+              <attributearray />
+              <modattack />
+              <modsleaze />
+              <moddataprocessing />
+              <modfirewall />
+              <modattributearray />
+              <canswapattributes>False</canswapattributes>
+              <active>False</active>
+              <homenode>False</homenode>
+              <sortorder>0</sortorder>
+            </gear>
+          </children>
+          <location />
+          <notes>Agents are autonomous programs that are rated from 1 to 6. Each agent occupies one program slot on your deck. Agents use the Matrix attributes of the device they run on, and their rating (up to 6) for attributes.
+
+Agents also have the Computer, Hacking, and Cybercombat skills at a rating equal to their own. An agent runs as a program and can use programs running on the same device as them.
+
+You can have your agent perform Matrix actions for you. When an agent is running, it has its own persona (and icon). An agent is about as smart as a pilot program of the same rating (Pilot Programs, p. 269).
+
+Any attack on an agent damages the device on which it is running, rather than the agent itself (which is, after all, merely a program). This means that if you’re running an agent on your deck, you and it share the same Matrix Condition Monitor.</notes>
+          <discountedcost>False</discountedcost>
+          <programlimit />
+          <overclocked>None</overclocked>
+          <attack />
+          <sleaze />
+          <dataprocessing />
+          <firewall />
+          <attributearray />
+          <modattack />
+          <modsleaze />
+          <moddataprocessing />
+          <modfirewall />
+          <modattributearray />
+          <canswapattributes>False</canswapattributes>
+          <active>False</active>
+          <homenode>False</homenode>
+          <sortorder>0</sortorder>
+        </gear>
+        <gear>
+          <sourceid>0025f1c7-45a4-4ec5-a692-e18aab2f97a9</sourceid>
+          <guid>57409cdb-5461-47bc-b667-1f5de54d51c3</guid>
+          <name>Dongles</name>
+          <category>Custom</category>
+          <capacity />
+          <armorcapacity />
+          <minrating />
+          <maxrating />
+          <rating>0</rating>
+          <qty>1.0</qty>
+          <avail>0</avail>
+          <cost>0</cost>
+          <extra />
+          <bonded>False</bonded>
+          <equipped>True</equipped>
+          <wirelesson>False</wirelesson>
+          <stolen>False</stolen>
+          <bonus>
+          </bonus>
+          <wirelessbonus>
+          </wirelessbonus>
+          <source>SR5</source>
+          <page>1</page>
+          <canformpersona />
+          <devicerating />
+          <gearname />
+          <forcedvalue />
+          <matrixcmfilled>0</matrixcmfilled>
+          <matrixcmbonus>0</matrixcmbonus>
+          <parentid />
+          <allowrename>False</allowrename>
+          <children>
+            <gear>
+              <sourceid>e2689c1f-4dd1-40b7-8771-1bb5926b5ebf</sourceid>
+              <guid>395b252a-ec33-4a12-bb36-09aa04d1f4a2</guid>
+              <name>Receiver</name>
+              <category>Commlink Accessories</category>
+              <capacity />
+              <armorcapacity>[2]</armorcapacity>
+              <minrating />
+              <maxrating />
+              <rating>0</rating>
+              <qty>1.0</qty>
+              <avail>3</avail>
+              <cost>400</cost>
+              <extra />
+              <bonded>False</bonded>
+              <equipped>True</equipped>
+              <wirelesson>False</wirelesson>
+              <stolen>False</stolen>
+              <bonus>
+              </bonus>
+              <wirelessbonus>
+              </wirelessbonus>
+              <source>DT</source>
+              <page>62</page>
+              <canformpersona />
+              <devicerating>0</devicerating>
+              <gearname />
+              <forcedvalue />
+              <matrixcmfilled>0</matrixcmfilled>
+              <matrixcmbonus>0</matrixcmbonus>
+              <parentid />
+              <allowrename>False</allowrename>
+              <children />
+              <location />
+              <notes>Just plug this dongle into your commlink and you get Noise Reduction 2 for your commlink and all slaved devices! Great for spam zones!</notes>
+              <discountedcost>False</discountedcost>
+              <programlimit />
+              <overclocked>None</overclocked>
+              <attack />
+              <sleaze />
+              <dataprocessing />
+              <firewall />
+              <attributearray />
+              <modattack />
+              <modsleaze />
+              <moddataprocessing />
+              <modfirewall />
+              <modattributearray />
+              <canswapattributes>False</canswapattributes>
+              <active>False</active>
+              <homenode>False</homenode>
+              <sortorder>0</sortorder>
+            </gear>
+          </children>
+          <location />
+          <notes>A dongle is a small device that attaches to a commlink’s universal data port and gives it extra functionality. Unless you’ve got a teeny little commlink, a dongle barely increases the size of the whole thing. A commlink can only use one dongle at a time.</notes>
+          <discountedcost>False</discountedcost>
+          <programlimit />
+          <overclocked>None</overclocked>
+          <attack />
+          <sleaze />
+          <dataprocessing />
+          <firewall />
+          <attributearray />
+          <modattack />
+          <modsleaze />
+          <moddataprocessing />
+          <modfirewall />
+          <modattributearray />
+          <canswapattributes>False</canswapattributes>
+          <active>False</active>
+          <homenode>False</homenode>
+          <sortorder>0</sortorder>
+        </gear>
       </children>
       <location>744f0456-56aa-4613-bc7e-b75b104ded58</location>
       <notes />
@@ -8569,7 +8817,7 @@ Your running programs appear as icons connected to your persona. As with all ico
       <modfirewall />
       <modattributearray />
       <canswapattributes>True</canswapattributes>
-      <active>False</active>
+      <active>True</active>
       <homenode>False</homenode>
       <sortorder>1</sortorder>
     </gear>
@@ -11569,6 +11817,577 @@ Any person placed in the Valkyrie module is automatically stabilized (p. 209, SR
       <canswapattributes>False</canswapattributes>
       <sortorder>0</sortorder>
     </vehicle>
+    <vehicle>
+      <sourceid>d187e9f7-b308-426f-ac35-957ba601c70c</sourceid>
+      <guid>a05b0b74-80e4-45f8-bc47-cb40951fb0a2</guid>
+      <name>MCT Fly-Spy (Minidrone)</name>
+      <category>Drones: Mini</category>
+      <handling>4</handling>
+      <offroadhandling>4</offroadhandling>
+      <accel>2</accel>
+      <offroadaccel>2</offroadaccel>
+      <speed>3</speed>
+      <offroadspeed>3</offroadspeed>
+      <pilot>3</pilot>
+      <body>1</body>
+      <seats>0</seats>
+      <armor>0</armor>
+      <sensor>3</sensor>
+      <devicerating>3</devicerating>
+      <avail>8</avail>
+      <cost>2000</cost>
+      <addslots>0</addslots>
+      <modslots>1</modslots>
+      <powertrainmodslots>0</powertrainmodslots>
+      <protectionmodslots>0</protectionmodslots>
+      <weaponmodslots>0</weaponmodslots>
+      <bodymodslots>0</bodymodslots>
+      <electromagneticmodslots>0</electromagneticmodslots>
+      <cosmeticmodslots>0</cosmeticmodslots>
+      <source>SR5</source>
+      <page>466</page>
+      <parentid />
+      <sortorder>0</sortorder>
+      <physicalcmfilled>0</physicalcmfilled>
+      <matrixcmfilled>0</matrixcmfilled>
+      <vehiclename />
+      <mods>
+        <mod>
+          <sourceid>a4082cac-6f48-4cd1-a58d-bef334d03d1b</sourceid>
+          <guid>2f0c60f6-9617-45d4-9ae3-5dace275ab91</guid>
+          <name>Realistic Features</name>
+          <category>Body</category>
+          <limit />
+          <slots>Rating</slots>
+          <capacity />
+          <rating>2</rating>
+          <maxrating>4</maxrating>
+          <ratinglabel>String_Rating</ratinglabel>
+          <conditionmonitor>0</conditionmonitor>
+          <avail>(Rating * 3)R</avail>
+          <cost>Rating * Body * 1000</cost>
+          <markup>0</markup>
+          <extra />
+          <source>R5</source>
+          <page>165</page>
+          <included>True</included>
+          <equipped>True</equipped>
+          <wirelesson>False</wirelesson>
+          <subsystems />
+          <weaponmountcategories />
+          <ammobonus>0</ammobonus>
+          <ammobonuspercent>0</ammobonuspercent>
+          <ammoreplace />
+          <weapons />
+          <notes />
+          <discountedcost>False</discountedcost>
+          <sortorder>0</sortorder>
+          <stolen>False</stolen>
+        </mod>
+      </mods>
+      <weaponmounts />
+      <gears>
+        <gear>
+          <sourceid>2ca81a10-d0f7-4b39-ac93-a84f2f69f9d9</sourceid>
+          <guid>0045e614-d8bf-4cc6-9353-9a011d070b33</guid>
+          <name>Sensor Array</name>
+          <category>Sensors</category>
+          <capacity>8/[0]</capacity>
+          <armorcapacity>[0]</armorcapacity>
+          <minrating>2</minrating>
+          <maxrating>8</maxrating>
+          <rating>3</rating>
+          <qty>1.0</qty>
+          <avail>7</avail>
+          <cost>0</cost>
+          <extra />
+          <bonded>False</bonded>
+          <equipped>True</equipped>
+          <wirelesson>False</wirelesson>
+          <stolen>False</stolen>
+          <bonus>
+          </bonus>
+          <wirelessbonus>
+          </wirelessbonus>
+          <source>SR5</source>
+          <page>445</page>
+          <canformpersona />
+          <devicerating />
+          <gearname />
+          <forcedvalue />
+          <matrixcmfilled>0</matrixcmfilled>
+          <matrixcmbonus>0</matrixcmbonus>
+          <parentid>a05b0b74-80e4-45f8-bc47-cb40951fb0a2</parentid>
+          <allowrename>False</allowrename>
+          <children>
+            <gear>
+              <sourceid>e140b671-dc22-429d-b12a-dfbf46951049</sourceid>
+              <guid>a1262754-0c68-4df5-a4f7-b3b7ceccb23d</guid>
+              <name>Ultrasound</name>
+              <category>Sensor Functions</category>
+              <capacity>[1]</capacity>
+              <armorcapacity>[1]</armorcapacity>
+              <minrating />
+              <maxrating />
+              <rating>0</rating>
+              <qty>1.0</qty>
+              <avail>0</avail>
+              <cost>0</cost>
+              <extra />
+              <bonded>False</bonded>
+              <equipped>True</equipped>
+              <wirelesson>False</wirelesson>
+              <stolen>False</stolen>
+              <bonus>
+              </bonus>
+              <wirelessbonus>
+              </wirelessbonus>
+              <source>SR5</source>
+              <page>446</page>
+              <canformpersona />
+              <devicerating />
+              <gearname />
+              <forcedvalue />
+              <matrixcmfilled>0</matrixcmfilled>
+              <matrixcmbonus>0</matrixcmbonus>
+              <parentid />
+              <allowrename>False</allowrename>
+              <children />
+              <location />
+              <notes />
+              <discountedcost>False</discountedcost>
+              <programlimit />
+              <overclocked>None</overclocked>
+              <attack />
+              <sleaze />
+              <dataprocessing />
+              <firewall />
+              <attributearray />
+              <modattack />
+              <modsleaze />
+              <moddataprocessing />
+              <modfirewall />
+              <modattributearray />
+              <canswapattributes>False</canswapattributes>
+              <active>False</active>
+              <homenode>False</homenode>
+              <sortorder>0</sortorder>
+            </gear>
+            <gear>
+              <sourceid>4d12e4a1-edd3-4abf-830f-aa95874b7531</sourceid>
+              <guid>abd6c54d-4dd1-481f-b2ab-676532493613</guid>
+              <name>Radio Signal Scanner</name>
+              <category>Sensor Functions</category>
+              <capacity>[1]</capacity>
+              <armorcapacity>[1]</armorcapacity>
+              <minrating />
+              <maxrating />
+              <rating>0</rating>
+              <qty>1.0</qty>
+              <avail>0</avail>
+              <cost>0</cost>
+              <extra />
+              <bonded>False</bonded>
+              <equipped>True</equipped>
+              <wirelesson>False</wirelesson>
+              <stolen>False</stolen>
+              <bonus>
+              </bonus>
+              <wirelessbonus>
+              </wirelessbonus>
+              <source>SR5</source>
+              <page>446</page>
+              <canformpersona />
+              <devicerating />
+              <gearname />
+              <forcedvalue />
+              <matrixcmfilled>0</matrixcmfilled>
+              <matrixcmbonus>0</matrixcmbonus>
+              <parentid />
+              <allowrename>False</allowrename>
+              <children />
+              <location />
+              <notes />
+              <discountedcost>False</discountedcost>
+              <programlimit />
+              <overclocked>None</overclocked>
+              <attack />
+              <sleaze />
+              <dataprocessing />
+              <firewall />
+              <attributearray />
+              <modattack />
+              <modsleaze />
+              <moddataprocessing />
+              <modfirewall />
+              <modattributearray />
+              <canswapattributes>False</canswapattributes>
+              <active>False</active>
+              <homenode>False</homenode>
+              <sortorder>0</sortorder>
+            </gear>
+            <gear>
+              <sourceid>0f13599a-2a4e-4b75-80e2-fab4405a7a87</sourceid>
+              <guid>65562452-a997-468a-8ccc-1e808fe95592</guid>
+              <name>Omni-directional Microphone</name>
+              <category>Sensor Functions</category>
+              <capacity>Rating/[1]</capacity>
+              <armorcapacity>Rating/[1]</armorcapacity>
+              <minrating />
+              <maxrating>{Parent Rating}</maxrating>
+              <rating>1</rating>
+              <qty>1.0</qty>
+              <avail>0</avail>
+              <cost>0</cost>
+              <extra />
+              <bonded>False</bonded>
+              <equipped>True</equipped>
+              <wirelesson>False</wirelesson>
+              <stolen>False</stolen>
+              <bonus>
+              </bonus>
+              <wirelessbonus>
+              </wirelessbonus>
+              <source>SR5</source>
+              <page>446</page>
+              <canformpersona />
+              <devicerating />
+              <gearname />
+              <forcedvalue />
+              <matrixcmfilled>0</matrixcmfilled>
+              <matrixcmbonus>0</matrixcmbonus>
+              <parentid />
+              <allowrename>False</allowrename>
+              <children />
+              <location />
+              <notes />
+              <discountedcost>False</discountedcost>
+              <programlimit />
+              <overclocked>None</overclocked>
+              <attack />
+              <sleaze />
+              <dataprocessing />
+              <firewall />
+              <attributearray />
+              <modattack />
+              <modsleaze />
+              <moddataprocessing />
+              <modfirewall />
+              <modattributearray />
+              <canswapattributes>False</canswapattributes>
+              <active>False</active>
+              <homenode>False</homenode>
+              <sortorder>0</sortorder>
+            </gear>
+            <gear>
+              <sourceid>e853967a-a2b8-4d89-9a97-773034489a16</sourceid>
+              <guid>78b21b7c-14ea-4e7c-ae34-9fa35f965a16</guid>
+              <name>Motion Sensor</name>
+              <category>Sensor Functions</category>
+              <capacity>[1]</capacity>
+              <armorcapacity>[1]</armorcapacity>
+              <minrating />
+              <maxrating />
+              <rating>0</rating>
+              <qty>1.0</qty>
+              <avail>0</avail>
+              <cost>0</cost>
+              <extra />
+              <bonded>False</bonded>
+              <equipped>True</equipped>
+              <wirelesson>False</wirelesson>
+              <stolen>False</stolen>
+              <bonus>
+              </bonus>
+              <wirelessbonus>
+              </wirelessbonus>
+              <source>SR5</source>
+              <page>446</page>
+              <canformpersona />
+              <devicerating />
+              <gearname />
+              <forcedvalue />
+              <matrixcmfilled>0</matrixcmfilled>
+              <matrixcmbonus>0</matrixcmbonus>
+              <parentid />
+              <allowrename>False</allowrename>
+              <children />
+              <location />
+              <notes />
+              <discountedcost>False</discountedcost>
+              <programlimit />
+              <overclocked>None</overclocked>
+              <attack />
+              <sleaze />
+              <dataprocessing />
+              <firewall />
+              <attributearray />
+              <modattack />
+              <modsleaze />
+              <moddataprocessing />
+              <modfirewall />
+              <modattributearray />
+              <canswapattributes>False</canswapattributes>
+              <active>False</active>
+              <homenode>False</homenode>
+              <sortorder>0</sortorder>
+            </gear>
+            <gear>
+              <sourceid>ffc069af-d3ec-4201-887c-0178dcdfeef9</sourceid>
+              <guid>31404414-a2e4-4758-a6a7-5bc1b4fbc96d</guid>
+              <name>Camera</name>
+              <category>Sensor Functions</category>
+              <capacity>Rating/[1]</capacity>
+              <armorcapacity>Rating/[1]</armorcapacity>
+              <minrating />
+              <maxrating>{Parent Rating}</maxrating>
+              <rating>1</rating>
+              <qty>1.0</qty>
+              <avail>0</avail>
+              <cost>0</cost>
+              <extra />
+              <bonded>False</bonded>
+              <equipped>True</equipped>
+              <wirelesson>False</wirelesson>
+              <stolen>False</stolen>
+              <bonus>
+              </bonus>
+              <wirelessbonus>
+              </wirelessbonus>
+              <source>SR5</source>
+              <page>446</page>
+              <canformpersona />
+              <devicerating />
+              <gearname />
+              <forcedvalue />
+              <matrixcmfilled>0</matrixcmfilled>
+              <matrixcmbonus>0</matrixcmbonus>
+              <parentid />
+              <allowrename>False</allowrename>
+              <children />
+              <location />
+              <notes />
+              <discountedcost>False</discountedcost>
+              <programlimit />
+              <overclocked>None</overclocked>
+              <attack />
+              <sleaze />
+              <dataprocessing />
+              <firewall />
+              <attributearray />
+              <modattack />
+              <modsleaze />
+              <moddataprocessing />
+              <modfirewall />
+              <modattributearray />
+              <canswapattributes>False</canswapattributes>
+              <active>False</active>
+              <homenode>False</homenode>
+              <sortorder>0</sortorder>
+            </gear>
+            <gear>
+              <sourceid>3a79e046-8106-4089-a1ab-895eee956b86</sourceid>
+              <guid>f8851da4-b4b0-407d-8d42-dbcd5602b4fc</guid>
+              <name>Laser Range Finder</name>
+              <category>Sensor Functions</category>
+              <capacity>[1]</capacity>
+              <armorcapacity>[1]</armorcapacity>
+              <minrating />
+              <maxrating />
+              <rating>0</rating>
+              <qty>1.0</qty>
+              <avail>0</avail>
+              <cost>0</cost>
+              <extra />
+              <bonded>False</bonded>
+              <equipped>True</equipped>
+              <wirelesson>False</wirelesson>
+              <stolen>False</stolen>
+              <bonus>
+              </bonus>
+              <wirelessbonus>
+              </wirelessbonus>
+              <source>SR5</source>
+              <page>446</page>
+              <canformpersona />
+              <devicerating />
+              <gearname />
+              <forcedvalue />
+              <matrixcmfilled>0</matrixcmfilled>
+              <matrixcmbonus>0</matrixcmbonus>
+              <parentid />
+              <allowrename>False</allowrename>
+              <children />
+              <location />
+              <notes />
+              <discountedcost>False</discountedcost>
+              <programlimit />
+              <overclocked>None</overclocked>
+              <attack />
+              <sleaze />
+              <dataprocessing />
+              <firewall />
+              <attributearray />
+              <modattack />
+              <modsleaze />
+              <moddataprocessing />
+              <modfirewall />
+              <modattributearray />
+              <canswapattributes>False</canswapattributes>
+              <active>False</active>
+              <homenode>False</homenode>
+              <sortorder>0</sortorder>
+            </gear>
+            <gear>
+              <sourceid>f25e4819-209c-4cbf-b24f-668359a7a2ad</sourceid>
+              <guid>95ec0717-0011-4d0a-ac0a-a73fdc9db05f</guid>
+              <name>Laser Microphone</name>
+              <category>Sensor Functions</category>
+              <capacity>Rating/[1]</capacity>
+              <armorcapacity>Rating/[1]</armorcapacity>
+              <minrating />
+              <maxrating>{Parent Rating}</maxrating>
+              <rating>1</rating>
+              <qty>1.0</qty>
+              <avail>0</avail>
+              <cost>0</cost>
+              <extra />
+              <bonded>False</bonded>
+              <equipped>True</equipped>
+              <wirelesson>False</wirelesson>
+              <stolen>False</stolen>
+              <bonus>
+              </bonus>
+              <wirelessbonus>
+              </wirelessbonus>
+              <source>SR5</source>
+              <page>446</page>
+              <canformpersona />
+              <devicerating />
+              <gearname />
+              <forcedvalue />
+              <matrixcmfilled>0</matrixcmfilled>
+              <matrixcmbonus>0</matrixcmbonus>
+              <parentid />
+              <allowrename>False</allowrename>
+              <children />
+              <location />
+              <notes />
+              <discountedcost>False</discountedcost>
+              <programlimit />
+              <overclocked>None</overclocked>
+              <attack />
+              <sleaze />
+              <dataprocessing />
+              <firewall />
+              <attributearray />
+              <modattack />
+              <modsleaze />
+              <moddataprocessing />
+              <modfirewall />
+              <modattributearray />
+              <canswapattributes>False</canswapattributes>
+              <active>False</active>
+              <homenode>False</homenode>
+              <sortorder>0</sortorder>
+            </gear>
+            <gear>
+              <sourceid>5c3b9966-ad7e-42e3-b0e0-f656021784cf</sourceid>
+              <guid>00602892-9894-41dc-9820-239d767b1363</guid>
+              <name>Atmosphere Sensor</name>
+              <category>Sensor Functions</category>
+              <capacity>[1]</capacity>
+              <armorcapacity>[1]</armorcapacity>
+              <minrating />
+              <maxrating />
+              <rating>0</rating>
+              <qty>1.0</qty>
+              <avail>0</avail>
+              <cost>0</cost>
+              <extra />
+              <bonded>False</bonded>
+              <equipped>True</equipped>
+              <wirelesson>False</wirelesson>
+              <stolen>False</stolen>
+              <bonus>
+              </bonus>
+              <wirelessbonus>
+              </wirelessbonus>
+              <source>SR5</source>
+              <page>446</page>
+              <canformpersona />
+              <devicerating />
+              <gearname />
+              <forcedvalue />
+              <matrixcmfilled>0</matrixcmfilled>
+              <matrixcmbonus>0</matrixcmbonus>
+              <parentid />
+              <allowrename>False</allowrename>
+              <children />
+              <location />
+              <notes />
+              <discountedcost>False</discountedcost>
+              <programlimit />
+              <overclocked>None</overclocked>
+              <attack />
+              <sleaze />
+              <dataprocessing />
+              <firewall />
+              <attributearray />
+              <modattack />
+              <modsleaze />
+              <moddataprocessing />
+              <modfirewall />
+              <modattributearray />
+              <canswapattributes>False</canswapattributes>
+              <active>False</active>
+              <homenode>False</homenode>
+              <sortorder>0</sortorder>
+            </gear>
+          </children>
+          <location />
+          <notes />
+          <discountedcost>False</discountedcost>
+          <programlimit />
+          <overclocked>None</overclocked>
+          <attack />
+          <sleaze />
+          <dataprocessing />
+          <firewall />
+          <attributearray />
+          <modattack />
+          <modsleaze />
+          <moddataprocessing />
+          <modfirewall />
+          <modattributearray />
+          <canswapattributes>False</canswapattributes>
+          <active>False</active>
+          <homenode>False</homenode>
+          <sortorder>0</sortorder>
+        </gear>
+      </gears>
+      <weapons />
+      <location />
+      <notes />
+      <discountedcost>False</discountedcost>
+      <active>False</active>
+      <homenode>False</homenode>
+      <devicerating>3</devicerating>
+      <programlimit />
+      <overclocked>None</overclocked>
+      <attack />
+      <sleaze />
+      <dataprocessing />
+      <firewall />
+      <attributearray />
+      <modattack />
+      <modsleaze />
+      <moddataprocessing />
+      <modfirewall />
+      <modattributearray />
+      <canswapattributes>False</canswapattributes>
+      <sortorder>0</sortorder>
+    </vehicle>
   </vehicles>
   <metamagics />
   <arts />
@@ -11665,7 +12484,7 @@ Any person placed in the Valkyrie module is automatically stabilized (p. 209, SR
       <customid />
       <customgroup />
       <addtorating>False</addtorating>
-      <enabled>False</enabled>
+      <enabled>True</enabled>
       <order>0</order>
       <notes />
     </improvement>
@@ -12016,10 +12835,118 @@ Any person placed in the Valkyrie module is automatically stabilized (p. 209, SR
       <order>0</order>
       <notes />
     </improvement>
+    <improvement>
+      <target />
+      <improvedname>STR</improvedname>
+      <sourcename>5c8ccb20-f2fb-4a08-a663-f4bcca35d297</sourcename>
+      <min>7</min>
+      <max>2</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Custom</improvementsource>
+      <custom>True</custom>
+      <customname>Drone STR</customname>
+      <customid>specificattribute</customid>
+      <customgroup>Jumped In</customgroup>
+      <addtorating>False</addtorating>
+      <enabled>False</enabled>
+      <order>3</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>BOD</improvedname>
+      <sourcename>8c22dcf6-9066-4f0c-8034-21a8af7b3883</sourcename>
+      <min>1</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Custom</improvementsource>
+      <custom>True</custom>
+      <customname>Drone BOD</customname>
+      <customid>specificattribute</customid>
+      <customgroup>Jumped In</customgroup>
+      <addtorating>False</addtorating>
+      <enabled>False</enabled>
+      <order>2</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>AGI</improvedname>
+      <sourcename>ad142f7d-daad-467d-82a7-e7ca8a2b008c</sourcename>
+      <min>4</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Custom</improvementsource>
+      <custom>True</custom>
+      <customname>AGI -&gt; LOG</customname>
+      <customid>specificattribute</customid>
+      <customgroup>Jumped In</customgroup>
+      <addtorating>False</addtorating>
+      <enabled>False</enabled>
+      <order>1</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>REA</improvedname>
+      <sourcename>cd990a84-46c2-40f8-bd0d-70f4e89b1eb4</sourcename>
+      <min>3</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Custom</improvementsource>
+      <custom>True</custom>
+      <customname>REA -&gt; INT</customname>
+      <customid>specificattribute</customid>
+      <customgroup>Jumped In</customgroup>
+      <addtorating>False</addtorating>
+      <enabled>False</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
   </improvements>
   <drugs />
   <mentorspirits />
   <expenses>
+    <expense>
+      <guid>83923072-a5d5-4648-9f47-f8e1bbe5e565</guid>
+      <date>2020-07-26T21:18:59</date>
+      <amount>1</amount>
+      <reason>Starting Karma</reason>
+      <type>Karma</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ManualAdd</karmatype>
+        <nuyentype>AddCyberware</nuyentype>
+        <objectid />
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
     <expense>
       <guid>c626a7f6-4966-499e-a287-9db5fba52ac0</guid>
       <date>2020-07-26T21:18:59</date>
@@ -12037,16 +12964,386 @@ Any person placed in the Valkyrie module is automatically stabilized (p. 209, SR
       </undo>
     </expense>
     <expense>
-      <guid>83923072-a5d5-4648-9f47-f8e1bbe5e565</guid>
-      <date>2020-07-26T21:18:59</date>
+      <guid>d9b6ed34-eaa2-485e-b7df-322c4537b149</guid>
+      <date>2020-07-29T10:44:03</date>
+      <amount>6000</amount>
+      <reason>GM Server Works Rewards - June</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>ManualAdd</nuyentype>
+        <objectid />
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>d878d782-7276-47bc-a064-cd9040023d2a</guid>
+      <date>2020-07-29T14:33:26</date>
+      <amount>3000</amount>
+      <reason>WFTM (1 karma)</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>ManualAdd</nuyentype>
+        <objectid />
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>63c20c77-d051-499b-82c1-1e4a23d6c627</guid>
+      <date>2020-07-29T14:33:39</date>
+      <amount>-1</amount>
+      <reason>WTFM (1 karma)</reason>
+      <type>Karma</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ManualSubtract</karmatype>
+        <nuyentype>AddCyberware</nuyentype>
+        <objectid />
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>33c47bcd-6285-4b0c-b9a1-dbaad9b4f081</guid>
+      <date>2020-07-29T14:34:12</date>
+      <amount>0.0</amount>
+      <reason>Purchased Gear Agents</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddGear</nuyentype>
+        <objectid>e2d544b1-e1b2-4645-a515-648c940b0894</objectid>
+        <qty>1.0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>c0520495-c6bf-486e-b95d-625d4d1839d7</guid>
+      <date>2020-07-29T14:34:35</date>
+      <amount>-3000.0</amount>
+      <reason>Purchased Gear Agent</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddGear</nuyentype>
+        <objectid>a756c97e-d809-484e-b968-715bd1206104</objectid>
+        <qty>1.0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>42c4db44-ecaa-446a-86e6-6e108e8c0839</guid>
+      <date>2020-07-30T14:22:13</date>
+      <amount>-5500.0</amount>
+      <reason>August Rent</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>IncreaseLifestyle</nuyentype>
+        <objectid>590091bd-0b31-4c75-8ec5-74a1c5960db8</objectid>
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>2842bc2a-6736-4a40-9a5c-fae48eb149e1</guid>
+      <date>2020-07-30T14:22:14</date>
+      <amount>0</amount>
+      <reason>Decremented Lifestyle Medium</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+    </expense>
+    <expense>
+      <guid>c5c9b746-b8ba-4244-83ed-4bb84b5e4454</guid>
+      <date>2020-07-30T14:22:24</date>
+      <amount>5500</amount>
+      <reason>August Rent - Free Month</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>ManualAdd</nuyentype>
+        <objectid />
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>4f4a5b77-5769-4f5c-bfd4-f592a47bb799</guid>
+      <date>2020-07-30T14:23:09</date>
+      <amount>1000</amount>
+      <reason>Day Job (10)</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>ManualAdd</nuyentype>
+        <objectid />
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>d858566c-8c4c-413b-affc-8f2eb8b0719f</guid>
+      <date>2020-07-31T00:51:53</date>
+      <amount>-2000.0</amount>
+      <reason>Purchased Vehicle MCT Fly-Spy (Minidrone)</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddVehicle</nuyentype>
+        <objectid>a05b0b74-80e4-45f8-bc47-cb40951fb0a2</objectid>
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>f2322996-6bc5-4a42-ad0b-f07299edbdfa</guid>
+      <date>2020-07-31T00:52:06</date>
+      <amount>0.0</amount>
+      <reason>Purchased Vehicle Gear Geiger Counter</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddVehicleGear</nuyentype>
+        <objectid>55f4aa1c-9025-42be-9bc1-5899270e0e66</objectid>
+        <qty>1</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>abc42366-3fe0-49c2-93cd-2eb24c69a480</guid>
+      <date>2020-07-31T00:52:31</date>
+      <amount>0.0</amount>
+      <reason>Purchased Vehicle Gear Ultrasound</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddVehicleGear</nuyentype>
+        <objectid>a1262754-0c68-4df5-a4f7-b3b7ceccb23d</objectid>
+        <qty>1</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>7877c7b9-9312-4f0d-b9d3-7570e7787a88</guid>
+      <date>2020-07-31T00:52:34</date>
+      <amount>0.0</amount>
+      <reason>Purchased Vehicle Gear Radio Signal Scanner</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddVehicleGear</nuyentype>
+        <objectid>abd6c54d-4dd1-481f-b2ab-676532493613</objectid>
+        <qty>1</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>dc2d9b04-87c8-44fb-93c8-227973eff5cf</guid>
+      <date>2020-07-31T00:52:36</date>
+      <amount>0.0</amount>
+      <reason>Purchased Vehicle Gear Omni-directional Microphone</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddVehicleGear</nuyentype>
+        <objectid>65562452-a997-468a-8ccc-1e808fe95592</objectid>
+        <qty>1</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>047707b7-f1f7-4c18-bd00-17c0bc0fc93f</guid>
+      <date>2020-07-31T00:52:43</date>
+      <amount>0.0</amount>
+      <reason>Purchased Vehicle Gear Motion Sensor</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddVehicleGear</nuyentype>
+        <objectid>78b21b7c-14ea-4e7c-ae34-9fa35f965a16</objectid>
+        <qty>1</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>14d6b8e1-9d3f-46bd-81c7-645d56edfe26</guid>
+      <date>2020-07-31T00:52:52</date>
+      <amount>0.0</amount>
+      <reason>Purchased Vehicle Gear Camera</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddVehicleGear</nuyentype>
+        <objectid>31404414-a2e4-4758-a6a7-5bc1b4fbc96d</objectid>
+        <qty>1</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>2cc70ad7-b713-45fd-85cc-c0288a83ca90</guid>
+      <date>2020-07-31T00:53:08</date>
+      <amount>0.0</amount>
+      <reason>Purchased Vehicle Gear Laser Range Finder</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddVehicleGear</nuyentype>
+        <objectid>f8851da4-b4b0-407d-8d42-dbcd5602b4fc</objectid>
+        <qty>1</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>86e3858f-bb5a-40e3-9517-3fe083f2962e</guid>
+      <date>2020-07-31T00:53:10</date>
+      <amount>0.0</amount>
+      <reason>Purchased Vehicle Gear Laser Microphone</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddVehicleGear</nuyentype>
+        <objectid>95ec0717-0011-4d0a-ac0a-a73fdc9db05f</objectid>
+        <qty>1</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>13470002-5e71-46fa-8f6c-59ca37754c41</guid>
+      <date>2020-07-31T00:53:13</date>
+      <amount>0.0</amount>
+      <reason>Purchased Vehicle Gear Atmosphere Sensor</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddVehicleGear</nuyentype>
+        <objectid>00602892-9894-41dc-9820-239d767b1363</objectid>
+        <qty>1</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>85c236c6-2653-4442-ad7c-b9cc48dd8e70</guid>
+      <date>2020-08-10T23:18:59</date>
+      <amount>0.0</amount>
+      <reason>Purchased Gear Dongles</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddGear</nuyentype>
+        <objectid>57409cdb-5461-47bc-b667-1f5de54d51c3</objectid>
+        <qty>1.0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>ff03cab5-5430-4ece-ae37-3134ac649c8c</guid>
+      <date>2020-08-10T23:19:23</date>
+      <amount>-400.0</amount>
+      <reason>Purchased Gear Receiver</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddGear</nuyentype>
+        <objectid>395b252a-ec33-4a12-bb36-09aa04d1f4a2</objectid>
+        <qty>1.0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>0a863488-bccf-446f-bf9a-0a827cf3ba1c</guid>
+      <date>2020-08-10T23:38:37</date>
+      <amount>3000.00</amount>
+      <reason>Sold Cyberware Gear Agent</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+    </expense>
+    <expense>
+      <guid>e2b50a72-fabb-4b4b-9eba-1d7d3302156d</guid>
+      <date>2020-08-10T23:38:51</date>
+      <amount>-10000.0</amount>
+      <reason>Purchased Gear Agent</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddGear</nuyentype>
+        <objectid>b46cd82b-7a0d-4dbb-a3b6-3c35539024ff</objectid>
+        <qty>1.0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>b36842ca-6df1-4ef5-b76c-7f6c537214cc</guid>
+      <date>2020-08-16T12:14:05</date>
       <amount>1</amount>
-      <reason>Starting Karma</reason>
+      <reason>Mission Reward (Collab Opportunity)</reason>
       <type>Karma</type>
       <refund>False</refund>
       <forcecareervisible>False</forcecareervisible>
       <undo>
         <karmatype>ManualAdd</karmatype>
         <nuyentype>AddCyberware</nuyentype>
+        <objectid />
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>c017e240-7ef8-40e1-b7e2-b2bec4dde996</guid>
+      <date>2020-08-16T12:14:55</date>
+      <amount>3000</amount>
+      <reason>Mission Reward (Collab Opportunity)</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>ManualAdd</nuyentype>
         <objectid />
         <qty>0</qty>
         <extra />
@@ -12126,7 +13423,9 @@ Any person placed in the Valkyrie module is automatically stabilized (p. 209, SR
       <sortorder>1</sortorder>
     </location>
   </weaponlocations>
-  <improvementgroups />
+  <improvementgroups>
+    <improvementgroup>Jumped In</improvementgroup>
+  </improvementgroups>
   <calendar />
   <sources>
     <source>RG</source>

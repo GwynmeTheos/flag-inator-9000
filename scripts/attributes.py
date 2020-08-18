@@ -32,7 +32,7 @@ def attributeFlagCheck(character, attributesDict):
 
             if attributesDict[str('highestLimb' + currentAtt['name'])] >= 9 and attributesDict[str('highestLimb' + currentAtt['name'])] > int(currentAtt['metatypemax']):
                 accruedFlags += 2
-                print("    [Highest Limb " + currentAtt['name'] + " at " + str(attributesDict[str('highestLimb' + currentAtt['name'])]) + ", over Metatype limit] = +2 Flag")
+                print("    [Highest Limb " + currentAtt['name'] + " at " + str(attributesDict[str('highestLimb' + currentAtt['name'])]) + ", over true Metatype limit] = +2 Flag")
 
         else:
             if attributesDict[currentAtt['name']] == 1:

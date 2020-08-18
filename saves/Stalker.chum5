@@ -108,7 +108,7 @@ Contact: Nothing
 Contact: Ram Dench. Ork. Gang Leader. 3/2. Support (Hideouts). Avondale (Redmond).
 "Three Halloweners were on site. Street Sam with a chainsaw (slammer), Adept with a Yo-Yo (slammer) and Mage (puddle of blood and gore). No loses, one close call. Sumary: Hot potato with a live grenade."</gamenotes>
   <primaryarm>Left</primaryarm>
-  <karma>4</karma>
+  <karma>15</karma>
   <special>5</special>
   <totalspecial>5</totalspecial>
   <totalattributes>20</totalattributes>
@@ -125,7 +125,7 @@ Contact: Ram Dench. Ork. Gang Leader. 3/2. Support (Hideouts). Avondale (Redmond
   <burntstreetcred>0</burntstreetcred>
   <created>True</created>
   <maxavail>12</maxavail>
-  <nuyen>19361.500</nuyen>
+  <nuyen>48861.500</nuyen>
   <startingnuyen>6000</startingnuyen>
   <sumtoten>10</sumtoten>
   <buildkarma>25</buildkarma>
@@ -239,7 +239,7 @@ Contact: Ram Dench. Ork. Gang Leader. 3/2. Support (Hideouts). Avondale (Redmond
       <base>5</base>
       <karma>0</karma>
       <metatypecategory>Special</metatypecategory>
-      <totalvalue>7</totalvalue>
+      <totalvalue>0</totalvalue>
     </attribute>
     <attribute>
       <name>MAG</name>
@@ -300,7 +300,7 @@ Contact: Ram Dench. Ork. Gang Leader. 3/2. Support (Hideouts). Avondale (Redmond
   <groupmember>True</groupmember>
   <groupname>Blades of the Resonance</groupname>
   <groupnotes>Strictures: Defender &amp; Secrecy</groupnotes>
-  <totaless>4.80</totaless>
+  <totaless>4.60</totaless>
   <tradition>
     <sourceid>7a3ecfbe-616e-425d-b204-329de37ffdbb</sourceid>
     <guid>fd889679-bff6-47b9-bbcb-9b0cc6ce1dee</guid>
@@ -1316,7 +1316,7 @@ Contact: Ram Dench. Ork. Gang Leader. 3/2. Support (Hideouts). Avondale (Redmond
       <guid>00000000-0000-0000-0000-000000000000</guid>
       <name>Machine Sprite</name>
       <crittername>Kizuna AI</crittername>
-      <services>8</services>
+      <services>4</services>
       <force>5</force>
       <bound>True</bound>
       <fettered>False</fettered>
@@ -1330,7 +1330,7 @@ Contact: Ram Dench. Ork. Gang Leader. 3/2. Support (Hideouts). Avondale (Redmond
     <spirit>
       <guid>00000000-0000-0000-0000-000000000000</guid>
       <name>Data Sprite</name>
-      <crittername>Lifeline</crittername>
+      <crittername>Matsuri</crittername>
       <services>7</services>
       <force>5</force>
       <bound>True</bound>
@@ -3554,6 +3554,361 @@ Wireless Bonus: Provides interaction with a user’s healthcare provider, as wel
       <canswapattributes>False</canswapattributes>
       <sortorder>0</sortorder>
     </cyberware>
+    <cyberware>
+      <sourceid>2767fdaf-4f49-4403-a799-e91b9e6c8fa2</sourceid>
+      <guid>74759fdc-0e15-4a21-92dd-f3f4f604b03f</guid>
+      <name>Cyberears</name>
+      <category>Earware</category>
+      <limbslot />
+      <limbslotcount>1</limbslotcount>
+      <inheritattributes>False</inheritattributes>
+      <ess>(Rating * 0.1) + 0.1</ess>
+      <capacity>Rating * 4</capacity>
+      <avail>Rating * 3</avail>
+      <cost>FixedValues(3000,4500,7500,11000,15500,21000)</cost>
+      <source>SR5</source>
+      <page>453</page>
+      <parentid />
+      <hasmodularmount />
+      <plugsintomodularmount />
+      <blocksmounts />
+      <forced />
+      <rating>1</rating>
+      <minrating>1</minrating>
+      <maxrating>6</maxrating>
+      <ratinglabel>String_Rating</ratinglabel>
+      <subsystems>Earware</subsystems>
+      <wirelesson>False</wirelesson>
+      <grade>Standard</grade>
+      <location />
+      <extra />
+      <suite>False</suite>
+      <stolen>False</stolen>
+      <essdiscount>0</essdiscount>
+      <extraessadditivemultiplier>0</extraessadditivemultiplier>
+      <extraessmultiplicativemultiplier>1.0</extraessmultiplicativemultiplier>
+      <forcegrade />
+      <matrixcmfilled>0</matrixcmfilled>
+      <prototypetranshuman>False</prototypetranshuman>
+      <bonus />
+      <pairbonus />
+      <wirelessbonus />
+      <wirelesspairbonus />
+      <allowgear>
+        <gearcategory>Custom</gearcategory>
+        <gearcategory>Sensors</gearcategory>
+      </allowgear>
+      <improvementsource>Cyberware</improvementsource>
+      <pairinclude>
+        <name>Cyberears</name>
+      </pairinclude>
+      <wirelesspairinclude>
+        <name>Cyberears</name>
+      </wirelesspairinclude>
+      <children>
+        <cyberware>
+          <sourceid>e0212e7e-e690-41d8-a461-4834a668d9c8</sourceid>
+          <guid>f04f0bb3-f7cb-4013-aaf7-c8e7f810b91f</guid>
+          <name>Sound Link</name>
+          <category>Earware</category>
+          <limbslot />
+          <limbslotcount>1</limbslotcount>
+          <inheritattributes>False</inheritattributes>
+          <ess>0.1</ess>
+          <capacity>[*]</capacity>
+          <avail>4</avail>
+          <cost>0</cost>
+          <source>SR5</source>
+          <page>454</page>
+          <parentid>74759fdc-0e15-4a21-92dd-f3f4f604b03f</parentid>
+          <hasmodularmount />
+          <plugsintomodularmount />
+          <blocksmounts />
+          <forced />
+          <rating>0</rating>
+          <minrating />
+          <maxrating />
+          <ratinglabel>String_Rating</ratinglabel>
+          <subsystems />
+          <wirelesson>False</wirelesson>
+          <grade>Standard</grade>
+          <location />
+          <extra />
+          <suite>False</suite>
+          <stolen>False</stolen>
+          <essdiscount>0</essdiscount>
+          <extraessadditivemultiplier>0</extraessadditivemultiplier>
+          <extraessmultiplicativemultiplier>1.0</extraessmultiplicativemultiplier>
+          <forcegrade />
+          <matrixcmfilled>0</matrixcmfilled>
+          <prototypetranshuman>False</prototypetranshuman>
+          <bonus />
+          <pairbonus />
+          <wirelessbonus />
+          <wirelesspairbonus />
+          <improvementsource>Cyberware</improvementsource>
+          <pairinclude>
+            <name>Sound Link</name>
+          </pairinclude>
+          <wirelesspairinclude>
+            <name>Sound Link</name>
+          </wirelesspairinclude>
+          <children />
+          <notes />
+          <discountedcost>False</discountedcost>
+          <addtoparentess>False</addtoparentess>
+          <addtoparentcapacity>False</addtoparentcapacity>
+          <active>False</active>
+          <homenode>False</homenode>
+          <devicerating />
+          <programlimit />
+          <overclocked>None</overclocked>
+          <attack />
+          <sleaze />
+          <dataprocessing />
+          <firewall />
+          <attributearray />
+          <modattack />
+          <modsleaze />
+          <moddataprocessing />
+          <modfirewall />
+          <modattributearray />
+          <canswapattributes>False</canswapattributes>
+          <sortorder>0</sortorder>
+        </cyberware>
+        <cyberware>
+          <sourceid>40830ce9-b279-4951-adf2-05a69dd41d77</sourceid>
+          <guid>141340f3-9849-4288-8c44-5782b2f582b4</guid>
+          <name>Antennae</name>
+          <category>Earware</category>
+          <limbslot />
+          <limbslotcount>1</limbslotcount>
+          <inheritattributes>False</inheritattributes>
+          <ess>0.1</ess>
+          <capacity>[1]</capacity>
+          <avail>2</avail>
+          <cost>500</cost>
+          <source>CF</source>
+          <page>74</page>
+          <parentid />
+          <hasmodularmount />
+          <plugsintomodularmount />
+          <blocksmounts />
+          <forced />
+          <rating>0</rating>
+          <minrating />
+          <maxrating />
+          <ratinglabel>String_Rating</ratinglabel>
+          <subsystems />
+          <wirelesson>False</wirelesson>
+          <grade>Standard</grade>
+          <location />
+          <extra />
+          <suite>False</suite>
+          <stolen>False</stolen>
+          <essdiscount>0</essdiscount>
+          <extraessadditivemultiplier>0</extraessadditivemultiplier>
+          <extraessmultiplicativemultiplier>1.0</extraessmultiplicativemultiplier>
+          <forcegrade />
+          <matrixcmfilled>0</matrixcmfilled>
+          <prototypetranshuman>False</prototypetranshuman>
+          <bonus />
+          <pairbonus />
+          <wirelessbonus />
+          <wirelesspairbonus />
+          <improvementsource>Cyberware</improvementsource>
+          <pairinclude>
+            <name>Antennae</name>
+          </pairinclude>
+          <wirelesspairinclude>
+            <name>Antennae</name>
+          </wirelesspairinclude>
+          <children />
+          <notes />
+          <discountedcost>False</discountedcost>
+          <addtoparentess>False</addtoparentess>
+          <addtoparentcapacity>False</addtoparentcapacity>
+          <active>False</active>
+          <homenode>False</homenode>
+          <devicerating />
+          <programlimit />
+          <overclocked>None</overclocked>
+          <attack />
+          <sleaze />
+          <dataprocessing />
+          <firewall />
+          <attributearray />
+          <modattack />
+          <modsleaze />
+          <moddataprocessing />
+          <modfirewall />
+          <modattributearray />
+          <canswapattributes>False</canswapattributes>
+          <sortorder>0</sortorder>
+        </cyberware>
+        <cyberware>
+          <sourceid>40830ce9-b279-4951-adf2-05a69dd41d77</sourceid>
+          <guid>e1a5e6b7-2549-4c9a-8251-c2589ea62b8f</guid>
+          <name>Antennae</name>
+          <category>Earware</category>
+          <limbslot />
+          <limbslotcount>1</limbslotcount>
+          <inheritattributes>False</inheritattributes>
+          <ess>0.1</ess>
+          <capacity>[1]</capacity>
+          <avail>2</avail>
+          <cost>500</cost>
+          <source>CF</source>
+          <page>74</page>
+          <parentid />
+          <hasmodularmount />
+          <plugsintomodularmount />
+          <blocksmounts />
+          <forced />
+          <rating>0</rating>
+          <minrating />
+          <maxrating />
+          <ratinglabel>String_Rating</ratinglabel>
+          <subsystems />
+          <wirelesson>False</wirelesson>
+          <grade>Standard</grade>
+          <location />
+          <extra />
+          <suite>False</suite>
+          <stolen>False</stolen>
+          <essdiscount>0</essdiscount>
+          <extraessadditivemultiplier>0</extraessadditivemultiplier>
+          <extraessmultiplicativemultiplier>1.0</extraessmultiplicativemultiplier>
+          <forcegrade />
+          <matrixcmfilled>0</matrixcmfilled>
+          <prototypetranshuman>False</prototypetranshuman>
+          <bonus />
+          <pairbonus />
+          <wirelessbonus />
+          <wirelesspairbonus />
+          <improvementsource>Cyberware</improvementsource>
+          <pairinclude>
+            <name>Antennae</name>
+          </pairinclude>
+          <wirelesspairinclude>
+            <name>Antennae</name>
+          </wirelesspairinclude>
+          <children />
+          <notes />
+          <discountedcost>False</discountedcost>
+          <addtoparentess>False</addtoparentess>
+          <addtoparentcapacity>False</addtoparentcapacity>
+          <active>False</active>
+          <homenode>False</homenode>
+          <devicerating />
+          <programlimit />
+          <overclocked>None</overclocked>
+          <attack />
+          <sleaze />
+          <dataprocessing />
+          <firewall />
+          <attributearray />
+          <modattack />
+          <modsleaze />
+          <moddataprocessing />
+          <modfirewall />
+          <modattributearray />
+          <canswapattributes>False</canswapattributes>
+          <sortorder>0</sortorder>
+        </cyberware>
+        <cyberware>
+          <sourceid>40830ce9-b279-4951-adf2-05a69dd41d77</sourceid>
+          <guid>fedd80fb-6f95-46f1-b3e4-52afa71c2a26</guid>
+          <name>Antennae</name>
+          <category>Earware</category>
+          <limbslot />
+          <limbslotcount>1</limbslotcount>
+          <inheritattributes>False</inheritattributes>
+          <ess>0.1</ess>
+          <capacity>[1]</capacity>
+          <avail>2</avail>
+          <cost>500</cost>
+          <source>CF</source>
+          <page>74</page>
+          <parentid />
+          <hasmodularmount />
+          <plugsintomodularmount />
+          <blocksmounts />
+          <forced />
+          <rating>0</rating>
+          <minrating />
+          <maxrating />
+          <ratinglabel>String_Rating</ratinglabel>
+          <subsystems />
+          <wirelesson>False</wirelesson>
+          <grade>Standard</grade>
+          <location />
+          <extra />
+          <suite>False</suite>
+          <stolen>False</stolen>
+          <essdiscount>0</essdiscount>
+          <extraessadditivemultiplier>0</extraessadditivemultiplier>
+          <extraessmultiplicativemultiplier>1.0</extraessmultiplicativemultiplier>
+          <forcegrade />
+          <matrixcmfilled>0</matrixcmfilled>
+          <prototypetranshuman>False</prototypetranshuman>
+          <bonus />
+          <pairbonus />
+          <wirelessbonus />
+          <wirelesspairbonus />
+          <improvementsource>Cyberware</improvementsource>
+          <pairinclude>
+            <name>Antennae</name>
+          </pairinclude>
+          <wirelesspairinclude>
+            <name>Antennae</name>
+          </wirelesspairinclude>
+          <children />
+          <notes />
+          <discountedcost>False</discountedcost>
+          <addtoparentess>False</addtoparentess>
+          <addtoparentcapacity>False</addtoparentcapacity>
+          <active>False</active>
+          <homenode>False</homenode>
+          <devicerating />
+          <programlimit />
+          <overclocked>None</overclocked>
+          <attack />
+          <sleaze />
+          <dataprocessing />
+          <firewall />
+          <attributearray />
+          <modattack />
+          <modsleaze />
+          <moddataprocessing />
+          <modfirewall />
+          <modattributearray />
+          <canswapattributes>False</canswapattributes>
+          <sortorder>0</sortorder>
+        </cyberware>
+      </children>
+      <notes />
+      <discountedcost>False</discountedcost>
+      <addtoparentess>False</addtoparentess>
+      <addtoparentcapacity>False</addtoparentcapacity>
+      <active>False</active>
+      <homenode>False</homenode>
+      <devicerating />
+      <programlimit />
+      <overclocked>None</overclocked>
+      <attack />
+      <sleaze />
+      <dataprocessing />
+      <firewall />
+      <attributearray />
+      <modattack />
+      <modsleaze />
+      <moddataprocessing />
+      <modfirewall />
+      <modattributearray />
+      <canswapattributes>False</canswapattributes>
+      <sortorder>0</sortorder>
+    </cyberware>
   </cyberwares>
   <qualities>
     <quality>
@@ -3979,6 +4334,69 @@ The character has an incredible aptitude for learning new skills. Unfortunately,
       <firstlevelbonus>
       </firstlevelbonus>
       <notes />
+    </quality>
+    <quality>
+      <sourceid>5b19dbcd-fb69-4a02-a25a-7ac5342ca576</sourceid>
+      <guid>b2ade5aa-4c92-49f9-811c-11a144f7622e</guid>
+      <name>Analytical Mind</name>
+      <extra />
+      <bp>5</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>False</metagenic>
+      <print>True</print>
+      <qualitytype>Positive</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>SR5</source>
+      <page>72</page>
+      <sourcename />
+      <bonus>
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes>ANALYTICAL MIND
+COST: 5 KARMA
+
+Analytical Mind describes the uncanny ability to logically analyze information, deduce solutions to problems, or separate vital information from distractions and noise.
+
+It’s useful in cracking cyphers, solving puzzles, figuring out traps, and sifting through data. This quality gives the character a +2 dice pool modifier to any Logic Tests involving pattern recognition, evidence analysis, clue hunting, or solving puzzles. This quality also reduces the time it takes the character to solve a problem by half.
+</notes>
+    </quality>
+    <quality>
+      <sourceid>34965554-9252-4b37-b40b-c904e8034d03</sourceid>
+      <guid>8d2403a6-0f93-457a-8108-0ef7b1c1f2bb</guid>
+      <name>Vendetta</name>
+      <extra>Neo-Tokyo Airport Customs hacker guy</extra>
+      <bp>-7</bp>
+      <implemented>True</implemented>
+      <contributetobp>True</contributetobp>
+      <contributetolimit>True</contributetolimit>
+      <stagedpurchase>False</stagedpurchase>
+      <doublecareer>True</doublecareer>
+      <canbuywithspellpoints>False</canbuywithspellpoints>
+      <metagenic>False</metagenic>
+      <print>True</print>
+      <qualitytype>Negative</qualitytype>
+      <qualitysource>Selected</qualitysource>
+      <mutant>False</mutant>
+      <source>RF</source>
+      <page>159</page>
+      <sourcename />
+      <bonus>
+        <selecttext />
+      </bonus>
+      <firstlevelbonus>
+      </firstlevelbonus>
+      <notes>VENDETTA
+BONUS: 7 KARMA
+This is some Hatfield and McCoy-level drek. The char acter is entangled in a blood feud with an individual or group, and no matter the initial cause, the vendetta is now as much an issue of honor and reputation as revenge. The quality means the character has extreme difficulty resisting a confrontation with her foe.
+Whenever the character encounters the target of her ire, she must make a Composure (3) Test or else have no choice but to incite a violent confrontation. If the character should ever neutralize their nemesis, they have two options. They can buy off the quality, or someone new will pick up the vendetta, giving the character gets a new nemesis.
+</notes>
     </quality>
   </qualities>
   <lifestyles>
@@ -7275,6 +7693,75 @@ When using the Resonance to damage those around them, some technomancers have le
     </improvement>
     <improvement>
       <target />
+      <improvedname>INT</improvedname>
+      <sourcename>58c12688-5599-4cfe-a1c6-47f515268e56</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>4</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Custom</improvementsource>
+      <custom>True</custom>
+      <customname>Inc. Int.</customname>
+      <customid>specificattribute</customid>
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>False</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>EDG</improvedname>
+      <sourcename />
+      <min>0</min>
+      <max>0</max>
+      <aug>-7</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>EdgeUse</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>Seattle Airport Customs hacker guy</improvedname>
+      <sourcename>8d2403a6-0f93-457a-8108-0ef7b1c1f2bb</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Text</improvementttype>
+      <improvementsource>Quality</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
       <improvedname>RES</improvedname>
       <sourcename />
       <min>-1</min>
@@ -8280,22 +8767,6 @@ When using the Resonance to damage those around them, some technomancers have le
       </undo>
     </expense>
     <expense>
-      <guid>30d0027a-7848-409a-90f7-b488a1fc9ce4</guid>
-      <date>2020-05-16T23:55:46</date>
-      <amount>-1</amount>
-      <reason>Working for the Man</reason>
-      <type>Karma</type>
-      <refund>False</refund>
-      <forcecareervisible>False</forcecareervisible>
-      <undo>
-        <karmatype>ManualSubtract</karmatype>
-        <nuyentype>AddCyberware</nuyentype>
-        <objectid />
-        <qty>0</qty>
-        <extra />
-      </undo>
-    </expense>
-    <expense>
       <guid>d5596df9-fb58-4698-88dd-24054d8c838f</guid>
       <date>2020-05-16T23:55:46</date>
       <amount>3000.0</amount>
@@ -8306,6 +8777,22 @@ When using the Resonance to damage those around them, some technomancers have le
       <undo>
         <karmatype>ImproveAttribute</karmatype>
         <nuyentype>ManualAdd</nuyentype>
+        <objectid />
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>30d0027a-7848-409a-90f7-b488a1fc9ce4</guid>
+      <date>2020-05-16T23:55:46</date>
+      <amount>-1</amount>
+      <reason>Working for the Man</reason>
+      <type>Karma</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ManualSubtract</karmatype>
+        <nuyentype>AddCyberware</nuyentype>
         <objectid />
         <qty>0</qty>
         <extra />
@@ -8907,6 +9394,207 @@ When using the Resonance to damage those around them, some technomancers have le
       <undo>
         <karmatype>ManualSubtract</karmatype>
         <nuyentype>AddCyberware</nuyentype>
+        <objectid />
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>43ff220b-c66e-40c3-b0a4-92d6c0168b09</guid>
+      <date>2020-07-30T14:23:35</date>
+      <amount>-2000</amount>
+      <reason>August Rent</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>IncreaseLifestyle</nuyentype>
+        <objectid>41ff3446-6198-44ce-aec5-8f5afd2ff880</objectid>
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>ce274190-0881-42ae-972a-0062af8a5742</guid>
+      <date>2020-07-30T14:23:36</date>
+      <amount>0</amount>
+      <reason>Decremented Lifestyle Low</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+    </expense>
+    <expense>
+      <guid>e6d8a9ee-97aa-4b59-88b2-0a9e80b94608</guid>
+      <date>2020-07-30T14:23:40</date>
+      <amount>2000</amount>
+      <reason>August Rent - Staff Pay</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>ManualAdd</nuyentype>
+        <objectid />
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>499960e2-e4ef-44a9-9289-321754a8f41e</guid>
+      <date>2020-08-01T23:24:02</date>
+      <amount>7</amount>
+      <reason>Mission Reward (JJBA)</reason>
+      <type>Karma</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ManualAdd</karmatype>
+        <nuyentype>AddCyberware</nuyentype>
+        <objectid />
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>2d3365ce-d803-4d34-a496-c86f2bb3f2ec</guid>
+      <date>2020-08-01T23:24:21</date>
+      <amount>8500.00</amount>
+      <reason>Mission Reward (JJBA)</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>ManualAdd</nuyentype>
+        <objectid />
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>8ac32248-b23b-4042-bf2e-2cfa77e870a4</guid>
+      <date>2020-08-06T19:12:17</date>
+      <amount>-10</amount>
+      <reason>Gained Positive Quality Analytical Mind</reason>
+      <type>Karma</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>AddQuality</karmatype>
+        <nuyentype>AddCyberware</nuyentype>
+        <objectid>b2ade5aa-4c92-49f9-811c-11a144f7622e</objectid>
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>375872a1-12a3-4891-83bc-d3b23154d5a4</guid>
+      <date>2020-08-08T20:44:53</date>
+      <amount>-3000</amount>
+      <reason>Purchased Cyberware Cyberears</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddCyberware</nuyentype>
+        <objectid>74759fdc-0e15-4a21-92dd-f3f4f604b03f</objectid>
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>4a8f806e-1b46-46d2-81b6-e1dc88a15fd5</guid>
+      <date>2020-08-08T20:44:58</date>
+      <amount>-500</amount>
+      <reason>Purchased Cyberware Antennae</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddCyberware</nuyentype>
+        <objectid>141340f3-9849-4288-8c44-5782b2f582b4</objectid>
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>d69c8bb4-ac08-41d1-9942-93833b21a805</guid>
+      <date>2020-08-08T20:45:00</date>
+      <amount>-500</amount>
+      <reason>Purchased Cyberware Antennae</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddCyberware</nuyentype>
+        <objectid>e1a5e6b7-2549-4c9a-8251-c2589ea62b8f</objectid>
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>bcf49a3b-609d-466e-96ed-a32dbb7eb832</guid>
+      <date>2020-08-08T20:45:01</date>
+      <amount>-500</amount>
+      <reason>Purchased Cyberware Antennae</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddCyberware</nuyentype>
+        <objectid>fedd80fb-6f95-46f1-b3e4-52afa71c2a26</objectid>
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>36d4f790-6488-4fa6-8d78-14c78dc4f902</guid>
+      <date>2020-08-08T23:28:39</date>
+      <amount>0</amount>
+      <reason>Gained Negative Quality Vendetta</reason>
+      <type>Karma</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>AddQuality</karmatype>
+        <nuyentype>AddCyberware</nuyentype>
+        <objectid>8d2403a6-0f93-457a-8108-0ef7b1c1f2bb</objectid>
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>bfae2119-e6f5-42a8-add3-a663e20a49ef</guid>
+      <date>2020-08-16T12:09:37</date>
+      <amount>14</amount>
+      <reason>Mission Reward (Saiga Showdown)</reason>
+      <type>Karma</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ManualAdd</karmatype>
+        <nuyentype>AddCyberware</nuyentype>
+        <objectid />
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>7716f957-4e04-4fbc-8111-9778d3974e00</guid>
+      <date>2020-08-16T12:09:51</date>
+      <amount>25500.00</amount>
+      <reason>Mission Reward (Saiga Showdown)</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>ManualAdd</nuyentype>
         <objectid />
         <qty>0</qty>
         <extra />
