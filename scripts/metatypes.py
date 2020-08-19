@@ -5,17 +5,17 @@ def metatypeFlagCheck(character):
     accruedFlags = 0
 
     # Elf
-    if character['character']['metatype'] == 'Elf':
-        accruedFlags += 2
-        print("    [Elf] = +2 Flag")
-
-    elif character['character']['metavariant'] == 'Dryad':
+    if character['character']['metavariant'] == 'Dryad':
         accruedFlags += 5
         print("    [Elf: Dryad] = +5 Flag")
 
     elif character['character']['metavariant'] == 'Nocturna':
         accruedFlags += 6
         print("    [Elf: Nocturna] = +6 Flag")
+
+    elif character['character']['metatype'] == 'Elf':
+        accruedFlags += 2
+        print("    [Elf] = +2 Flag")
 
     # Human
     elif character['character']['metavariant'] == 'Nartaki':

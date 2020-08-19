@@ -28,12 +28,13 @@ def skillFlagCheck(skillsDict, attributesDict):
 
     accruedFlags += RESSkills(skillsDict, attributesDict)
 
+    accruedFlags += EXOSkills(skillsDict, attributesDict)
+
     return accruedFlags
 
 
 def BODSkills(skillsDict, attributesDict):
     accruedFlags = 0
-    higherRating = "Error"
     for skill in skillsDict['BODSkills'].keys():
 
         # Check for defaulting.
@@ -137,7 +138,6 @@ def UnarmedCombatSkills(skillsDict, attributesDict):
             higherRating = "Logic"
         else:
             if attributesDict['averageAGI'] > attributesDict['highestLimbAGI']:
-                print(attributesDict['averageAGI'] + ">" + attributesDict['highestLimbAGI'])
                 dicepool = skillsDict['CombatSkills']['Unarmed Combat'] + attributesDict['averageAGI']
             else:
                 dicepool = skillsDict['CombatSkills']['Unarmed Combat'] + attributesDict['highestLimbAGI']
@@ -289,8 +289,10 @@ def STRSkills(skillsDict, attributesDict):
         # Defautable.
         if skillsDict['STRSkills'][skill] == 0:
             dicepool = attributesDict['averageSTR'] - 1
+            higherRating = "Strength"
         else:
             dicepool = skillsDict['STRSkills'][skill] + attributesDict['averageSTR']
+            higherRating = "Strength"
 
         if dicepool > 12:
             # 13-15
@@ -324,8 +326,10 @@ def CHASkills(skillsDict, attributesDict):
         # Defautable.
         if skillsDict['CHASkills'][skill] == 0:
             dicepool = attributesDict['averageCHA'] - 1
+            higherRating = "Charisma"
         else:
             dicepool = skillsDict['CHASkills'][skill] + attributesDict['averageCHA']
+            higherRating = "Charisma"
 
         if dicepool > 12:
             # 13-15
@@ -360,8 +364,10 @@ def INTSkills(skillsDict, attributesDict):
         # Defautable.
         elif skillsDict['INTSkills'][skill] == 0:
             dicepool = attributesDict['averageINT'] - 1
+            higherRating = "Intuition"
         else:
             dicepool = skillsDict['INTSkills'][skill] + attributesDict['averageINT']
+            higherRating = "Intuition"
 
         if dicepool > 12:
             # 13-15
@@ -481,8 +487,10 @@ def WILSkills(skillsDict, attributesDict):
         # Defautable.
         elif skillsDict['WILSkills'][skill] == 0:
             dicepool = attributesDict['averageWIL'] - 1
+            higherRating = "Willpower"
         else:
             dicepool = skillsDict['WILSkills'][skill] + attributesDict['averageWIL']
+            higherRating = "Willpower"
 
         if dicepool > 12:
             # 13-15
@@ -518,6 +526,7 @@ def MAGSkills(skillsDict, attributesDict):
         # None
         else:
             dicepool = skillsDict['MAGSkills'][skill] + attributesDict['averageMAG']
+            higherRating = "Magic"
 
         if dicepool > 12:
             # 13-15
@@ -553,6 +562,7 @@ def RESSkills(skillsDict, attributesDict):
         # None
         else:
             dicepool = skillsDict['RESSkills'][skill] + attributesDict['averageRES']
+            higherRating = "Resonance"
 
         if dicepool > 12:
             # 13-15
@@ -571,5 +581,56 @@ def RESSkills(skillsDict, attributesDict):
             elif dicepool >= 20:
                 accruedFlags += 7
                 print("    [" + skill + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +7 Flag")
+
+    return accruedFlags
+
+
+def EXOSkills(skillsDict, attributesDict):
+    accruedFlags = 0
+    higherRating = "Error"
+
+    for skill in skillsDict['EXOSkills']:
+        # Combat Active skills.
+        if skill['Category'] == 'Combat Active':
+            if attributesDict['averageLOG'] > attributesDict['averageAGI']:
+                dicepool = skill['Rating'] + attributesDict['averageLOG']
+                higherRating = "Logic"
+            else:
+                if attributesDict['averageAGI'] > attributesDict['highestArmAGI']:
+                    dicepool = skill['Rating'] + attributesDict['averageAGI']
+                else:
+                    dicepool = skill['Rating'] + attributesDict['highestArmAGI']
+                higherRating = "Agility"
+
+        # Vehicle Active skills.
+        elif skill['Category'] == 'Vehicle Active':
+            if attributesDict['averageINT'] > attributesDict['averageREA']:
+                dicepool = skill['Rating'] + attributesDict['averageINT']
+                higherRating = "Intuition"
+            else:
+                dicepool = skill['Rating'] + attributesDict['averageREA']
+                higherRating = "Reaction"
+
+        # If this happens, something is very wrong.
+        else:
+            dicepool = 9999
+
+        if dicepool > 12:
+            # 13-15
+            if 13 <= dicepool < 16:
+                accruedFlags += 1
+                print("    [" + skill['Name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +1 Flag")
+            # 16-17
+            elif 16 <= dicepool < 18:
+                accruedFlags += 3
+                print("    [" + skill['Name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +3 Flag")
+            # 18-19
+            elif 18 <= dicepool < 20:
+                accruedFlags += 5
+                print("    [" + skill['Name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +5 Flag")
+            # 20+
+            elif dicepool >= 20:
+                accruedFlags += 7
+                print("    [" + skill['Name'] + " + " + higherRating + " at " + str(dicepool) + " dicepool] = +7 Flag")
 
     return accruedFlags

@@ -24,16 +24,16 @@ def qualityFlagCheck(talent, character):
                 accruedFlags += 6
                 print("    [Astral Hazing] = +6 Flag")
 
-            elif quality['name'] == 'Metagenetic Improvement (Body)' or \
-                    quality['name'] == 'Metagenetic Improvement (Agility)' or \
-                    quality['name'] == 'Metagenetic Improvement (Reaction)' or \
-                    quality['name'] == 'Metagenetic Improvement (Strength)' or \
-                    quality['name'] == 'Metagenetic Improvement (Charisma)' or \
-                    quality['name'] == 'Metagenetic Improvement (Intuition)' or \
-                    quality['name'] == 'Metagenetic Improvement (Logic)' or \
-                    quality['name'] == 'Metagenetic Improvement (Willpower)':
+            elif quality['name'] == 'Metagenic Improvement (Body)' or \
+                    quality['name'] == 'Metagenic Improvement (Agility)' or \
+                    quality['name'] == 'Metagenic Improvement (Reaction)' or \
+                    quality['name'] == 'Metagenic Improvement (Strength)' or \
+                    quality['name'] == 'Metagenic Improvement (Charisma)' or \
+                    quality['name'] == 'Metagenic Improvement (Intuition)' or \
+                    quality['name'] == 'Metagenic Improvement (Logic)' or \
+                    quality['name'] == 'Metagenic Improvement (Willpower)':
                 accruedFlags += 4
-                print("    [" + quality['name'] + "] = +2 Flag")
+                print("    [" + quality['name'] + "] = +4 Flag")
 
             elif quality['name'] == 'Impaired Attribute (Body)' or \
                     quality['name'] == 'Impaired Attribute (Agility)' or \

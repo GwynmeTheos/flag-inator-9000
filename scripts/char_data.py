@@ -79,13 +79,24 @@ def createSkillDict(character):
     skillsDict['RESSkills'] = {'Compiling': 0,
                                'Decompiling': 0,
                                'Registering': 0}
+    skillsDict['EXOSkills'] = list()
 
     # Loop through every single skill and add the skill rating to the dicepool.
     for skill in character['character']['newskills']['skills']['skill']:
-        for skillList in skillsDict.keys():
-            for skillName in skillsDict[skillList].keys():
-                if skillName == skill['name']:
-                    skillsDict[skillList][skillName] += int(skill['karma']) + int(skill['base'])
+        try:
+            for skillList in skillsDict.keys():
+                try:
+                    for skillName in skillsDict[skillList].keys():
+                        if skillName == skill['name']:
+                            skillsDict[skillList][skillName] += int(skill['karma']) + int(skill['base'])
+                except AttributeError:
+                    # Getting to EXOSkills breaks it, so this is here to just pass.
+                    pass
+        except KeyError:
+            # It is an exotic skill.
+            skillsDict['EXOSkills'].append({'Name': "Exotic: " + skill['specific'],
+                                            'Rating': int(skill['karma']) + int(skill['base']),
+                                            'Category': skill['skillcategory']})
 
     # Loop through the skill groups and add the skill group rating.
     for skillGroup in character['character']['newskills']['groups']['group']:

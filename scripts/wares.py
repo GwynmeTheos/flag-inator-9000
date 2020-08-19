@@ -47,10 +47,22 @@ def wareFlagCheck(character):
         for ware in character['character']['cyberwares']['cyberware']:
             # Betaware
             if ware['grade'] == "Betaware" or ware['grade'] == "Betaware (Adapsin)":
-                betaCostSum += float(ware['ess'])
+                if ware['name'] == "Move-by-Wire System":
+                    betaCostSum += float(ware['rating']) + 2
+                elif ware['ess'].find("Rating") != -1:
+                    essenceStr = ware['ess'].replace("Rating * ")
+                    betaCostSum += float(essenceStr)
+                else:
+                    betaCostSum += float(ware['ess'])
             # Deltaware
             elif ware['grade'] == "Deltaware" or ware['grade'] == "Deltaware (Adapsin)":
-                deltaCostSum += float(ware['ess']) * 2
+                if ware['name'] == "Move-by-Wire System":
+                    deltaCostSum += (float(ware['rating']) + 2) * 2
+                elif ware['ess'].find("Rating") != -1:
+                    essenceStr = ware['ess'].replace("Rating * ")
+                    deltaCostSum += float(essenceStr) * 2
+                else:
+                    deltaCostSum += float(ware['ess']) * 2
         accruedFlags += int(betaCostSum) + int(deltaCostSum)
         if int(betaCostSum) != 0:
             print("    [Sum of base cost of Betaware] = +" + str(int(betaCostSum)) + " Flag")
