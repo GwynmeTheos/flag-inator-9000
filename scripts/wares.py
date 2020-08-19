@@ -50,7 +50,7 @@ def wareFlagCheck(character):
                 if ware['name'] == "Move-by-Wire System":
                     betaCostSum += float(ware['rating']) + 2
                 elif ware['ess'].find("Rating") != -1:
-                    essenceStr = ware['ess'].replace("Rating * ")
+                    essenceStr = str(ware['ess']).replace("Rating * ", "")
                     betaCostSum += (float(essenceStr) * int(ware['rating']))
                 else:
                     betaCostSum += float(ware['ess'])
@@ -59,7 +59,7 @@ def wareFlagCheck(character):
                 if ware['name'] == "Move-by-Wire System":
                     deltaCostSum += (float(ware['rating']) + 2) * 2
                 elif ware['ess'].find("Rating") != -1:
-                    essenceStr = ware['ess'].replace("Rating * ")
+                    essenceStr = str(ware['ess']).replace("Rating * ", "")
                     deltaCostSum += (float(essenceStr) * int(ware['rating'])) * 2
                 else:
                     deltaCostSum += float(ware['ess']) * 2
