@@ -76,10 +76,6 @@ def CombatSkills(skillsDict, attributesDict):
         # Not defautable.
         if skillsDict['CombatSkills'][skill] == 0 and (skill == 'Palming'):
             dicepool = 0
-        # Unarmed Combat uses a different check for the attributes, but it is in the CombatSkills
-        # list for the sake of checking the skill's rating. So, just continue.
-        elif skill == "Unarmed Combat":
-            continue
         # Defautable.
         elif skillsDict['CombatSkills'][skill] == 0:
             if attributesDict['averageLOG'] > attributesDict['averageAGI']:

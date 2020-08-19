@@ -51,7 +51,7 @@ def wareFlagCheck(character):
                     betaCostSum += float(ware['rating']) + 2
                 elif ware['ess'].find("Rating") != -1:
                     essenceStr = ware['ess'].replace("Rating * ")
-                    betaCostSum += (float(essenceStr) * int(ware['rating']))
+                    betaCostSum += float(essenceStr)
                 else:
                     betaCostSum += float(ware['ess'])
             # Deltaware
@@ -60,7 +60,7 @@ def wareFlagCheck(character):
                     deltaCostSum += (float(ware['rating']) + 2) * 2
                 elif ware['ess'].find("Rating") != -1:
                     essenceStr = ware['ess'].replace("Rating * ")
-                    deltaCostSum += (float(essenceStr) * int(ware['rating'])) * 2
+                    deltaCostSum += float(essenceStr) * 2
                 else:
                     deltaCostSum += float(ware['ess']) * 2
         accruedFlags += int(betaCostSum) + int(deltaCostSum)
