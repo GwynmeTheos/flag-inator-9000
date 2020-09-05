@@ -48,12 +48,12 @@
   <gamenotes />
   <primaryarm>Right</primaryarm>
   <ignorerules>True</ignorerules>
-  <karma>-1470</karma>
+  <karma>-1195</karma>
   <special>9</special>
   <totalspecial>9</totalspecial>
   <totalattributes>16</totalattributes>
-  <contactpoints>18</contactpoints>
-  <contactpointsused>18</contactpointsused>
+  <contactpoints>21</contactpoints>
+  <contactpointsused>21</contactpointsused>
   <spelllimit>10</spelllimit>
   <cfplimit>0</cfplimit>
   <ainormalprogramlimit>0</ainormalprogramlimit>
@@ -65,7 +65,7 @@
   <burntstreetcred>0</burntstreetcred>
   <created>False</created>
   <maxavail>12</maxavail>
-  <nuyen>-2812170.0</nuyen>
+  <nuyen>-2995170.0</nuyen>
   <startingnuyen>6000</startingnuyen>
   <sumtoten>10</sumtoten>
   <buildkarma>25</buildkarma>
@@ -84,7 +84,7 @@
   <nuyenmaxbp>10</nuyenmaxbp>
   <adept>True</adept>
   <magician>True</magician>
-  <technomancer>True</technomancer>
+  <technomancer>False</technomancer>
   <ai>False</ai>
   <cyberwaredisabled>False</cyberwaredisabled>
   <initiationdisabled>False</initiationdisabled>
@@ -136,10 +136,10 @@
       <metatypemin>1</metatypemin>
       <metatypemax>6</metatypemax>
       <metatypeaugmax>10</metatypeaugmax>
-      <base>4</base>
+      <base>5</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>2</totalvalue>
+      <totalvalue>3</totalvalue>
     </attribute>
     <attribute>
       <name>INT</name>
@@ -166,7 +166,7 @@
       <metatypemin>1</metatypemin>
       <metatypemax>6</metatypemax>
       <metatypeaugmax>10</metatypeaugmax>
-      <base>4</base>
+      <base>5</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
       <totalvalue>11</totalvalue>
@@ -233,41 +233,52 @@
     </attribute>
   </attributes>
   <magenabled>True</magenabled>
-  <initiategrade>4</initiategrade>
-  <resenabled>True</resenabled>
+  <initiategrade>5</initiategrade>
+  <resenabled>False</resenabled>
   <submersiongrade>0</submersiongrade>
   <depenabled>False</depenabled>
-  <groupmember>False</groupmember>
+  <groupmember>True</groupmember>
   <groupname />
   <groupnotes />
   <totaless>2.95</totaless>
-  <magsplitadept>0</magsplitadept>
+  <magsplitadept>6</magsplitadept>
   <magsplitmagician>0</magsplitmagician>
   <tradition>
-    <sourceid>7a3ecfbe-616e-425d-b204-329de37ffdbb</sourceid>
+    <sourceid>8a0d8bc6-47ac-4043-a916-e2681a4d5bd7</sourceid>
     <guid>01fc78d3-a776-4005-95eb-5f68afb6b9ae</guid>
-    <traditiontype>RES</traditiontype>
-    <name>Default</name>
-    <extra />
+    <traditiontype>MAG</traditiontype>
+    <name>Toxic</name>
+    <extra>Abomination, Barren, Noxious, Nuclear, Plague, Sludge</extra>
     <spiritform>Materialization</spiritform>
-    <drain>WIL + RES</drain>
-    <source>SR5</source>
-    <page>258</page>
+    <drain>WIL + CHA</drain>
+    <source>SG</source>
+    <page>84</page>
     <spiritcombat />
     <spiritdetection />
     <spirithealth />
     <spiritillusion />
     <spiritmanipulation />
-    <spirits>
-      <spirit>Courier Sprite</spirit>
-      <spirit>Crack Sprite</spirit>
-      <spirit>Data Sprite</spirit>
-      <spirit>Fault Sprite</spirit>
-      <spirit>Machine Sprite</spirit>
-      <spirit>Companion Sprite</spirit>
-      <spirit>Generalist Sprite</spirit>
-    </spirits>
-    <bonus />
+    <spirits />
+    <bonus>
+      <limitspiritcategory>
+        <spirit>Abomination</spirit>
+      </limitspiritcategory>
+      <limitspiritcategory>
+        <spirit>Barren</spirit>
+      </limitspiritcategory>
+      <limitspiritcategory>
+        <spirit>Noxious</spirit>
+      </limitspiritcategory>
+      <limitspiritcategory>
+        <spirit>Nuclear</spirit>
+      </limitspiritcategory>
+      <limitspiritcategory>
+        <spirit>Plague</spirit>
+      </limitspiritcategory>
+      <limitspiritcategory>
+        <spirit>Sludge</spirit>
+      </limitspiritcategory>
+    </bonus>
   </tradition>
   <physicalcmfilled>0</physicalcmfilled>
   <stuncmfilled>0</stuncmfilled>
@@ -474,17 +485,6 @@
         <buywithkarma>False</buywithkarma>
       </skill>
       <skill>
-        <guid>fdd0427a-052e-48ac-b641-675bffd18329</guid>
-        <suid>f338d383-ffd8-4ff8-b99b-cf4c2ed1b159</suid>
-        <isknowledge>False</isknowledge>
-        <skillcategory>Resonance Active</skillcategory>
-        <karma>0</karma>
-        <base>0</base>
-        <notes />
-        <name>Compiling</name>
-        <buywithkarma>False</buywithkarma>
-      </skill>
-      <skill>
         <guid>aa4d47e3-351e-4ddc-b803-6d1fce21c014</guid>
         <suid>1c14bf0d-cc69-4126-9a95-1f2429c11aa5</suid>
         <isknowledge>False</isknowledge>
@@ -537,17 +537,6 @@
         <base>12</base>
         <notes />
         <name>Cybertechnology</name>
-        <buywithkarma>False</buywithkarma>
-      </skill>
-      <skill>
-        <guid>13b31112-37e1-44bb-aaf3-e39339cc44e1</guid>
-        <suid>64eed2e9-e61c-4cba-81d4-18a612cf2df6</suid>
-        <isknowledge>False</isknowledge>
-        <skillcategory>Resonance Active</skillcategory>
-        <karma>0</karma>
-        <base>0</base>
-        <notes />
-        <name>Decompiling</name>
         <buywithkarma>False</buywithkarma>
       </skill>
       <skill>
@@ -947,17 +936,6 @@
         <buywithkarma>False</buywithkarma>
       </skill>
       <skill>
-        <guid>7c9350d5-b70e-461f-a637-0e627f88f028</guid>
-        <suid>3a38bbcf-38b0-435b-98f2-4ce8c50e8490</suid>
-        <isknowledge>False</isknowledge>
-        <skillcategory>Resonance Active</skillcategory>
-        <karma>0</karma>
-        <base>0</base>
-        <notes />
-        <name>Registering</name>
-        <buywithkarma>False</buywithkarma>
-      </skill>
-      <skill>
         <guid>bab954d9-a5ee-44e9-9b07-d4c0e9499729</guid>
         <suid>a6287e62-6a3b-43ce-b6e0-20f3655910e2</suid>
         <isknowledge>False</isknowledge>
@@ -1085,6 +1063,12 @@
       <group>
         <karma>0</karma>
         <base>0</base>
+        <id>12269dc0-54d1-4668-a9ac-b08b86dfba3a</id>
+        <name>Tasking</name>
+      </group>
+      <group>
+        <karma>0</karma>
+        <base>0</base>
         <id>85758574-3fe4-4520-8efe-68076e110725</id>
         <name>Stealth</name>
       </group>
@@ -1165,12 +1149,6 @@
         <base>0</base>
         <id>f1b12e4e-aeb5-4def-a5c2-eefd785f32f3</id>
         <name>Acting</name>
-      </group>
-      <group>
-        <karma>12</karma>
-        <base>0</base>
-        <id>12269dc0-54d1-4668-a9ac-b08b86dfba3a</id>
-        <name>Tasking</name>
       </group>
     </groups>
   </newskills>
@@ -1568,7 +1546,12 @@
       <grade>0</grade>
     </spell>
   </spells>
-  <foci />
+  <foci>
+    <focus>
+      <guid>e9f8ad4b-f016-4479-b8e3-5f95146aa1ea</guid>
+      <gearid>ee87ada5-4d90-4a17-ae28-55af31df3ffb</gearid>
+    </focus>
+  </foci>
   <stackedfoci />
   <powers>
     <power>
@@ -13562,74 +13545,45 @@ Symbiosis provides the character with preternatural insight and connection to ev
       </firstlevelbonus>
       <notes />
     </quality>
-    <quality>
-      <sourceid>c4b35412-bd91-45b4-b428-29da7edd5ff4</sourceid>
-      <guid>271e158a-0344-46a3-bcf9-feb21caecd5b</guid>
-      <name>Technomancer</name>
-      <extra />
-      <bp>15</bp>
-      <implemented>True</implemented>
-      <contributetobp>True</contributetobp>
-      <contributetolimit>False</contributetolimit>
-      <stagedpurchase>False</stagedpurchase>
-      <doublecareer>True</doublecareer>
-      <canbuywithspellpoints>False</canbuywithspellpoints>
-      <metagenic>False</metagenic>
-      <print>True</print>
-      <qualitytype>Positive</qualitytype>
-      <qualitysource>Selected</qualitysource>
-      <mutant>False</mutant>
-      <source>SR5</source>
-      <page>69</page>
-      <sourcename />
-      <bonus>
-        <addgear>
-          <name>Living Persona</name>
-          <category>Commlinks</category>
-        </addgear>
-        <enableattribute>
-          <name>RES</name>
-        </enableattribute>
-        <enabletab>
-          <name>technomancer</name>
-        </enabletab>
-        <unlockskills>Technomancer</unlockskills>
-      </bonus>
-      <firstlevelbonus />
-      <notes />
-    </quality>
   </qualities>
   <lifestyles />
   <gears>
     <gear>
-      <sourceid>73b55822-dfb8-48f5-8ff8-37ef498ab9ef</sourceid>
-      <guid>f2532e78-3c33-495c-a836-955181dc3028</guid>
-      <name>Living Persona</name>
-      <category>Commlinks</category>
+      <sourceid>62bfb38d-5515-440b-83ed-289ed926d27e</sourceid>
+      <guid>ee87ada5-4d90-4a17-ae28-55af31df3ffb</guid>
+      <name>Power Focus</name>
+      <category>Foci</category>
       <capacity />
       <armorcapacity />
       <minrating />
-      <maxrating />
-      <rating>1</rating>
+      <maxrating>18</maxrating>
+      <rating>10</rating>
       <qty>1.0</qty>
-      <avail>0</avail>
-      <cost>0</cost>
-      <extra />
-      <bonded>False</bonded>
+      <avail>(Rating * 4)R</avail>
+      <cost>Rating * 18000</cost>
+      <extra>7a3ecfbe-616e-425d-b204-329de37ffdbb</extra>
+      <bonded>True</bonded>
       <equipped>True</equipped>
       <wirelesson>False</wirelesson>
       <stolen>False</stolen>
-      <bonus />
-      <wirelessbonus />
+      <bonus>
+        <skillattribute>
+          <name precedence="0">MAG</name>
+          <bonus>Rating</bonus>
+        </skillattribute>
+        <selecttradition />
+      </bonus>
+      <wirelessbonus>
+      </wirelessbonus>
       <source>SR5</source>
-      <page>251</page>
-      <canformpersona>Self</canformpersona>
-      <devicerating>{RES}</devicerating>
-      <gearname />
+      <page>319</page>
+      <canformpersona />
+      <devicerating />
+      <gearname>Focy</gearname>
       <forcedvalue />
       <matrixcmfilled>0</matrixcmfilled>
       <matrixcmbonus>0</matrixcmbonus>
-      <parentid>271e158a-0344-46a3-bcf9-feb21caecd5b</parentid>
+      <parentid />
       <allowrename>False</allowrename>
       <children />
       <location />
@@ -13637,10 +13591,10 @@ Symbiosis provides the character with preternatural insight and connection to ev
       <discountedcost>False</discountedcost>
       <programlimit />
       <overclocked>None</overclocked>
-      <attack>{CHA}</attack>
-      <sleaze>{INT}</sleaze>
-      <dataprocessing>{LOG}</dataprocessing>
-      <firewall>{WIL}</firewall>
+      <attack />
+      <sleaze />
+      <dataprocessing />
+      <firewall />
       <attributearray />
       <modattack />
       <modsleaze />
@@ -13648,7 +13602,68 @@ Symbiosis provides the character with preternatural insight and connection to ev
       <modfirewall />
       <modattributearray />
       <canswapattributes>False</canswapattributes>
-      <active>True</active>
+      <active>False</active>
+      <homenode>False</homenode>
+      <sortorder>0</sortorder>
+    </gear>
+    <gear>
+      <sourceid>a64c073c-8aa9-4383-b885-267f8ce1ea99</sourceid>
+      <guid>b54e807b-ffb8-4046-9c69-19a19053a10f</guid>
+      <name>Qi Focus</name>
+      <category>Foci</category>
+      <capacity />
+      <armorcapacity />
+      <minrating />
+      <maxrating>18</maxrating>
+      <rating>1</rating>
+      <qty>1.0</qty>
+      <avail>(Rating * 3)R</avail>
+      <cost>Rating * 3000</cost>
+      <extra />
+      <bonded>False</bonded>
+      <equipped>True</equipped>
+      <wirelesson>False</wirelesson>
+      <stolen>False</stolen>
+      <bonus>
+        <selectpowers>
+          <selectpower>
+            <ignorerating>True</ignorerating>
+            <val>Rating</val>
+            <limit>Rating</limit>
+            <pointsperlevel>0.25</pointsperlevel>
+          </selectpower>
+        </selectpowers>
+      </bonus>
+      <wirelessbonus>
+      </wirelessbonus>
+      <source>SR5</source>
+      <page>319</page>
+      <canformpersona />
+      <devicerating />
+      <gearname />
+      <forcedvalue />
+      <matrixcmfilled>0</matrixcmfilled>
+      <matrixcmbonus>0</matrixcmbonus>
+      <parentid />
+      <allowrename>False</allowrename>
+      <children />
+      <location />
+      <notes />
+      <discountedcost>False</discountedcost>
+      <programlimit />
+      <overclocked>None</overclocked>
+      <attack />
+      <sleaze />
+      <dataprocessing />
+      <firewall />
+      <attributearray />
+      <modattack />
+      <modsleaze />
+      <moddataprocessing />
+      <modfirewall />
+      <modattributearray />
+      <canswapattributes>False</canswapattributes>
+      <active>False</active>
       <homenode>False</homenode>
       <sortorder>0</sortorder>
     </gear>
@@ -13768,7 +13783,20 @@ Symbiosis provides the character with preternatural insight and connection to ev
       <sortorder>0</sortorder>
     </vehicle>
   </vehicles>
-  <metamagics />
+  <metamagics>
+    <metamagic>
+      <sourceid>a83ef030-4372-421e-874e-839ceb77a64e</sourceid>
+      <guid>6b6c6e28-665c-4137-9a4a-1106970f969e</guid>
+      <name>Paradigm Shift: Toxic</name>
+      <source>FA</source>
+      <paidwithkarma>False</paidwithkarma>
+      <page>44</page>
+      <grade>5</grade>
+      <bonus />
+      <improvementsource>Metamagic</improvementsource>
+      <notes />
+    </metamagic>
+  </metamagics>
   <arts>
     <art>
       <sourceid>d28fb2f1-e0e6-4ca6-8e26-43d1487d612a</sourceid>
@@ -17238,54 +17266,17 @@ Symbiosis provides the character with preternatural insight and connection to ev
       <schooling>False</schooling>
       <notes />
     </initiationgrade>
+    <initiationgrade>
+      <guid>14caa3ee-51ac-40d6-a27d-536759d31e08</guid>
+      <res>True</res>
+      <grade>5</grade>
+      <group>True</group>
+      <ordeal>True</ordeal>
+      <schooling>False</schooling>
+      <notes />
+    </initiationgrade>
   </initiationgrades>
   <improvements>
-    <improvement>
-      <target />
-      <improvedname>MAG</improvedname>
-      <sourcename />
-      <min>0</min>
-      <max>4</max>
-      <aug>0</aug>
-      <augmax>0</augmax>
-      <val>0</val>
-      <rating>1</rating>
-      <exclude />
-      <condition />
-      <improvementttype>Attribute</improvementttype>
-      <improvementsource>Initiation</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
-    <improvement>
-      <target />
-      <improvedname>MAGAdept</improvedname>
-      <sourcename />
-      <min>0</min>
-      <max>4</max>
-      <aug>0</aug>
-      <augmax>0</augmax>
-      <val>0</val>
-      <rating>1</rating>
-      <exclude />
-      <condition />
-      <improvementttype>Attribute</improvementttype>
-      <improvementsource>Initiation</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
     <improvement>
       <target />
       <improvedname>LOG</improvedname>
@@ -34813,7 +34804,54 @@ Symbiosis provides the character with preternatural insight and connection to ev
       <notes />
     </improvement>
     <improvement>
-      <unique>abb415d6-2f0e-4f58-86d7-114e38af643c</unique>
+      <unique>precedence0</unique>
+      <target />
+      <improvedname>MAG</improvedname>
+      <sourcename>ee87ada5-4d90-4a17-ae28-55af31df3ffb</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>10</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>SkillAttribute</improvementttype>
+      <improvementsource>Gear</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>7a3ecfbe-616e-425d-b204-329de37ffdbb</improvedname>
+      <sourcename>ee87ada5-4d90-4a17-ae28-55af31df3ffb</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Tradition</improvementttype>
+      <improvementsource>Gear</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <unique>e84188d5-a822-4480-98fd-670a6e8ba0a9</unique>
       <target />
       <improvedname>WIL</improvedname>
       <sourcename>SEEKER_WIL</sourcename>
@@ -34837,7 +34875,7 @@ Symbiosis provides the character with preternatural insight and connection to ev
       <notes />
     </improvement>
     <improvement>
-      <unique>084e0586-c56c-48ff-9c90-f932d5d2465e</unique>
+      <unique>10b51f4f-b97f-47f8-a88f-e75908b81426</unique>
       <target />
       <improvedname>AGI</improvedname>
       <sourcename>SEEKER_AGI</sourcename>
@@ -34861,7 +34899,7 @@ Symbiosis provides the character with preternatural insight and connection to ev
       <notes />
     </improvement>
     <improvement>
-      <unique>26275bb8-5a54-459f-86f1-b7c5e2c1838c</unique>
+      <unique>6940a0ca-3415-4cf2-a5ed-20f259164928</unique>
       <target />
       <improvedname>STR</improvedname>
       <sourcename>SEEKER_STR</sourcename>
@@ -34885,7 +34923,7 @@ Symbiosis provides the character with preternatural insight and connection to ev
       <notes />
     </improvement>
     <improvement>
-      <unique>13e2223f-546b-406f-ab49-ea70c6a7b7dc</unique>
+      <unique>e93d2acd-b82a-4b71-a234-32111a2a0d9a</unique>
       <target />
       <improvedname>BOX</improvedname>
       <sourcename>SEEKER_BOX</sourcename>
@@ -34898,53 +34936,6 @@ Symbiosis provides the character with preternatural insight and connection to ev
       <exclude />
       <condition />
       <improvementttype>PhysicalCM</improvementttype>
-      <improvementsource>Quality</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
-    <improvement>
-      <target />
-      <improvedname>f2532e78-3c33-495c-a836-955181dc3028</improvedname>
-      <sourcename>271e158a-0344-46a3-bcf9-feb21caecd5b</sourcename>
-      <min>0</min>
-      <max>0</max>
-      <aug>0</aug>
-      <augmax>0</augmax>
-      <val>0</val>
-      <rating>1</rating>
-      <exclude />
-      <condition />
-      <improvementttype>Gear</improvementttype>
-      <improvementsource>Quality</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
-    <improvement>
-      <unique>enableattribute</unique>
-      <target />
-      <improvedname>RES</improvedname>
-      <sourcename>271e158a-0344-46a3-bcf9-feb21caecd5b</sourcename>
-      <min>0</min>
-      <max>0</max>
-      <aug>0</aug>
-      <augmax>0</augmax>
-      <val>0</val>
-      <rating>0</rating>
-      <exclude />
-      <condition />
-      <improvementttype>Attribute</improvementttype>
       <improvementsource>Quality</improvementsource>
       <custom>False</custom>
       <customname />
@@ -35048,20 +35039,19 @@ Symbiosis provides the character with preternatural insight and connection to ev
       <notes />
     </improvement>
     <improvement>
-      <unique>enabletab</unique>
       <target />
-      <improvedname>Technomancer</improvedname>
-      <sourcename>271e158a-0344-46a3-bcf9-feb21caecd5b</sourcename>
+      <improvedname>MAG</improvedname>
+      <sourcename />
       <min>0</min>
-      <max>0</max>
+      <max>5</max>
       <aug>0</aug>
       <augmax>0</augmax>
       <val>0</val>
-      <rating>0</rating>
+      <rating>1</rating>
       <exclude />
       <condition />
-      <improvementttype>SpecialTab</improvementttype>
-      <improvementsource>Quality</improvementsource>
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Initiation</improvementsource>
       <custom>False</custom>
       <customname />
       <customid />
@@ -35073,8 +35063,31 @@ Symbiosis provides the character with preternatural insight and connection to ev
     </improvement>
     <improvement>
       <target />
-      <improvedname>Technomancer</improvedname>
-      <sourcename>271e158a-0344-46a3-bcf9-feb21caecd5b</sourcename>
+      <improvedname>MAGAdept</improvedname>
+      <sourcename />
+      <min>0</min>
+      <max>5</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Initiation</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>Abomination</improvedname>
+      <sourcename>01fc78d3-a776-4005-95eb-5f68afb6b9ae</sourcename>
       <min>0</min>
       <max>0</max>
       <aug>0</aug>
@@ -35083,8 +35096,123 @@ Symbiosis provides the character with preternatural insight and connection to ev
       <rating>1</rating>
       <exclude />
       <condition />
-      <improvementttype>SpecialSkills</improvementttype>
-      <improvementsource>Quality</improvementsource>
+      <improvementttype>LimitSpiritCategory</improvementttype>
+      <improvementsource>Tradition</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>Barren</improvedname>
+      <sourcename>01fc78d3-a776-4005-95eb-5f68afb6b9ae</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>LimitSpiritCategory</improvementttype>
+      <improvementsource>Tradition</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>Noxious</improvedname>
+      <sourcename>01fc78d3-a776-4005-95eb-5f68afb6b9ae</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>LimitSpiritCategory</improvementttype>
+      <improvementsource>Tradition</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>Nuclear</improvedname>
+      <sourcename>01fc78d3-a776-4005-95eb-5f68afb6b9ae</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>LimitSpiritCategory</improvementttype>
+      <improvementsource>Tradition</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>Plague</improvedname>
+      <sourcename>01fc78d3-a776-4005-95eb-5f68afb6b9ae</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>LimitSpiritCategory</improvementttype>
+      <improvementsource>Tradition</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>Sludge</improvedname>
+      <sourcename>01fc78d3-a776-4005-95eb-5f68afb6b9ae</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>LimitSpiritCategory</improvementttype>
+      <improvementsource>Tradition</improvementsource>
       <custom>False</custom>
       <customname />
       <customid />
@@ -35105,8 +35233,8 @@ Symbiosis provides the character with preternatural insight and connection to ev
   <improvementgroups />
   <calendar />
   <sources>
-    <source>SR5</source>
     <source>SG</source>
+    <source>SR5</source>
     <source>SSP</source>
     <source>FA</source>
     <source>BTB</source>

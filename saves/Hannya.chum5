@@ -67,7 +67,7 @@ After reaching Seattle, her father antagonized the Black Lodge, trying to uncove
   <burntstreetcred>0</burntstreetcred>
   <created>True</created>
   <maxavail>12</maxavail>
-  <nuyen>17702.42857142857142857142857</nuyen>
+  <nuyen>11501.857142857142857142857141</nuyen>
   <startingnuyen>50000</startingnuyen>
   <sumtoten>10</sumtoten>
   <buildkarma>25</buildkarma>
@@ -141,7 +141,7 @@ After reaching Seattle, her father antagonized the Black Lodge, trying to uncove
       <base>1</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>4</totalvalue>
+      <totalvalue>8</totalvalue>
     </attribute>
     <attribute>
       <name>INT</name>
@@ -171,7 +171,7 @@ After reaching Seattle, her father antagonized the Black Lodge, trying to uncove
       <base>4</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>5</totalvalue>
+      <totalvalue>9</totalvalue>
     </attribute>
     <attribute>
       <name>EDG</name>
@@ -181,7 +181,7 @@ After reaching Seattle, her father antagonized the Black Lodge, trying to uncove
       <base>3</base>
       <karma>0</karma>
       <metatypecategory>Special</metatypecategory>
-      <totalvalue>0</totalvalue>
+      <totalvalue>3</totalvalue>
     </attribute>
     <attribute>
       <name>MAG</name>
@@ -235,7 +235,7 @@ After reaching Seattle, her father antagonized the Black Lodge, trying to uncove
     </attribute>
   </attributes>
   <magenabled>True</magenabled>
-  <initiategrade>1</initiategrade>
+  <initiategrade>2</initiategrade>
   <resenabled>False</resenabled>
   <submersiongrade>0</submersiongrade>
   <depenabled>False</depenabled>
@@ -269,7 +269,7 @@ Fraternity: there are no limits to the type of situation where aid can be reques
     <bonus />
   </tradition>
   <physicalcmfilled>0</physicalcmfilled>
-  <stuncmfilled>0</stuncmfilled>
+  <stuncmfilled>1</stuncmfilled>
   <newskills>
     <skillptsmax>18</skillptsmax>
     <skillgrpsmax>0</skillgrpsmax>
@@ -2734,7 +2734,7 @@ Wireless: Add the audio enhancement’s rating as a dice pool modifier to your a
               <canswapattributes>False</canswapattributes>
               <active>False</active>
               <homenode>False</homenode>
-              <sortorder>0</sortorder>
+              <sortorder>1</sortorder>
             </gear>
           </gears>
           <bonus />
@@ -2789,6 +2789,48 @@ Wireless: Add the audio enhancement’s rating as a dice pool modifier to your a
       <discountedcost>False</discountedcost>
       <sortorder>0</sortorder>
     </armor>
+    <armor>
+      <sourceid>1c5f484a-996c-4518-bf23-677a506b2ea5</sourceid>
+      <guid>79c9b6a4-1d3a-4d0d-85dd-cfa65ef02668</guid>
+      <name>Forearm Guards</name>
+      <category>Specialty Armor</category>
+      <armor>+1</armor>
+      <armoroverride />
+      <armorcapacity>3</armorcapacity>
+      <avail>6</avail>
+      <cost>300</cost>
+      <source>RG</source>
+      <page>73</page>
+      <armorname />
+      <equipped>True</equipped>
+      <wirelesson>False</wirelesson>
+      <extra />
+      <damage>0</damage>
+      <rating>0</rating>
+      <maxrating>0</maxrating>
+      <ratinglabel>String_Rating</ratinglabel>
+      <stolen>False</stolen>
+      <emcumbrance>True</emcumbrance>
+      <armormods />
+      <bonus />
+      <wirelessbonus />
+      <location>7108bb29-8c37-4f50-8588-12b91c57e51f</location>
+      <notes>FOREARM GUARDS
+Simple and rarely stylish, forearm guards are dermaplast (or, rarely, metallic) bracers fitted to a wearer.
+Their use is simple—use them to block melee attacks,
+especially blades, turning blows away without actually cutting into you.
+&gt; Despite what you see in old trideo footage, don’t try to block bullets with these. It ends badly.
+&gt; Butch &gt; Personal experience or after-surgery reports from the clinic?
+&gt; Sounder &gt; Yes.
+&gt; Butch &gt; The basic models are sparkly, but keep in mind that they have some room for modification. Pop-out blades,
+holdout guns, or, a personal favorite, a place to keep your commlink.
+&gt; /dev/grrl &gt; You mean cyberdeck.
+&gt; Bull &gt; No, I mean commlink. I keep my ‘deck in my new bag.
+See? &lt;PIC_LINK&gt; &gt; /dev/grrl &gt; A pink cyberdeck holster with unicorns and sparkles? Kill me now.
+&gt; Bull </notes>
+      <discountedcost>False</discountedcost>
+      <sortorder>1</sortorder>
+    </armor>
   </armors>
   <weapons>
     <weapon>
@@ -2816,8 +2858,8 @@ Wireless: Add the audio enhancement’s rating as a dice pool modifier to your a
       <rating>0</rating>
       <clips>
         <clip>
-          <name>Arrow: Standard</name>
-          <id>ab15cf81-90cc-4aec-a420-0e0e62b73bf6</id>
+          <name>Arrow: Barbed Head</name>
+          <id>db3454ca-22ec-43b4-b4f3-9374d8e9e8ad</id>
           <count>1</count>
         </clip>
       </clips>
@@ -3116,15 +3158,19 @@ Wireless: A wireless smartlink provides a dice pool bonus to all attacks with th
       <location>bcc63fe2-0b5e-4704-9467-0197083e4f81</location>
       <notes>Tension: 8
 
-DP: 14 + 1 (Smartgun) + 1 (Master Archer) + 3 (Take Aim)
+DP: 14 + 1 (Smartgun) + 1 (Master Archer) + 0 (Take Aim)
 
-DV: Tension + 2 = 10 + 1S (Barbed)           = 11P DV
-AP: Tension / 4 = -2           (Barbed)           = -2 AP
-ACC: 5 + 2 + 1 + 1 = 9        (Barbed)           = 9 ACC
+DV: Tension + 2 = 10 + 1S  (Barbed)          = 11P DV
+AP: Tension / 4 = -2            (Barbed)          = -2 AP
+ACC: 5 + 2 + 1 + 1 = 9         (Barbed)          = 9 ACC
 
 DV: Tension + 2 = 10 + 1S  (Hammerhead) = 11S DV
 AP: Tension / 4 = -2 + 2      (Hammerhead) = 0 AP
-ACC: 5 + 2 + 1 + 1 = 9 - 1    (Hammerhead) = 8 ACC</notes>
+ACC: 5 + 2 + 1 + 1 = 9 - 1    (Hammerhead) = 8 ACC
+
+DV: Tension + 2 = 8            (Standard)        = 10P DV
+AP: Tension / 4 = -2            (Standard)        = -2 AP
+ACC: 5 + 2 + 1 +1 = 9          (Standard)        = 9 ACC</notes>
       <discountedcost>False</discountedcost>
       <weaponslots />
       <doubledcostweaponslots />
@@ -5892,8 +5938,8 @@ The mod gives a +6 bonus on any tests to see if a character keeps grip on the gu
       <rating>0</rating>
       <clips>
         <clip>
-          <name>Ammo: Regular Ammo</name>
-          <id>c0396337-3d77-47f6-94d5-1d7f8784d9d4</id>
+          <name>Ammo: APDS</name>
+          <id>d9965976-c059-4ed7-9c6d-205df8573505</id>
           <count>60</count>
         </clip>
         <clip>
@@ -5994,7 +6040,7 @@ The mod gives a +6 bonus on any tests to see if a character keeps grip on the gu
           <wirelesson>False</wirelesson>
           <wirelessbonus />
           <stolen>False</stolen>
-          <sortorder>9</sortorder>
+          <sortorder>12</sortorder>
         </accessory>
         <accessory>
           <sourceid>2905095e-937e-4dbc-aa56-3b66676e1559</sourceid>
@@ -6154,7 +6200,7 @@ The mod gives a +6 bonus on any tests to see if a character keeps grip on the gu
           <wirelesson>False</wirelesson>
           <wirelessbonus />
           <stolen>False</stolen>
-          <sortorder>5</sortorder>
+          <sortorder>8</sortorder>
         </accessory>
         <accessory>
           <sourceid>d57d2c64-1f61-4f5f-a465-8ce0dfacec6a</sourceid>
@@ -6310,7 +6356,7 @@ The mod gives a +6 bonus on any tests to see if a character keeps grip on the gu
           <wirelesson>True</wirelesson>
           <wirelessbonus />
           <stolen>False</stolen>
-          <sortorder>11</sortorder>
+          <sortorder>14</sortorder>
         </accessory>
         <accessory>
           <sourceid>e09095d7-72b5-44ef-b52a-aa2de172da2f</sourceid>
@@ -6358,7 +6404,7 @@ The mod gives a +6 bonus on any tests to see if a character keeps grip on the gu
           <wirelesson>False</wirelesson>
           <wirelessbonus />
           <stolen>False</stolen>
-          <sortorder>12</sortorder>
+          <sortorder>15</sortorder>
         </accessory>
         <accessory>
           <sourceid>bf18c385-77bf-4f45-a51c-c17fd702526f</sourceid>
@@ -6406,7 +6452,7 @@ The mod gives a +6 bonus on any tests to see if a character keeps grip on the gu
           <wirelesson>False</wirelesson>
           <wirelessbonus />
           <stolen>False</stolen>
-          <sortorder>4</sortorder>
+          <sortorder>7</sortorder>
         </accessory>
         <accessory>
           <sourceid>d67f3194-61f3-4440-b02c-e5f173532b01</sourceid>
@@ -6502,7 +6548,7 @@ The mod gives a +6 bonus on any tests to see if a character keeps grip on the gu
           <wirelesson>False</wirelesson>
           <wirelessbonus />
           <stolen>False</stolen>
-          <sortorder>3</sortorder>
+          <sortorder>6</sortorder>
         </accessory>
         <accessory>
           <sourceid>12e3bb7f-0058-4c9f-ba36-3a865d52b5a0</sourceid>
@@ -6550,7 +6596,7 @@ The mod gives a +6 bonus on any tests to see if a character keeps grip on the gu
           <wirelesson>False</wirelesson>
           <wirelessbonus />
           <stolen>False</stolen>
-          <sortorder>7</sortorder>
+          <sortorder>10</sortorder>
         </accessory>
         <accessory>
           <sourceid>8eec5df1-88e2-4822-b156-9c2340a33efc</sourceid>
@@ -6598,7 +6644,7 @@ The mod gives a +6 bonus on any tests to see if a character keeps grip on the gu
           <wirelesson>False</wirelesson>
           <wirelessbonus />
           <stolen>False</stolen>
-          <sortorder>2</sortorder>
+          <sortorder>5</sortorder>
         </accessory>
         <accessory>
           <sourceid>a1865555-8ad5-43ec-a30e-b7d77e804fab</sourceid>
@@ -6646,7 +6692,7 @@ The mod gives a +6 bonus on any tests to see if a character keeps grip on the gu
           <wirelesson>False</wirelesson>
           <wirelessbonus />
           <stolen>False</stolen>
-          <sortorder>10</sortorder>
+          <sortorder>13</sortorder>
         </accessory>
         <accessory>
           <sourceid>85b01b5c-c788-4b43-8190-9e0c18391436</sourceid>
@@ -6694,7 +6740,7 @@ The mod gives a +6 bonus on any tests to see if a character keeps grip on the gu
           <wirelesson>False</wirelesson>
           <wirelessbonus />
           <stolen>False</stolen>
-          <sortorder>8</sortorder>
+          <sortorder>11</sortorder>
         </accessory>
         <accessory>
           <sourceid>21bc8b85-3fd7-4bde-ac8d-35e1fa099f21</sourceid>
@@ -6742,7 +6788,7 @@ The mod gives a +6 bonus on any tests to see if a character keeps grip on the gu
           <wirelesson>False</wirelesson>
           <wirelessbonus />
           <stolen>False</stolen>
-          <sortorder>6</sortorder>
+          <sortorder>9</sortorder>
         </accessory>
         <accessory>
           <sourceid>4ed24342-276e-4455-acba-22b551e4d775</sourceid>
@@ -6790,7 +6836,7 @@ The mod gives a +6 bonus on any tests to see if a character keeps grip on the gu
           <wirelesson>False</wirelesson>
           <wirelessbonus />
           <stolen>False</stolen>
-          <sortorder>0</sortorder>
+          <sortorder>1</sortorder>
         </accessory>
         <accessory>
           <sourceid>4ed24342-276e-4455-acba-22b551e4d775</sourceid>
@@ -6838,7 +6884,7 @@ The mod gives a +6 bonus on any tests to see if a character keeps grip on the gu
           <wirelesson>False</wirelesson>
           <wirelessbonus />
           <stolen>False</stolen>
-          <sortorder>0</sortorder>
+          <sortorder>2</sortorder>
         </accessory>
         <accessory>
           <sourceid>4ed24342-276e-4455-acba-22b551e4d775</sourceid>
@@ -6886,7 +6932,7 @@ The mod gives a +6 bonus on any tests to see if a character keeps grip on the gu
           <wirelesson>False</wirelesson>
           <wirelessbonus />
           <stolen>False</stolen>
-          <sortorder>0</sortorder>
+          <sortorder>3</sortorder>
         </accessory>
         <accessory>
           <sourceid>d40d2fc6-3aad-4793-843d-20e3597b2365</sourceid>
@@ -6935,7 +6981,7 @@ Sometimes the job calls for the ability to ire more shots without taking time to
           <wirelesson>False</wirelesson>
           <wirelessbonus />
           <stolen>False</stolen>
-          <sortorder>0</sortorder>
+          <sortorder>4</sortorder>
         </accessory>
       </accessories>
       <location>64fea868-4e66-4055-be6b-cf22a4e47ca5</location>
@@ -7018,7 +7064,139 @@ Sometimes the job calls for the ability to ire more shots without taking time to
       <mount />
       <stolen>False</stolen>
       <extramount />
-      <location />
+      <location>f9a706d5-a6c4-42e9-8175-1d0f41f06d20</location>
+      <notes />
+      <discountedcost>False</discountedcost>
+      <weaponslots />
+      <doubledcostweaponslots />
+      <active>False</active>
+      <homenode>False</homenode>
+      <devicerating />
+      <programlimit />
+      <overclocked>None</overclocked>
+      <attack />
+      <sleaze />
+      <dataprocessing />
+      <firewall />
+      <attributearray />
+      <modattack />
+      <modsleaze />
+      <moddataprocessing />
+      <modfirewall />
+      <modattributearray />
+      <canswapattributes>False</canswapattributes>
+      <matrixcmfilled>0</matrixcmfilled>
+      <wirelessbonus />
+      <wirelesson>False</wirelesson>
+      <sortorder>0</sortorder>
+    </weapon>
+    <weapon>
+      <sourceid>78beeb28-9ae6-418d-97bb-1d45ac19cee8</sourceid>
+      <guid>135d1c73-2daf-474c-8294-4bcc89512b36</guid>
+      <name>Osmium Mace</name>
+      <category>Clubs</category>
+      <type>Melee</type>
+      <spec>Hammers</spec>
+      <spec2 />
+      <reach>2</reach>
+      <damage>(STR+2+(2*number(STR &gt;= 5))+(2*number(STR &gt;= 7)))P</damage>
+      <ap>-1</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <cyberware>False</cyberware>
+      <ammocategory />
+      <ammoname />
+      <ammoslots>1</ammoslots>
+      <sizecategory />
+      <firingmode>Skill</firingmode>
+      <minrating />
+      <maxrating>0</maxrating>
+      <rating>0</rating>
+      <clips />
+      <conceal>0</conceal>
+      <avail>14R</avail>
+      <cost>5500</cost>
+      <useskill />
+      <useskillspec />
+      <range />
+      <alternaterange />
+      <rangemultiply>1</rangemultiply>
+      <singleshot>1</singleshot>
+      <shortburst>3</shortburst>
+      <longburst>6</longburst>
+      <fullburst>10</fullburst>
+      <suppressive>20</suppressive>
+      <allowsingleshot>True</allowsingleshot>
+      <allowshortburst>True</allowshortburst>
+      <allowlongburst>True</allowlongburst>
+      <allowfullburst>True</allowfullburst>
+      <allowsuppressive>True</allowsuppressive>
+      <source>TCT</source>
+      <page>185</page>
+      <parentid />
+      <allowaccessory>True</allowaccessory>
+      <weaponname />
+      <included>False</included>
+      <equipped>True</equipped>
+      <requireammo>True</requireammo>
+      <accuracy>3+number({STR} &gt;= 5)+number({STR} &gt;= 7)</accuracy>
+      <mount />
+      <stolen>False</stolen>
+      <extramount />
+      <accessories>
+        <accessory>
+          <sourceid>85b01b5c-c788-4b43-8190-9e0c18391436</sourceid>
+          <guid>56926e1a-cea5-48ed-84ab-cc9de7f9b102</guid>
+          <name>Personalized Grip</name>
+          <mount>None</mount>
+          <extramount>None</extramount>
+          <rc />
+          <maxrating>0</maxrating>
+          <rating>0</rating>
+          <ratinglabel>String_Rating</ratinglabel>
+          <rcgroup>0</rcgroup>
+          <rcdeployable>False</rcdeployable>
+          <specialmodification>False</specialmodification>
+          <conceal />
+          <avail>2</avail>
+          <cost>100</cost>
+          <included>False</included>
+          <equipped>True</equipped>
+          <source>HT</source>
+          <page>182</page>
+          <accuracy>1</accuracy>
+          <ammoreplace />
+          <ammoslots>0</ammoslots>
+          <modifyammocapacity />
+          <damagetype />
+          <damage />
+          <damagereplace />
+          <firemode />
+          <firemodereplace />
+          <ap />
+          <apreplace />
+          <notes>PERSONALIZED GRIP
+This modiication allows a weapon’s owner to custom ize a weapon to it the size and shape of their hand perfectly. This is particularly useful for metatypes at the high and low end of the bell curve for standard meta human size. This modiication increases a weapon’s Accuracy by 1.
+</notes>
+          <discountedcost>False</discountedcost>
+          <addmode />
+          <singleshot>0</singleshot>
+          <shortburst>0</shortburst>
+          <longburst>0</longburst>
+          <fullburst>0</fullburst>
+          <suppressive>0</suppressive>
+          <rangebonus>0</rangebonus>
+          <rangemodifier>0</rangemodifier>
+          <extra />
+          <ammobonus>0</ammobonus>
+          <wirelesson>False</wirelesson>
+          <wirelessbonus />
+          <stolen>False</stolen>
+          <sortorder>0</sortorder>
+        </accessory>
+      </accessories>
+      <location>711b2a81-05dc-4d2d-ab82-b6048d4f5285</location>
       <notes />
       <discountedcost>False</discountedcost>
       <weaponslots />
@@ -7545,7 +7723,13 @@ Penalties for Called Shots are decreased by 2, while all other Ranged Attack act
       </bonus>
       <firstlevelbonus>
       </firstlevelbonus>
-      <notes />
+      <notes>THE MAGICIAN’S WAY
+
+COST: 20 KARMA
+
+One of the most popular Ways for mystic adepts, the Magician’s Way seeks to find balance between physical and magical abilities—or at least find what works best for the adept. Because of the time the adept spends on her sorcery and spellcasting abilities, many feel that she is not truly embracing either aspect. Adepts who practice this Way feel they are simply trying to either make the best of what they have or find the best of both worlds.
+
+Unlike their physical counterparts, mystic adepts following this Way have access to all non-adept metamagic abilities for which they meet the prerequisites. And because they do not specialize as much as other adepts (and do not receive a bonus besides the discount on Power Point cost), followers of this Way are able to choose any power they want for the discount, with the exception of Improved Reflexes.</notes>
     </quality>
   </qualities>
   <lifestyles>
@@ -7853,7 +8037,7 @@ you might as well have a throwback commlink with an antique external storage dev
       <source>SR5</source>
       <page>369</page>
       <trustfund>False</trustfund>
-      <primarytenant>True</primarytenant>
+      <primarytenant>False</primarytenant>
       <type>Advanced</type>
       <increment>Month</increment>
       <sourceid>4a37d519-c9be-4ecc-97bb-e9d78708c374</sourceid>
@@ -8388,7 +8572,7 @@ you might as well have a throwback commlink with an antique external storage dev
       <minrating />
       <maxrating>12</maxrating>
       <rating>9</rating>
-      <qty>30</qty>
+      <qty>28</qty>
       <avail>(Rating)R</avail>
       <cost>(Rating * 2) + 10</cost>
       <extra>Bows</extra>
@@ -8512,7 +8696,7 @@ Additionally, poachers who were after exotic birds but knew they lost a lot of v
       <minrating />
       <maxrating>12</maxrating>
       <rating>9</rating>
-      <qty>50</qty>
+      <qty>51</qty>
       <avail>Rating</avail>
       <cost>Rating * 2</cost>
       <extra>Bows</extra>
@@ -10246,6 +10430,59 @@ Ticker reduces the time for subject-related Matrix Searches in half. Obviously, 
           <homenode>False</homenode>
           <sortorder>3</sortorder>
         </gear>
+        <gear>
+          <sourceid>e2689c1f-4dd1-40b7-8771-1bb5926b5ebf</sourceid>
+          <guid>61d053fb-938c-4318-8685-bf097dc26791</guid>
+          <name>Receiver</name>
+          <category>Commlink Accessories</category>
+          <capacity />
+          <armorcapacity>[2]</armorcapacity>
+          <minrating />
+          <maxrating />
+          <rating>0</rating>
+          <qty>1.0</qty>
+          <avail>3</avail>
+          <cost>400</cost>
+          <extra />
+          <bonded>False</bonded>
+          <equipped>True</equipped>
+          <wirelesson>False</wirelesson>
+          <stolen>False</stolen>
+          <bonus>
+          </bonus>
+          <wirelessbonus>
+          </wirelessbonus>
+          <source>DT</source>
+          <page>62</page>
+          <canformpersona />
+          <devicerating>0</devicerating>
+          <gearname />
+          <forcedvalue />
+          <matrixcmfilled>0</matrixcmfilled>
+          <matrixcmbonus>0</matrixcmbonus>
+          <parentid />
+          <allowrename>False</allowrename>
+          <children />
+          <location />
+          <notes />
+          <discountedcost>False</discountedcost>
+          <programlimit />
+          <overclocked>None</overclocked>
+          <attack />
+          <sleaze />
+          <dataprocessing />
+          <firewall />
+          <attributearray />
+          <modattack />
+          <modsleaze />
+          <moddataprocessing />
+          <modfirewall />
+          <modattributearray />
+          <canswapattributes>False</canswapattributes>
+          <active>False</active>
+          <homenode>False</homenode>
+          <sortorder>0</sortorder>
+        </gear>
       </children>
       <location>02f90d79-e1c5-48ac-9ea5-ee05aa873aa7</location>
       <notes>Running Silent 99% of the time.
@@ -11190,7 +11427,7 @@ Each license must be assigned to a particular (fake) SIN of the player’s choos
       <minrating />
       <maxrating />
       <rating>0</rating>
-      <qty>180</qty>
+      <qty>240</qty>
       <avail>2R</avail>
       <costfor>10</costfor>
       <cost>20</cost>
@@ -11361,7 +11598,7 @@ Each license must be assigned to a particular (fake) SIN of the player’s choos
       <minrating />
       <maxrating />
       <rating>0</rating>
-      <qty>60</qty>
+      <qty>0</qty>
       <avail>12F</avail>
       <costfor>10</costfor>
       <cost>120</cost>
@@ -11689,7 +11926,7 @@ Each license must be assigned to a particular (fake) SIN of the player’s choos
       <minrating />
       <maxrating />
       <rating>0</rating>
-      <qty>35</qty>
+      <qty>135.0</qty>
       <avail>0</avail>
       <cost>20</cost>
       <extra>Shinto</extra>
@@ -12454,6 +12691,18 @@ Cameras may also be upgraded with vision enhancements and audio enhancements. A 
       <improvementsource>Metamagic</improvementsource>
       <notes />
     </metamagic>
+    <metamagic>
+      <sourceid>505d9fe3-852c-459b-8f9e-3e22c1b91b9a</sourceid>
+      <guid>890cb3ae-712d-45ab-a5a0-5a2561ff2db1</guid>
+      <name>Masking</name>
+      <source>SR5</source>
+      <paidwithkarma>False</paidwithkarma>
+      <page>326</page>
+      <grade>2</grade>
+      <bonus />
+      <improvementsource>Metamagic</improvementsource>
+      <notes />
+    </metamagic>
   </metamagics>
   <arts>
     <art>
@@ -12475,6 +12724,15 @@ Cameras may also be upgraded with vision enhancements and audio enhancements. A 
       <guid>e55669e6-7f12-4196-99f4-d741a6473228</guid>
       <res>False</res>
       <grade>1</grade>
+      <group>True</group>
+      <ordeal>True</ordeal>
+      <schooling>False</schooling>
+      <notes />
+    </initiationgrade>
+    <initiationgrade>
+      <guid>969218f4-1d8a-4a74-a716-61ff490b6db5</guid>
+      <res>False</res>
+      <grade>2</grade>
       <group>True</group>
       <ordeal>True</ordeal>
       <schooling>False</schooling>
@@ -13760,122 +14018,6 @@ Cameras may also be upgraded with vision enhancements and audio enhancements. A 
     </improvement>
     <improvement>
       <target />
-      <improvedname>MAG</improvedname>
-      <sourcename />
-      <min>0</min>
-      <max>1</max>
-      <aug>0</aug>
-      <augmax>0</augmax>
-      <val>0</val>
-      <rating>1</rating>
-      <exclude />
-      <condition />
-      <improvementttype>Attribute</improvementttype>
-      <improvementsource>Initiation</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
-    <improvement>
-      <target />
-      <improvedname>MAGAdept</improvedname>
-      <sourcename />
-      <min>0</min>
-      <max>1</max>
-      <aug>0</aug>
-      <augmax>0</augmax>
-      <val>0</val>
-      <rating>1</rating>
-      <exclude />
-      <condition />
-      <improvementttype>Attribute</improvementttype>
-      <improvementsource>Initiation</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
-    <improvement>
-      <unique>precedence0</unique>
-      <target />
-      <improvedname />
-      <sourcename>e9049522-fadd-434d-9fc1-dd459e370efe</sourcename>
-      <min>0</min>
-      <max>0</max>
-      <aug>0</aug>
-      <augmax>0</augmax>
-      <val>3</val>
-      <rating>1</rating>
-      <exclude />
-      <condition />
-      <improvementttype>InitiativeDice</improvementttype>
-      <improvementsource>Power</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
-    <improvement>
-      <target />
-      <improvedname>REA</improvedname>
-      <sourcename>e9049522-fadd-434d-9fc1-dd459e370efe</sourcename>
-      <min>0</min>
-      <max>0</max>
-      <aug>3</aug>
-      <augmax>0</augmax>
-      <val>0</val>
-      <rating>1</rating>
-      <exclude />
-      <condition />
-      <improvementttype>Attribute</improvementttype>
-      <improvementsource>Power</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
-    <improvement>
-      <target />
-      <improvedname />
-      <sourcename>086f39a6-7c96-4bcd-b0a7-4666c2065fc1</sourcename>
-      <min>0</min>
-      <max>0</max>
-      <aug>0</aug>
-      <augmax>0</augmax>
-      <val>1</val>
-      <rating>1</rating>
-      <exclude />
-      <condition />
-      <improvementttype>Armor</improvementttype>
-      <improvementsource>Power</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
-    <improvement>
-      <target />
       <improvedname>Global Grid</improvedname>
       <sourcename>6f91089b-0b97-49d4-8a0b-11409870383d</sourcename>
       <min>0</min>
@@ -14154,29 +14296,6 @@ Cameras may also be upgraded with vision enhancements and audio enhancements. A 
     </improvement>
     <improvement>
       <target />
-      <improvedname>EDG</improvedname>
-      <sourcename />
-      <min>0</min>
-      <max>0</max>
-      <aug>-4</aug>
-      <augmax>0</augmax>
-      <val>0</val>
-      <rating>1</rating>
-      <exclude />
-      <condition />
-      <improvementttype>Attribute</improvementttype>
-      <improvementsource>EdgeUse</improvementsource>
-      <custom>False</custom>
-      <customname />
-      <customid />
-      <customgroup />
-      <addtorating>False</addtorating>
-      <enabled>True</enabled>
-      <order>0</order>
-      <notes />
-    </improvement>
-    <improvement>
-      <target />
       <improvedname>Shinto</improvedname>
       <sourcename>36f458f5-afaa-4e1b-878f-c597e2da8bd6</sourcename>
       <min>0</min>
@@ -14269,6 +14388,191 @@ Cameras may also be upgraded with vision enhancements and audio enhancements. A 
     </improvement>
     <improvement>
       <target />
+      <improvedname>MAG</improvedname>
+      <sourcename />
+      <min>0</min>
+      <max>2</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Initiation</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>MAGAdept</improvedname>
+      <sourcename />
+      <min>0</min>
+      <max>2</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Initiation</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <unique>precedence0</unique>
+      <target />
+      <improvedname />
+      <sourcename>e9049522-fadd-434d-9fc1-dd459e370efe</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>3</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>InitiativeDice</improvementttype>
+      <improvementsource>Power</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>REA</improvedname>
+      <sourcename>e9049522-fadd-434d-9fc1-dd459e370efe</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>3</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Power</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname />
+      <sourcename>086f39a6-7c96-4bcd-b0a7-4666c2065fc1</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>1</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Armor</improvementttype>
+      <improvementsource>Power</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>EDG</improvedname>
+      <sourcename />
+      <min>0</min>
+      <max>0</max>
+      <aug>-1</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>EdgeUse</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>CHA</improvedname>
+      <sourcename>adf550b8-847d-4843-bf97-43bc23c01807</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>4</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Custom</improvementsource>
+      <custom>True</custom>
+      <customname>CHA</customname>
+      <customid>specificattribute</customid>
+      <customgroup>NyxBuffs</customgroup>
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>1</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>WIL</improvedname>
+      <sourcename>5783afd1-638a-4ccf-b2c3-4c4bfb68b9f1</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>4</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Attribute</improvementttype>
+      <improvementsource>Custom</improvementsource>
+      <custom>True</custom>
+      <customname>WIL</customname>
+      <customid>specificattribute</customid>
+      <customgroup>NyxBuffs</customgroup>
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
       <improvedname>DEP</improvedname>
       <sourcename />
       <min>0</min>
@@ -14281,6 +14585,52 @@ Cameras may also be upgraded with vision enhancements and audio enhancements. A 
       <condition />
       <improvementttype>Attribute</improvementttype>
       <improvementsource>EssenceLoss</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>Reagents, per dram</improvedname>
+      <sourcename>1ff6b590-d648-4c31-9e01-68a219bb809c</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Tradition</improvementttype>
+      <improvementsource>Gear</improvementsource>
+      <custom>False</custom>
+      <customname />
+      <customid />
+      <customgroup />
+      <addtorating>False</addtorating>
+      <enabled>True</enabled>
+      <order>0</order>
+      <notes />
+    </improvement>
+    <improvement>
+      <target />
+      <improvedname>Reagents, per dram</improvedname>
+      <sourcename>b31e299d-4f62-4578-bcc6-c896687f1ef7</sourcename>
+      <min>0</min>
+      <max>0</max>
+      <aug>0</aug>
+      <augmax>0</augmax>
+      <val>0</val>
+      <rating>1</rating>
+      <exclude />
+      <condition />
+      <improvementttype>Tradition</improvementttype>
+      <improvementsource>Gear</improvementsource>
       <custom>False</custom>
       <customname />
       <customid />
@@ -15957,6 +16307,152 @@ Cameras may also be upgraded with vision enhancements and audio enhancements. A 
         <extra />
       </undo>
     </expense>
+    <expense>
+      <guid>db4c1e9e-e6ff-49ee-8466-633edc9ddc01</guid>
+      <date>2020-08-24T20:03:20</date>
+      <amount>10</amount>
+      <reason>GM Pay - August</reason>
+      <type>Karma</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ManualAdd</karmatype>
+        <nuyentype>AddCyberware</nuyentype>
+        <objectid />
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>4a09197a-7fcb-4d02-a837-c92bee65a938</guid>
+      <date>2020-08-27T11:44:05</date>
+      <amount>-5500.0</amount>
+      <reason>Purchased Weapon Osmium Mace</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddWeapon</nuyentype>
+        <objectid>135d1c73-2daf-474c-8294-4bcc89512b36</objectid>
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>5c7f6f62-604c-4728-9d57-4214a6c7d7f5</guid>
+      <date>2020-08-27T11:53:19</date>
+      <amount>0</amount>
+      <reason>Modified Lifestyle High ("Izumo Shrine - Auburn, Lake Wilderness") -&gt; High ("Izumo Shrine - Auburn, Lake Wilderness")</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+    </expense>
+    <expense>
+      <guid>fb8eb1c9-885f-4b6b-bd77-23b8eb94f5c3</guid>
+      <date>2020-08-28T20:57:37</date>
+      <amount>-300</amount>
+      <reason>Purchased Armor Forearm Guards</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddArmor</nuyentype>
+        <objectid>79c9b6a4-1d3a-4d0d-85dd-cfa65ef02668</objectid>
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>d069a13d-4a18-4d68-aa30-27a865e57455</guid>
+      <date>2020-08-28T21:49:55</date>
+      <amount>-400.0</amount>
+      <reason>Purchased Gear Receiver</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>AddGear</nuyentype>
+        <objectid>61d053fb-938c-4318-8685-bf097dc26791</objectid>
+        <qty>1.0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>c93eb5f1-ac73-4c7f-b50e-38db197f3521</guid>
+      <date>2020-08-30T12:25:15</date>
+      <amount>-13</amount>
+      <reason>Initiate Grade 1 -&gt; 2</reason>
+      <type>Karma</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveInitiateGrade</karmatype>
+        <nuyentype>AddCyberware</nuyentype>
+        <objectid>969218f4-1d8a-4a74-a716-61ff490b6db5</objectid>
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>4821e679-d4d5-4799-83a3-4f2ffce0ab4a</guid>
+      <date>2020-08-30T16:13:52</date>
+      <amount>3</amount>
+      <reason>Side RP (Is your refrigerator running?)</reason>
+      <type>Karma</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ManualAdd</karmatype>
+        <nuyentype>AddCyberware</nuyentype>
+        <objectid />
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>7d92d8d8-a591-4b2e-8d25-c1ad6595a49e</guid>
+      <date>2020-09-01T12:52:59</date>
+      <amount>-2428.5714285714285714285714286</amount>
+      <reason>September Rent</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>IncreaseLifestyle</nuyentype>
+        <objectid>b8350510-ca64-4042-9c2c-240320ddb10c</objectid>
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
+    <expense>
+      <guid>384ad911-7094-417b-b647-3b06815daec2</guid>
+      <date>2020-09-01T12:52:59</date>
+      <amount>0</amount>
+      <reason>Decremented Lifestyle High</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+    </expense>
+    <expense>
+      <guid>8154ebde-55b2-44e2-aba5-c2254f9df2a9</guid>
+      <date>2020-09-01T12:53:32</date>
+      <amount>2428</amount>
+      <reason>September Rent - Staff Pay</reason>
+      <type>Nuyen</type>
+      <refund>False</refund>
+      <forcecareervisible>False</forcecareervisible>
+      <undo>
+        <karmatype>ImproveAttribute</karmatype>
+        <nuyentype>ManualAdd</nuyentype>
+        <objectid />
+        <qty>0</qty>
+        <extra />
+      </undo>
+    </expense>
   </expenses>
   <gearlocations>
     <location>
@@ -16022,37 +16518,101 @@ Cameras may also be upgraded with vision enhancements and audio enhancements. A 
       <guid>bcc63fe2-0b5e-4704-9467-0197083e4f81</guid>
       <name>Bow Weapon Case</name>
       <notes />
-      <sortorder>5</sortorder>
+      <sortorder>6</sortorder>
     </location>
     <location>
       <guid>f5b48597-d368-4d45-aa6c-9e91b7fcfa1a</guid>
       <name>On person</name>
       <notes />
-      <sortorder>4</sortorder>
+      <sortorder>5</sortorder>
     </location>
     <location>
       <guid>42ffe6cd-e2af-4f9f-94e3-92f843119117</guid>
       <name>Concealed Pocket</name>
       <notes />
-      <sortorder>3</sortorder>
+      <sortorder>4</sortorder>
     </location>
     <location>
       <guid>f9a706d5-a6c4-42e9-8175-1d0f41f06d20</guid>
       <name>Backpack</name>
       <notes />
-      <sortorder>2</sortorder>
+      <sortorder>3</sortorder>
     </location>
     <location>
       <guid>64fea868-4e66-4055-be6b-cf22a4e47ca5</guid>
       <name>HK XM30 Weapon Case</name>
       <notes />
+      <sortorder>2</sortorder>
+    </location>
+    <location>
+      <guid>711b2a81-05dc-4d2d-ab82-b6048d4f5285</guid>
+      <name>Foci</name>
+      <notes />
       <sortorder>1</sortorder>
+    </location>
+    <location>
+      <guid>0ac11034-19d1-477d-b054-59319a4a914f</guid>
+      <name>Spai Gear</name>
+      <notes />
+      <sortorder>0</sortorder>
     </location>
   </weaponlocations>
   <improvementgroups>
     <improvementgroup>Season 1 Meta-mechanic</improvementgroup>
+    <improvementgroup>NyxBuffs</improvementgroup>
   </improvementgroups>
-  <calendar />
+  <calendar>
+    <week>
+      <guid>33f958cd-2eed-4eef-a997-eb4347bcad5d</guid>
+      <year>2082</year>
+      <week>39</week>
+      <notes />
+    </week>
+    <week>
+      <guid>aa36e416-33d8-411f-b4de-e498dbc1d80b</guid>
+      <year>2082</year>
+      <week>38</week>
+      <notes />
+    </week>
+    <week>
+      <guid>d680cf49-2d74-4664-b1a3-7fc7a81a56e1</guid>
+      <year>2082</year>
+      <week>37</week>
+      <notes />
+    </week>
+    <week>
+      <guid>ec3dc72c-1367-4bfc-b2a3-600692979db3</guid>
+      <year>2082</year>
+      <week>36</week>
+      <notes />
+    </week>
+    <week>
+      <guid>17bdae1e-7806-4dc1-b04f-f958b00281c6</guid>
+      <year>2082</year>
+      <week>35</week>
+      <notes>Reagents got.
+</notes>
+    </week>
+    <week>
+      <guid>c1ae4262-c9a4-423b-a8d0-8273525c6811</guid>
+      <year>2082</year>
+      <week>34</week>
+      <notes>Reagents got - 5.</notes>
+    </week>
+    <week>
+      <guid>a4705397-9d0e-4614-89b4-1ce43d9f1b6e</guid>
+      <year>2082</year>
+      <week>33</week>
+      <notes>Reagents got.</notes>
+    </week>
+    <week>
+      <guid>384ba77f-2645-4ded-bc47-b11aadd6fc8e</guid>
+      <year>2082</year>
+      <week>32</week>
+      <notes>Reagents got.
+</notes>
+    </week>
+  </calendar>
   <sources>
     <source>SG</source>
     <source>SR5</source>
@@ -16061,6 +16621,7 @@ Cameras may also be upgraded with vision enhancements and audio enhancements. A 
     <source>BTB</source>
     <source>CA</source>
     <source>TSG</source>
+    <source>TCT</source>
     <source>RF</source>
     <source>R5</source>
     <source>SL</source>
@@ -16076,7 +16637,7 @@ Cameras may also be upgraded with vision enhancements and audio enhancements. A 
     <physicalcm>11</physicalcm>
     <physicalcmthresholdoffset>0</physicalcmthresholdoffset>
     <physicalcmoverflow>6</physicalcmoverflow>
-    <stuncm>12</stuncm>
+    <stuncm>14</stuncm>
     <stuncmthresholdoffset>0</stuncmthresholdoffset>
   </calculatedvalues>
 </character>

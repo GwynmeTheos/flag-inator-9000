@@ -1,4 +1,4 @@
-# main.py
+# Main
 # Flag-inator 9000
 
 # built-in modules
