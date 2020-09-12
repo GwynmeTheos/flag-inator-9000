@@ -493,6 +493,19 @@ class Character:
                 self.skills['CHASkills']['Impersonation'] += int(skillGroup['karma']) + int(skillGroup['base'])
                 self.skills['CHASkills']['Performance'] += int(skillGroup['karma']) + int(skillGroup['base'])
 
+        # Dedicated Spellslinger is a bitch.
+        try:
+            if self.qualities['Dedicated Spellslinger']:
+                specs = int()
+                for skill in save_file['character']['newskills']['skills']['skill']:
+                    if skill['name'] == 'Spellcasting':
+                        for i in skill['specs']['spec']:
+                            specs += 1
+                    break
+                self.spells -= specs
+        except KeyError:
+            pass
+
         # Attribute + Skill Rank flags are calculated based on attribute,
         # which means we really only care for the highest skill rating tied to a specific attribute.
 
@@ -1684,16 +1697,15 @@ class Character:
             output = "<Spells>\n"
             try:
                 if self.qualities['Dedicated Spellslinger']:
-                    spellCount = self.spells - self.skills['MAGSkills']['Spellcasting']
-                    if spellCount < 10:
-                        pass
-                    else:
-                        flags += int(spellCount - 10)
-                        output += "    [" + str(
-                            spellCount) + " spells over 10, minus Dedicated Spellslinger spells] +" + str(
-                            flags) + " Flag points\n"
+                    discount = self.skills['MAGSkills']['Spellcasting']
             except KeyError:
+                discount = 0
+            spellcount = self.spells - discount - 10
+            if spellcount <= 2:
                 pass
+            else:
+                flags += int(spellcount/3)
+                output += "    [" + str(self.spells) + " spells over 10, minus Dedicated Spellslinger spells] +" + str(int(spellcount/3)) + " Flag points\n"
 
             if flags > 0:
                 if self.verbose:
