@@ -3,7 +3,7 @@
 # The PEP is stupid.
 
 # Imports
-import xmltodict, os, math
+import xmltodict, os, math, gc
 # Character data class
 import characterClass
 
@@ -104,6 +104,7 @@ def SingleCheck(settings):
     currentPage = 0
 
     while True:
+        gc.collect()
         # Loop over the save files, to check for list IndexErrors. If there is a list Index Error, just append an empty string.
         savesToShow = list()
         for i in range((currentPage * 10 + 0), (currentPage * 10 + 10), 1):
@@ -144,6 +145,7 @@ def SingleCheck(settings):
             try:
                 with open(str(saveFiles[int(selection)]), mode="r", encoding="utf-8") as f:
                     character = characterClass.Character(xmltodict.parse(f.read()), settings)
+                    f.close()
             # They wrote a letter, so it doesn't get turned into a char because the cast is to type int.
             except ValueError:
                 input("\nInvalid selection. Press enter to continue...")
@@ -158,10 +160,10 @@ def SingleCheck(settings):
                 print("If this issue persists, call Arisu-sensei.", end="\n")
                 input("Press enter to continue...")
                 continue
-
             else:
                 character.CheckFlags()
                 input()
+                del character
 
 
 def BatchCheck(settings):

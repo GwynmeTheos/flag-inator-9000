@@ -650,13 +650,13 @@ class Character:
             betaCount = float()
             for ware in self.ware.keys():
                 if self.ware[ware]['Grade'] == 'Betaware' or self.ware[ware]['Grade'] == 'Betaware (Adapsin)':
-                    betaCount += ware['Essence']
+                    betaCount += self.ware[ware]['Essence']
             self.essence['Betaware'] = betaCount
             # Delta
             deltaCount = float()
             for ware in self.ware.keys():
                 if self.ware[ware]['Grade'] == 'Deltaware' or self.ware[ware]['Grade'] == 'Deltaware (Adapsin)':
-                    deltaCount += ware['Essence']
+                    deltaCount += self.ware[ware]['Essence']
             self.essence['Deltaware'] = deltaCount
 
     def GenerateFociSpellsPowers(self, save_file):
@@ -1627,7 +1627,7 @@ class Character:
         # Betaware/Deltaware
         if bool(self.essence):
             flags = int()
-            output = "<Awakened Essence Loss>\n"
+            output = "<Beta/Delta Base Essence>\n"
 
             try:
                 if self.essence['Betaware'] > 0:
@@ -1762,3 +1762,9 @@ class Character:
                 if self.verbose:
                     print(output)
                 self.accrued_flags += flags
+
+    def __del__(self):
+        self.qualities.clear()
+        self.foci.clear()
+        self.adeptPowers.clear()
+        self.ware.clear()
