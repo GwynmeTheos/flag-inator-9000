@@ -697,7 +697,7 @@ class Character:
         try:
             if save_file['character']['tradition']['name'] == 'Toxic':
                 self.toxicMage = True
-        except TypeError:
+        except KeyError:
             self.toxicMage = False
 
     def CheckFlags(self):
@@ -1029,12 +1029,12 @@ class Character:
             # Check if they're defaultiong, some skills can't be defaulted in.
             # Highest Limb AGI skill
             if skill == 'Unarmed Combat':
-                if self.skills['AGISkills'][skill] == 0:
+                if self.skills['CombatSkills'][skill] == 0:
                     auxVar = self.attributes['highestLimbAGI'] - 1
                 else:
                     auxVar = self.skills['CombatSkills'][skill] + self.attributes['highestLimbAGI']
             # Highest Arm AGI Skills
-            elif self.skills['AGISkills'][skill] == 0:
+            elif self.skills['CombatSkills'][skill] == 0:
                 if skill == 'Palming':
                     auxVar = 0
                 else:
@@ -1290,12 +1290,12 @@ class Character:
                 # Check if they're defaultiong, some skills can't be defaulted in.
                 # Highest Limb AGI skill
                 if skill == 'Unarmed Combat':
-                    if self.skills['AGISkills'][skill] == 0:
+                    if self.skills['CombatSkills'][skill] == 0:
                         auxVar = self.attributes['averageLOG'] - 1
                     else:
                         auxVar = self.skills['CombatSkills'][skill] + self.attributes['averageLOG']
                 # Highest Arm AGI Skills
-                elif self.skills['AGISkills'][skill] == 0:
+                elif self.skills['CombatSkills'][skill] == 0:
                     if skill == 'Palming':
                         auxVar = 0
                     else:
@@ -1623,13 +1623,18 @@ class Character:
             flags = int()
             output = "<Awakened Essence Loss>\n"
 
-            if self.essence['Betaware'] > 0:
-                flags += int(self.essence['Betaware'])
-                output += "    [Betaware Essence] +" + str(int(self.essence['Betaware'])) + " Flag points\n"
-            if self.essence['Deltaware'] > 0:
-                flags += int(self.essence['Deltaware'] * 2)
-                output += "    [Deltaware Essence] +" + str(int(self.essence['Deltaware'] * 2)) + " Flag points\n"
-
+            try:
+                if self.essence['Betaware'] > 0:
+                    flags += int(self.essence['Betaware'])
+                    output += "    [Betaware Essence] +" + str(int(self.essence['Betaware'])) + " Flag points\n"
+            except KeyError:
+                pass
+            try:
+                if self.essence['Deltaware'] > 0:
+                    flags += int(self.essence['Deltaware'] * 2)
+                    output += "    [Deltaware Essence] +" + str(int(self.essence['Deltaware'] * 2)) + " Flag points\n"
+            except KeyError:
+                pass
             if flags > 0:
                 if self.verbose:
                     print(output)
@@ -1644,23 +1649,23 @@ class Character:
                 if focus[0] == 'Power Focus':
                     if 4 <= focus[1] <= 5:
                         flags += 1
-                        output += "    [R" + focus[1] + " " + focus[0] + "] +1 Flag points\n"
+                        output += "    [R" + str(focus[1]) + " " + str(focus[0]) + "] +1 Flag points\n"
                     elif 6 <= focus[1] <= 7:
                         flags += 2
-                        output += "    [R" + focus[1] + " " + focus[0] + "] +2 Flag points\n"
+                        output += "    [R" + str(focus[1]) + " " + str(focus[0]) + "] +2 Flag points\n"
                     elif 8 <= focus[1]:
                         flags += 4
-                        output += "    [R" + focus[1] + " " + focus[0] + "] +4 Flag points\n"
+                        output += "    [R" + str(focus[1]) + " " + str(focus[0]) + "] +4 Flag points\n"
                 else:
                     if 6 <= focus[1] <= 7:
                         flags += 1
-                        output += "    [R" + focus[1] + " " + focus[0] + "] +1 Flag points\n"
+                        output += "    [R" + str(focus[1]) + " " + str(focus[0]) + "] +1 Flag points\n"
                     elif 8 <= focus[1] <= 9:
                         flags += 2
-                        output += "    [R" + focus[1] + " " + focus[0] + "] +2 Flag points\n"
+                        output += "    [R" + str(focus[1]) + " " + str(focus[0]) + "] +2 Flag points\n"
                     elif 10 <= focus[1]:
                         flags += 4
-                        output += "    [R" + focus[1] + " " + focus[0] + "] +4 Flag points\n"
+                        output += "    [R" + str(focus[1]) + " " + str(focus[0]) + "] +4 Flag points\n"
 
             if flags > 0:
                 if self.verbose:
