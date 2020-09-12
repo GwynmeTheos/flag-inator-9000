@@ -630,8 +630,8 @@ class Character:
                                                'Rating': int(ware['rating'])}
                 # Special Formating: Rating * x.y
                 elif ware['ess'].find('Rating * ') != -1:
-                    essence = ware['ess'].replace('Rating * ', '')
-                    essence = float(essence) * int(ware['rating'])
+                    essence = ware['ess'].replace('Rating * ', '').replace(')', '').replace('(', '')
+                    essence = float(eval(essence)) * int(ware['rating'])
                     self.ware[ware['name']] = {'Essence': float(essence), 'Grade': ware['grade'],
                                                'Rating': int(ware['rating'])}
                 else:
@@ -649,13 +649,13 @@ class Character:
             # Beta
             betaCount = float()
             for ware in self.ware.keys():
-                if ware['Grade'] == 'Betaware' or ware['Grade'] == 'Betaware (Adapsin)':
+                if self.ware[ware]['Grade'] == 'Betaware' or self.ware[ware]['Grade'] == 'Betaware (Adapsin)':
                     betaCount += ware['Essence']
             self.essence['Betaware'] = betaCount
             # Delta
             deltaCount = float()
             for ware in self.ware.keys():
-                if ware['Grade'] == 'Deltaware' or ware['Grade'] == 'Deltaware (Adapsin)':
+                if self.ware[ware]['Grade'] == 'Deltaware' or self.ware[ware]['Grade'] == 'Deltaware (Adapsin)':
                     deltaCount += ware['Essence']
             self.essence['Deltaware'] = deltaCount
 
@@ -704,6 +704,7 @@ class Character:
         os.system("CLS")
         self.CheckMetatype()
         self.CheckTalents()
+        self.CheckQualities()
         self.CheckAttributes()
         self.CheckSkills()
         self.CheckArmor()
@@ -869,12 +870,12 @@ class Character:
                  quality == 'Infected: Loup-Garou':
                 output += "    [Strain II] +14 Flag points\n"
                 flags += 14
-            elif quality['name'] == 'Infected: Ghoul (Human)' or \
-                 quality['name'] == 'Infected: Ghoul (Dwarf)' or \
-                 quality['name'] == 'Infected: Ghoul (Elf)' or \
-                 quality['name'] == 'Infected: Ghoul (Ork)' or \
-                 quality['name'] == 'Infected: Ghoul (Sasquatch)' or \
-                 quality['name'] == 'Infected: Ghoul (Troll)':
+            elif quality == 'Infected: Ghoul (Human)' or \
+                 quality == 'Infected: Ghoul (Dwarf)' or \
+                 quality == 'Infected: Ghoul (Elf)' or \
+                 quality == 'Infected: Ghoul (Ork)' or \
+                 quality == 'Infected: Ghoul (Sasquatch)' or \
+                 quality == 'Infected: Ghoul (Troll)':
                 output += "    [Strain III] +12 Flag points\n"
                 flags += 12
         # Day Job and Fame
@@ -910,6 +911,11 @@ class Character:
                 output += "    [In Debt 15] +10 Flag points\n"
         except KeyError:
             pass
+
+        if flags > 0:
+            if self.verbose:
+                print(output)
+            self.accrued_flags += flags
 
     def CheckAttributes(self):
         flags = int()

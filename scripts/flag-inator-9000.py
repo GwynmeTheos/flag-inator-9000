@@ -150,7 +150,7 @@ def SingleCheck(settings):
                 continue
             # They wrote some random ass number
             except IndexError:
-                input("\nInvalid selection. Press enter to continue...")
+                input("\nInvalid number. Press enter to continue...")
                 continue
             # Probably would happen if they deleted the save file while in the app.
             except FileNotFoundError:
@@ -174,7 +174,7 @@ def Options(settings):
         print("+------------------------------> FLAG-INATOR 9000 <-----------------------------+", end='\n')
         print("|                                                                               |", end='\n')
         print("|  Verbose logging of Flags: {:5s}                                              |".format(settings['verbose']), end='\n')
-        print("|  Save files folder: {:51s} |".format(settings['folder']), end='\n')
+        print("|  Save files folder: {:57s} |".format(settings['folder']), end='\n')
         print("|                                                                               |", end='\n')
         print("|                                                                               |", end='\n')
         print("+-------------------------------------------------------------------------------+", end='\n')
