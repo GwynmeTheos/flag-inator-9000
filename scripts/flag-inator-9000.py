@@ -161,6 +161,7 @@ def SingleCheck(settings):
 
             else:
                 character.CheckFlags()
+                input()
 
 
 def BatchCheck(settings):
