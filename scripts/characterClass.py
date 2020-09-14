@@ -737,15 +737,15 @@ class Character:
             if self.meta['type'] == 'Human':
                 # Variant
                 if self.meta['variant'] == 'Nartaki':
-                    output += "    [" + self.meta['type'] + "] +3 Flag points\n"
+                    output += "    [" + self.meta['type'] + ": " + self.meta['variant'] + "] +3 Flag points\n"
                     flags += 3
 
             elif self.meta['type'] == 'Elf':
                 if self.meta['variant'] == 'Dryad':
-                    output += "    [" + self.meta['type'] + "] +5 Flag points\n"
+                    output += "    [" + self.meta['type'] + ": " + self.meta['variant'] + "] +5 Flag points\n"
                     flags += 5
                 elif self.meta['variant'] == 'Nocturna':
-                    output += "    [" + self.meta['type'] + "] +6 Flag points\n"
+                    output += "    [" + self.meta['type'] + ": " + self.meta['variant'] + "] +6 Flag points\n"
                     flags += 6
                 else:
                     output += "    [" + self.meta['type'] + "] +2 Flag points\n"
@@ -753,12 +753,12 @@ class Character:
 
             elif self.meta['type'] == 'Dwarf':
                 if self.meta['variant'] == 'Gnome':
-                    output += "    [" + self.meta['type'] + "] +5 Flag points\n"
+                    output += "    [" + self.meta['type'] + ": " + self.meta['variant'] + "] +5 Flag points\n"
                     flags += 5
 
             elif self.meta['type'] == 'Ork':
                 if self.meta['variant'] == 'Oni':
-                    output += "    [" + self.meta['type'] + "] +1 Flag points\n"
+                    output += "    [" + self.meta['type'] + ": " + self.meta['variant'] + "] +1 Flag points\n"
                     flags += 1
 
         elif self.meta['category'] == 'Metasapient':
