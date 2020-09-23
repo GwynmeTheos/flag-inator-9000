@@ -163,7 +163,6 @@ def SingleCheck(settings):
             else:
                 character.CheckFlags()
                 input()
-                del character
 
 
 def BatchCheck(settings):

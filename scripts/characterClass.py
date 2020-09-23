@@ -115,7 +115,14 @@ class Character:
             self.qualities['In Debt'] = inDebtCount
             # Shiva Arms
             self.qualities['Shiva Arms'] = shivaArmsCount
-
+        except TypeError:
+            pass
+        # Talent check in case above fails:
+        try:
+            if save_file['character']['prioritytalent'] != self.talent:
+                self.talent = save_file['character']['prioritytalent']
+            else:
+                self.talent = "Mundane"
         except TypeError:
             pass
 
@@ -525,6 +532,16 @@ class Character:
                 # If the armor value is 0, it's not necessary to check it.
                 elif armor['armor'] == '0':
                     continue
+                # Exception for critter armor.
+                elif armor['name'] == "Critter Body Armor":
+                    totalArmorValue = int(armor['rating'])
+                    # Loop through the mods in that piece of armor.
+                    for mods in armor['armormods']['armormod']:
+                        if mods['name'] == 'Full Body Armor: Helmet':
+                            continue
+                        else:
+                            totalArmorValue += int(mods['armor'])
+                    armorDict[armor['name']] = totalArmorValue
                 # Only actual armor is left. Time to process those.
                 else:
                     totalArmorValue = int(armor['armor'])
@@ -534,7 +551,6 @@ class Character:
                             continue
                         else:
                             totalArmorValue += int(mods['armor'])
-
                     armorDict[armor['name']] = totalArmorValue
         except TypeError:
             pass
@@ -651,22 +667,22 @@ class Character:
                     self.ware[ware['name']] = {'Essence': float(ware['ess']), 'Grade': ware['grade'],
                                                'Rating': int(ware['rating'])}
         except TypeError:
-            self.ware = None
+            pass
 
         # Check total essence, deltaware and betaware.
         # Total
         self.essence['Total'] = float(save_file['character']['totaless'])
-        if self.ware is None:
+        if not self.ware:
             pass
         else:
             # Beta
-            betaCount = float()
+            betaCount = 0.0
             for ware in self.ware.keys():
                 if self.ware[ware]['Grade'] == 'Betaware' or self.ware[ware]['Grade'] == 'Betaware (Adapsin)':
                     betaCount += self.ware[ware]['Essence']
             self.essence['Betaware'] = betaCount
             # Delta
-            deltaCount = float()
+            deltaCount = 0.0
             for ware in self.ware.keys():
                 if self.ware[ware]['Grade'] == 'Deltaware' or self.ware[ware]['Grade'] == 'Deltaware (Adapsin)':
                     deltaCount += self.ware[ware]['Essence']
@@ -679,7 +695,7 @@ class Character:
                 if gear['category'] == 'Foci':
                     self.foci.append([gear['name'], int(gear['rating'])])
         except TypeError:
-            self.foci = None
+            pass
         # Spells
         try:
             for i in save_file['character']['spells']['spell']:
@@ -691,7 +707,7 @@ class Character:
             for power in save_file['character']['powers']['power']:
                 self.adeptPowers[power['name']] = int(power['rating'])
         except TypeError:
-            self.adeptPowers = None
+            pass
 
     def GenerateInitiateTradition(self, save_file):
         # Initiate Grade
@@ -726,6 +742,13 @@ class Character:
         self.CheckInitiateTradition()
 
         print("\n-----> Total Flag = " + str(self.accrued_flags))
+
+        # Cleanup!
+        self.qualities.clear()
+        self.foci.clear()
+        self.adeptPowers.clear()
+        self.ware.clear()
+        self.essence.clear()
 
     def CheckMetatype(self):
         flags = int()
@@ -766,7 +789,7 @@ class Character:
             if self.meta['type'] == 'A.I.':
                 output += "    [" + self.meta['type'] + "] +6 Flag points\n"
                 flags += 6
-            elif self.meta['type'] == 'Naga.':
+            elif self.meta['type'] == 'Naga':
                 output += "    [" + self.meta['type'] + "] +14 Flag points\n"
                 flags += 14
             elif self.meta['type'] == 'Sasquatch':
@@ -795,8 +818,8 @@ class Character:
             output += "    [" + self.talent + "] +2 Flag points\n"
             flags += 2
         elif self.talent == 'Magician':
-            output += "    [" + self.talent + "] +2 Flag points\n"
-            flags += 2
+            output += "    [" + self.talent + "] +3 Flag points\n"
+            flags += 3
         elif self.talent == 'Mystic Adept':
             output += "    [" + self.talent + "] +7 Flag points\n"
             flags += 7
@@ -1049,21 +1072,48 @@ class Character:
             # Highest Limb AGI skill
             if skill == 'Unarmed Combat':
                 if self.skills['CombatSkills'][skill] == 0:
-                    auxVar = self.attributes['highestLimbAGI'] - 1
+                    if self.attributes['highestLimbAGI'] > self.attributes['averageAGI']:
+                        auxVar = self.attributes['highestLimbAGI'] - 1
+                    else:
+                        auxVar = self.attributes['averageAGI'] - 1
                 else:
-                    auxVar = self.skills['CombatSkills'][skill] + self.attributes['highestLimbAGI']
+                    if self.attributes['highestLimbAGI'] > self.attributes['averageAGI']:
+                        auxVar = self.skills['CombatSkills'][skill] + self.attributes['highestLimbAGI']
+                    else:
+                        auxVar = self.skills['CombatSkills'][skill] + self.attributes['averageAGI']
             # Highest Arm AGI Skills
             elif self.skills['CombatSkills'][skill] == 0:
                 if skill == 'Palming':
                     auxVar = 0
                 else:
-                    auxVar = self.attributes['highestArmAGI'] - 1
+                    if self.attributes['highestArmAGI'] > self.attributes['averageAGI']:
+                        auxVar = self.attributes['highestArmAGI'] - 1
+                    else:
+                        auxVar = self.attributes['averageAGI'] - 1
             else:
-                auxVar = self.skills['CombatSkills'][skill] + self.attributes['highestArmAGI']
+                if self.attributes['highestLimbAGI'] > self.attributes['averageAGI']:
+                    auxVar = self.skills['CombatSkills'][skill] + self.attributes['highestLimbAGI']
+                else:
+                    auxVar = self.skills['CombatSkills'][skill] + self.attributes['averageAGI']
             # Check if that's the highest of all skills in the list.
             if auxVar > currentPeak:
                 currentPeak = auxVar
                 currentSkill = skill
+        # Exotic AGI skills
+        for skill in self.skills['EXOSkills']:
+            if skill['Category'] == 'Combat Active':
+                # No exotic skills can be defaulted in.
+                if skill['Rating'] == 0:
+                    auxVar = 0
+                else:
+                    if self.attributes['highestLimbAGI'] > self.attributes['averageAGI']:
+                        auxVar = skill['Rating'] + self.attributes['highestLimbAGI']
+                    else:
+                        auxVar = skill['Rating'] + self.attributes['averageAGI']
+                # Check if that's the highest of all skills in the list.
+                if auxVar > currentPeak:
+                    currentPeak = auxVar
+                    currentSkill = skill['Name']
         # Now that we have the AGI Peak, check if it raises flags for this att.
         if currentPeak > 12:
             self.attributePeaks['AGI'][0] = currentPeak
@@ -1098,6 +1148,18 @@ class Character:
             if auxVar > currentPeak:
                 currentPeak = auxVar
                 currentSkill = skill
+        # Exotic REA skills
+        for skill in self.skills['EXOSkills']:
+            if skill['Category'] == 'Vehicle Active':
+                # No exotic skills can be defaulted in.
+                if skill['Rating'] == 0:
+                    auxVar = 0
+                else:
+                    auxVar = skill['Rating'] + self.attributes['averageREA']
+                # Check if that's the highest of all skills in the list.
+                if auxVar > currentPeak:
+                    currentPeak = auxVar
+                    currentSkill = skill['Name']
         # Now that we have the BOD Peak, check if it raises flags for this att.
         if currentPeak > 12:
             self.attributePeaks['REA'][0] = currentPeak
@@ -1196,6 +1258,18 @@ class Character:
                 if auxVar > currentPeak:
                     currentPeak = auxVar
                     currentSkill = skill
+            # Exotic REA skills
+            for skill in self.skills['EXOSkills']:
+                if skill['Category'] == 'Vehicle Active':
+                    # No exotic skills can be defaulted in.
+                    if skill['Rating'] == 0:
+                        auxVar = 0
+                    else:
+                        auxVar = skill['Rating'] + self.attributes['averageINT']
+                    # Check if that's the highest of all skills in the list.
+                    if auxVar > currentPeak:
+                        currentPeak = auxVar
+                        currentSkill = skill['Name']
         for skill in self.skills['INTSkills'].keys():
             # Check if they are defaulting, some skills can't be defaulted in.
             if self.skills['INTSkills'][skill] == 0:
@@ -1325,6 +1399,18 @@ class Character:
                 if auxVar > currentPeak:
                     currentPeak = auxVar
                     currentSkill = skill
+            # Exotic AGI skills
+            for skill in self.skills['EXOSkills']:
+                if skill['Category'] == 'Combat Active':
+                    # No exotic skills can be defaulted in.
+                    if skill['Rating'] == 0:
+                        auxVar = 0
+                    else:
+                        auxVar = skill['Rating'] + self.attributes['averageLOG']
+                    # Check if that's the highest of all skills in the list.
+                    if auxVar > currentPeak:
+                        currentPeak = auxVar
+                        currentSkill = skill['Name']
         for skill in self.skills['LOGSkills'].keys():
             # Check if they are defaulting, some skills can't be defaulted in.
             if self.skills['LOGSkills'][skill] == 0:
@@ -1774,9 +1860,3 @@ class Character:
                 if self.verbose:
                     print(output)
                 self.accrued_flags += flags
-
-    def __del__(self):
-        self.qualities.clear()
-        self.foci.clear()
-        self.adeptPowers.clear()
-        self.ware.clear()

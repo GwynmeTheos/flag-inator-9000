@@ -8,7 +8,7 @@
   <metatypeid>a53d885d-a4a4-443d-b6a6-b0a55b0a96c7</metatypeid>
   <metatypebp>0</metatypebp>
   <metavariant>None</metavariant>
-  <metavariantid>00000000-0000-0000-0000-000000000000</metavariantid>
+  <metavariantid>a53d885d-a4a4-443d-b6a6-b0a55b0a96c7</metavariantid>
   <metatypecategory>Metahuman</metatypecategory>
   <movement />
   <walk />
@@ -43,7 +43,7 @@
   <background />
   <concept />
   <notes />
-  <alias />
+  <alias>mage</alias>
   <playername />
   <gamenotes />
   <primaryarm>Right</primaryarm>
@@ -51,8 +51,8 @@
   <special>9</special>
   <totalspecial>9</totalspecial>
   <totalattributes>16</totalattributes>
-  <contactpoints>3</contactpoints>
-  <contactpointsused>3</contactpointsused>
+  <contactpoints>6</contactpoints>
+  <contactpointsused>6</contactpointsused>
   <spelllimit>7</spelllimit>
   <cfplimit>0</cfplimit>
   <ainormalprogramlimit>0</ainormalprogramlimit>
@@ -95,100 +95,100 @@
       <metatypemin>1</metatypemin>
       <metatypemax>6</metatypemax>
       <metatypeaugmax>10</metatypeaugmax>
-      <base>0</base>
+      <base>1</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>1</totalvalue>
+      <totalvalue>2</totalvalue>
     </attribute>
     <attribute>
       <name>AGI</name>
       <metatypemin>1</metatypemin>
       <metatypemax>6</metatypemax>
       <metatypeaugmax>10</metatypeaugmax>
-      <base>0</base>
+      <base>2</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>1</totalvalue>
+      <totalvalue>3</totalvalue>
     </attribute>
     <attribute>
       <name>REA</name>
       <metatypemin>1</metatypemin>
       <metatypemax>6</metatypemax>
       <metatypeaugmax>10</metatypeaugmax>
-      <base>0</base>
+      <base>1</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>1</totalvalue>
+      <totalvalue>2</totalvalue>
     </attribute>
     <attribute>
       <name>STR</name>
       <metatypemin>1</metatypemin>
       <metatypemax>6</metatypemax>
       <metatypeaugmax>10</metatypeaugmax>
-      <base>0</base>
+      <base>1</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>1</totalvalue>
+      <totalvalue>2</totalvalue>
     </attribute>
     <attribute>
       <name>CHA</name>
       <metatypemin>1</metatypemin>
       <metatypemax>6</metatypemax>
       <metatypeaugmax>10</metatypeaugmax>
-      <base>0</base>
+      <base>1</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>1</totalvalue>
+      <totalvalue>2</totalvalue>
     </attribute>
     <attribute>
       <name>INT</name>
       <metatypemin>1</metatypemin>
       <metatypemax>6</metatypemax>
       <metatypeaugmax>10</metatypeaugmax>
-      <base>0</base>
+      <base>1</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>1</totalvalue>
+      <totalvalue>2</totalvalue>
     </attribute>
     <attribute>
       <name>LOG</name>
       <metatypemin>1</metatypemin>
       <metatypemax>6</metatypemax>
       <metatypeaugmax>10</metatypeaugmax>
-      <base>0</base>
+      <base>1</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>1</totalvalue>
+      <totalvalue>2</totalvalue>
     </attribute>
     <attribute>
       <name>WIL</name>
       <metatypemin>1</metatypemin>
       <metatypemax>6</metatypemax>
       <metatypeaugmax>10</metatypeaugmax>
-      <base>0</base>
+      <base>1</base>
       <karma>0</karma>
       <metatypecategory>Standard</metatypecategory>
-      <totalvalue>1</totalvalue>
+      <totalvalue>2</totalvalue>
     </attribute>
     <attribute>
       <name>EDG</name>
       <metatypemin>2</metatypemin>
       <metatypemax>7</metatypemax>
       <metatypeaugmax>7</metatypeaugmax>
-      <base>0</base>
+      <base>1</base>
       <karma>0</karma>
       <metatypecategory>Special</metatypecategory>
-      <totalvalue>2</totalvalue>
+      <totalvalue>3</totalvalue>
     </attribute>
     <attribute>
       <name>MAG</name>
       <metatypemin>4</metatypemin>
       <metatypemax>6</metatypemax>
       <metatypeaugmax>6</metatypeaugmax>
-      <base>0</base>
+      <base>1</base>
       <karma>0</karma>
       <metatypecategory>Special</metatypecategory>
-      <totalvalue>4</totalvalue>
+      <totalvalue>5</totalvalue>
     </attribute>
     <attribute>
       <name>MAGAdept</name>
@@ -217,7 +217,7 @@
       <metatypeaugmax>6</metatypeaugmax>
       <base>0</base>
       <karma>0</karma>
-      <metatypecategory>Special</metatypecategory>
+      <metatypecategory>Standard</metatypecategory>
       <totalvalue>1</totalvalue>
     </attribute>
     <attribute>
@@ -1023,74 +1023,8 @@
       <group>
         <karma>0</karma>
         <base>0</base>
-        <id>52cb9e0d-2d5c-4bff-9529-cbbe60531700</id>
-        <name>Acting</name>
-      </group>
-      <group>
-        <karma>0</karma>
-        <base>0</base>
-        <id>a798d663-5dc8-4b33-8bb5-b0dc45b0a25a</id>
-        <name>Athletics</name>
-      </group>
-      <group>
-        <karma>0</karma>
-        <base>0</base>
-        <id>d3696ee4-570d-4b76-88f7-6bc1920a50ed</id>
-        <name>Biotech</name>
-      </group>
-      <group>
-        <karma>0</karma>
-        <base>0</base>
-        <id>f876ee90-2cb5-491b-a0a5-e74fc5719481</id>
-        <name>Close Combat</name>
-      </group>
-      <group>
-        <karma>0</karma>
-        <base>0</base>
-        <id>49e3c5a0-ce57-4b15-8ed0-1667af06ed67</id>
-        <name>Conjuring</name>
-      </group>
-      <group>
-        <karma>0</karma>
-        <base>0</base>
-        <id>2c75db4f-bb14-4824-93ad-df2d88d37932</id>
-        <name>Cracking</name>
-      </group>
-      <group>
-        <karma>0</karma>
-        <base>0</base>
-        <id>1f953174-ddbd-4b53-9621-197e657d6d5e</id>
-        <name>Electronics</name>
-      </group>
-      <group>
-        <karma>0</karma>
-        <base>0</base>
-        <id>9a61aef5-c15f-46a5-af83-1fdd818ac337</id>
-        <name>Enchanting</name>
-      </group>
-      <group>
-        <karma>0</karma>
-        <base>0</base>
-        <id>25d14dce-7269-45db-9728-6b375ea5caab</id>
-        <name>Engineering</name>
-      </group>
-      <group>
-        <karma>0</karma>
-        <base>0</base>
-        <id>733647f5-5bda-4e53-893d-2ef8cf407d68</id>
-        <name>Firearms</name>
-      </group>
-      <group>
-        <karma>0</karma>
-        <base>0</base>
-        <id>0b156fd8-84f5-470e-b362-178982d4db26</id>
-        <name>Influence</name>
-      </group>
-      <group>
-        <karma>0</karma>
-        <base>0</base>
-        <id>666ae530-88db-43e0-b779-4191ba514dc7</id>
-        <name>Outdoors</name>
+        <id>ad25c2eb-c646-4770-9676-40a704b9ec05</id>
+        <name>Stealth</name>
       </group>
       <group>
         <karma>0</karma>
@@ -1101,8 +1035,74 @@
       <group>
         <karma>0</karma>
         <base>0</base>
-        <id>ad25c2eb-c646-4770-9676-40a704b9ec05</id>
-        <name>Stealth</name>
+        <id>666ae530-88db-43e0-b779-4191ba514dc7</id>
+        <name>Outdoors</name>
+      </group>
+      <group>
+        <karma>0</karma>
+        <base>0</base>
+        <id>0b156fd8-84f5-470e-b362-178982d4db26</id>
+        <name>Influence</name>
+      </group>
+      <group>
+        <karma>0</karma>
+        <base>0</base>
+        <id>733647f5-5bda-4e53-893d-2ef8cf407d68</id>
+        <name>Firearms</name>
+      </group>
+      <group>
+        <karma>0</karma>
+        <base>0</base>
+        <id>25d14dce-7269-45db-9728-6b375ea5caab</id>
+        <name>Engineering</name>
+      </group>
+      <group>
+        <karma>0</karma>
+        <base>0</base>
+        <id>9a61aef5-c15f-46a5-af83-1fdd818ac337</id>
+        <name>Enchanting</name>
+      </group>
+      <group>
+        <karma>0</karma>
+        <base>0</base>
+        <id>1f953174-ddbd-4b53-9621-197e657d6d5e</id>
+        <name>Electronics</name>
+      </group>
+      <group>
+        <karma>0</karma>
+        <base>0</base>
+        <id>2c75db4f-bb14-4824-93ad-df2d88d37932</id>
+        <name>Cracking</name>
+      </group>
+      <group>
+        <karma>0</karma>
+        <base>0</base>
+        <id>49e3c5a0-ce57-4b15-8ed0-1667af06ed67</id>
+        <name>Conjuring</name>
+      </group>
+      <group>
+        <karma>0</karma>
+        <base>0</base>
+        <id>f876ee90-2cb5-491b-a0a5-e74fc5719481</id>
+        <name>Close Combat</name>
+      </group>
+      <group>
+        <karma>0</karma>
+        <base>0</base>
+        <id>d3696ee4-570d-4b76-88f7-6bc1920a50ed</id>
+        <name>Biotech</name>
+      </group>
+      <group>
+        <karma>0</karma>
+        <base>0</base>
+        <id>a798d663-5dc8-4b33-8bb5-b0dc45b0a25a</id>
+        <name>Athletics</name>
+      </group>
+      <group>
+        <karma>0</karma>
+        <base>0</base>
+        <id>52cb9e0d-2d5c-4bff-9529-cbbe60531700</id>
+        <name>Acting</name>
       </group>
     </groups>
   </newskills>
@@ -1139,7 +1139,7 @@
       <sizecategory />
       <firingmode>Skill</firingmode>
       <minrating />
-      <maxrating />
+      <maxrating>0</maxrating>
       <rating>0</rating>
       <clips />
       <conceal>0</conceal>
@@ -1165,7 +1165,7 @@
       <parentid>0c282bcd-ef62-466f-9308-7b494c432f97</parentid>
       <allowaccessory>False</allowaccessory>
       <weaponname />
-      <included>False</included>
+      <included>True</included>
       <equipped>True</equipped>
       <requireammo>True</requireammo>
       <accuracy>Physical</accuracy>
@@ -1230,7 +1230,8 @@
         </enabletab>
         <unlockskills>Magician</unlockskills>
       </bonus>
-      <firstlevelbonus />
+      <firstlevelbonus>
+      </firstlevelbonus>
       <notes>MAGICIANS
 • Magicians can astrally perceive.
 • Magicians can astrally project.
@@ -1376,9 +1377,7 @@
   <weaponlocations />
   <improvementgroups />
   <calendar />
-  <sources>
-    <source>SR5</source>
-  </sources>
+  <sources />
   <customdatadirectorynames>
     <directoryname>Cyberlimbs Cannot Add Headware</directoryname>
     <directoryname>Rainforest Carbine Missions Errata</directoryname>
@@ -1387,7 +1386,7 @@
     <!--these values are not loaded and only stored here for third parties, who parse this files (to not have to calculate them themselves)-->
     <physicalcm>9</physicalcm>
     <physicalcmthresholdoffset>0</physicalcmthresholdoffset>
-    <physicalcmoverflow>2</physicalcmoverflow>
+    <physicalcmoverflow>3</physicalcmoverflow>
     <stuncm>9</stuncm>
     <stuncmthresholdoffset>0</stuncmthresholdoffset>
   </calculatedvalues>
